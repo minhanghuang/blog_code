@@ -48,12 +48,19 @@ class SerializerPlug(object):
         try:
             serializer.is_valid(raise_exception=True) # 捕获异常
         except Exception as e:
-            print(e)
-            dict_exception = e.__dict__
-            for i, k in dict_exception["detail"].items():
-                self.msg_detail = i
-                self.msg_error = k[0]
-                break
+            print("序列化异常处理函数,e:{}".format(e))
+            dict_exception = e.__dict__.get("detail","")
+            # {'detail': {'success': ErrorDetail(string='False', code='error'),
+            #             'msg': ErrorDetail(string='用户名密码不正确', code='error')}}
+            # {'detail': {'username': [ErrorDetail(string='用户名不能为空。', code='required')],
+            #             'password': [ErrorDetail(string='密码不能为空。', code='required')]}}
+            if "success" in dict_exception:
+                self.msg_error = dict_exception["msg"]
+            else:
+                for i, k in dict_exception.items():
+                    self.msg_detail = i
+                    self.msg_error = k[0]
+                    break
             raise exception.myException400({
                 "success": False,
                 "msg": "{}".format(self.msg_error),

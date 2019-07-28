@@ -3,7 +3,7 @@ from rest_framework.exceptions import APIException
 from rest_framework import status
 
 """
-from django_restframework.exceptions import exception
+from utils.common.exceptions import exception
 raise exception.myException400({
                 "success": False,
                 "msg": "邮箱验证码不能为空"

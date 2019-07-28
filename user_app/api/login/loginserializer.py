@@ -2,6 +2,8 @@ from user_app import models
 from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
 from utils.common.serializers.serializer import error_instance
+from django.contrib.auth import authenticate
+from utils.common.exceptions import exception
 
 
 class LoginSerializerCls(DynamicFieldsMixin,serializers.ModelSerializer):
@@ -27,7 +29,12 @@ class LoginSerializerCls(DynamicFieldsMixin,serializers.ModelSerializer):
 
     def validate(self, arrt):
         """自定义校验所有字段"""
-
+        user = authenticate(username=arrt["username"], password=arrt["password"])
+        if not user:
+            raise exception.myException400({
+                "success": False,
+                "msg": "用户名密码不正确"
+            })
         return arrt
 
 

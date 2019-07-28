@@ -2,6 +2,7 @@ from rest_framework import permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from user_app import models
 from rest_framework import status
+from rest_framework_jwt.settings import api_settings
 from utils.common.mixins.mixin import MyAPIView
 from rest_framework.response import Response
 from user_app.api.login.loginserializer import LoginSerializerCls

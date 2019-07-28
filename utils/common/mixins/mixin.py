@@ -3,17 +3,18 @@ from rest_framework.mixins import (
     UpdateModelMixin,ListModelMixin,
     RetrieveModelMixin,
 )
-from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from utils.common.serializers.serializer import SerializerPlug
 from utils.common.paginations.pagination import MyPagination
 from rest_framework.views import APIView
+from utils.common.viewsets.viewsets import MyGenericViewSet
+
+
 
 """
 1. post create data
 """
-class MyCreateModeMixin(CreateModelMixin,GenericViewSet,SerializerPlug):
+class MyCreateModeMixin(CreateModelMixin,MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     msg_create = "创建成功"
@@ -38,7 +39,7 @@ class MyCreateModeMixin(CreateModelMixin,GenericViewSet,SerializerPlug):
 """
 2. delete destroy data
 """
-class MyDeleteModelMixin(DestroyModelMixin, GenericViewSet):
+class MyDeleteModelMixin(DestroyModelMixin, MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     msg_delete = "成功删除"
@@ -57,7 +58,7 @@ class MyDeleteModelMixin(DestroyModelMixin, GenericViewSet):
 """
 3. put update data
 """
-class MyUpdateModelMixin(UpdateModelMixin, GenericViewSet,SerializerPlug):
+class MyUpdateModelMixin(UpdateModelMixin, MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     msg_update = "修改成功"
@@ -89,7 +90,7 @@ class MyUpdateModelMixin(UpdateModelMixin, GenericViewSet,SerializerPlug):
 """
 4. get list data
 """
-class MyListModeMixin(ListModelMixin,GenericViewSet):
+class MyListModeMixin(ListModelMixin,MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     pagination_class = MyPagination # 分页
@@ -114,7 +115,7 @@ class MyListModeMixin(ListModelMixin,GenericViewSet):
 """
 5. get retrieve data
 """
-class MyRetrieveModelMixin(RetrieveModelMixin,GenericViewSet):
+class MyRetrieveModelMixin(RetrieveModelMixin,MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     msg_detail = "成功获取详细数据"
@@ -131,9 +132,9 @@ class MyRetrieveModelMixin(RetrieveModelMixin,GenericViewSet):
         }, status=status.HTTP_200_OK)
 
 """
-5. APIView
+6. APIView
 """
-class MyAPIView(APIView,SerializerPlug):
+class MyAPIView(APIView,MyGenericViewSet):
     authentication_classes = ()
     permission_classes = ()
     serializer_class = None
