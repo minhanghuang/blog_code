@@ -51,6 +51,14 @@ class Article(models.Model):
         verbose_name="浏览量",
         default=0
     )
+    top = models.BooleanField(
+        verbose_name="置顶文章",
+        default=False,
+    )
+    secret = models.BooleanField(
+        verbose_name="私密",
+        default=False,
+    )
 
     class Meta:
         db_table = 'article_app_Article' # 数据库名

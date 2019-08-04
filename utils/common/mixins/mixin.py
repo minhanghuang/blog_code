@@ -6,8 +6,8 @@ from rest_framework.mixins import (
 from rest_framework.response import Response
 from rest_framework import status
 from utils.common.paginations.pagination import MyPagination
-from rest_framework.views import APIView
 from utils.common.viewsets.viewsets import MyGenericViewSet
+from utils.common.viewsets.viewsets import MyGenericAPIView
 
 
 
@@ -134,48 +134,12 @@ class MyRetrieveModelMixin(RetrieveModelMixin,MyGenericViewSet):
 """
 6. APIView
 """
-class MyAPIView(APIView,MyGenericViewSet):
+class MyAPIView(MyGenericAPIView):
+
     authentication_classes = ()
     permission_classes = ()
     serializer_class = None
     msg_api = "Ok"
-
-    def get_serializer_class(self):
-        """
-        Return the class to use for the serializer.
-        Defaults to using `self.serializer_class`.
-
-        You may want to override this if you need to provide different
-        serializations depending on the incoming request.
-
-        (Eg. admins get full serialization, others get basic serialization)
-        """
-        assert self.serializer_class is not None, (
-            "'%s' should either include a `serializer_class` attribute, "
-            "or override the `get_serializer_class()` method."
-            % self.__class__.__name__
-        )
-
-        return self.serializer_class
-
-    def get_serializer_context(self):
-        """
-        Extra context provided to the serializer class.
-        """
-        return {
-            'request': self.request,
-            'format': self.format_kwarg,
-            'view': self
-        }
-
-    def get_serializer(self, *args, **kwargs):
-        """
-        Return the serializer instance that should be used for validating and
-        deserializing input, and for serializing output.
-        """
-        serializer_class = self.get_serializer_class()
-        kwargs['context'] = self.get_serializer_context()
-        return serializer_class(*args, **kwargs)
 
     def post(self,request):
         # serializer = self.get_serializer(data=request.data)
@@ -186,12 +150,4 @@ class MyAPIView(APIView,MyGenericViewSet):
             "results": ""
         }, status=status.HTTP_400_BAD_REQUEST)
 
-    def put(self,request):
-        # serializer = self.get_serializer(data=request.data)
-        # self.validation_error(serializer=serializer)  # 自定义Serializer异常处理
-        return Response({
-            "success": False,
-            "msg": "基类PUT,请重新封装",
-            "results": ""
-        }, status=status.HTTP_400_BAD_REQUEST)
 

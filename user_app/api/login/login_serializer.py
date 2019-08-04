@@ -1,17 +1,21 @@
 from user_app import models
-from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
 from utils.common.serializers.serializer import error_instance
 from django.contrib.auth import authenticate
 from utils.common.exceptions import exception
+from utils.common.serializers.serializer import MySerializerBase
 
 
-class LoginSerializerCls(DynamicFieldsMixin,serializers.ModelSerializer):
+class LoginSerializerCls(MySerializerBase):
     username = serializers.CharField(
+        label="用户名",
+        help_text="用户名",
         required=True,
         error_messages=error_instance.field_errormsg(field="用户名")
     )
     password = serializers.CharField(
+        label="密码",
+        help_text="密码",
         required=True,
         error_messages=error_instance.field_errormsg(field="密码")
     )

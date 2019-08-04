@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls import include
 from rest_framework import routers
-from user_app.api.login.loginviewset import LoginViewSetCls
+from user_app.api.login.login_viewset import LoginViewSetCls
 
 
 

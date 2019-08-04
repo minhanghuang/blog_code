@@ -2,9 +2,18 @@ from utils.common.exceptions import exception
 from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
 
-class MySerializer(DynamicFieldsMixin,serializers.ModelSerializer):
+class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
 
-    pass
+    def get_data(self, date, detail=True):
+        """格式化时间"""
+
+        if detail:
+            return date.strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            return date.strftime("%Y-%m-%d")
+
+
+
 
 class SerializerPlug(object):
     """
