@@ -22,4 +22,6 @@ schema_view = get_schema_view(title='API',renderer_classes=[SwaggerUIRenderer,Op
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', schema_view, name='docs'),  # 配置swagger的url路径
+    path('api/user/', include('app_user.urls')),
+    path('api/test/', include('app_test.urls')),
 ]
