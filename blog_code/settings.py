@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'app',
     'app_user',
     'app_test',
+    'app_article',
 ]
 
 MIDDLEWARE = [
