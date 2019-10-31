@@ -1,6 +1,6 @@
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
-from user_app import models
+from app_user import models
 
 
 class CustomBackend(ModelBackend):

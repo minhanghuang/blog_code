@@ -1,29 +1,22 @@
-from utils.common.exceptions import exception
 from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
 
 class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
 
-    def get_data(self, date, detail=True):
-        """格式化时间"""
-
+    def date_to_str(self, date, detail=True):
+        """
+        时间转字符串
+        :param date: 时间
+        :param detail: 是否显示详细时间
+        :return: str_date
+        """
         if detail:
             return date.strftime("%Y-%m-%d %H:%M:%S")
         else:
             return date.strftime("%Y-%m-%d")
 
-
-
-
-class SerializerPlug(object):
-    """
-    自定义序列化异常
-    """
-    def __init__(self):
-        self.msg_error = "error"
-        self.msg_detail = "field"
-
-    def field_errormsg(self,*args,**kwargs):
+    @classmethod
+    def field_error_msg(cls,*args,**kwargs):
         """
         字段错误走这里
         :param args:
@@ -31,7 +24,7 @@ class SerializerPlug(object):
         :return: error msg
         """
 
-        field = kwargs.get("field","")
+        field = kwargs.get("field"," ")
 
         return {
             "unique": "{}已经被注册。".format(field),
@@ -48,36 +41,4 @@ class SerializerPlug(object):
             'max_decimal_places': "确保%s小数点前不超过{max_whole_digits}个数字。" % field,
             'overflow': "{}日期时间值超出范围。".format(field),
         }
-
-    def validation_error(self, serializer):
-        """
-        序列化错误走这里
-        drf的异常处理不能满足需求
-        """
-        try:
-            serializer.is_valid(raise_exception=True) # 捕获异常
-        except Exception as e:
-            print("序列化异常处理函数,e:{}".format(e))
-            dict_exception = e.__dict__.get("detail","")
-            # {'detail': {'success': ErrorDetail(string='False', code='error'),
-            #             'msg': ErrorDetail(string='用户名密码不正确', code='error')}}
-            # {'detail': {'username': [ErrorDetail(string='用户名不能为空。', code='required')],
-            #             'password': [ErrorDetail(string='密码不能为空。', code='required')]}}
-            if "success" in dict_exception:
-                self.msg_error = dict_exception["msg"]
-            else:
-                for i, k in dict_exception.items():
-                    self.msg_detail = i
-                    self.msg_error = k[0]
-                    break
-            raise exception.myException400({
-                "success": False,
-                "msg": "{}".format(self.msg_error),
-            })
-        return None
-
-
-error_instance = SerializerPlug()
-
-
 

@@ -6,20 +6,27 @@ from rest_framework import status
 from utils.common.exceptions import exception
 raise exception.myException400({
                 "success": False,
-                "msg": "邮箱验证码不能为空"
+                "msg": "邮箱验证码不能为空",
+                "results": "",
             })
 """
 
 def custom_exception_handler(exc,context):
+
     response = exception_handler(exc,context) #获取本来应该返回的exception的response
     if response is not None:
         #response.data['status_code'] = response.status_code  #可添加status_code
         try:
             response.data["success"] = False
-            response.data["msg"] = response.data['detail']    #增加message这个key
-            del response.data['detail']
+            detail_data = response.data.get("detail",None)
+            if detail_data: # 如果有detail字段, 将detail换成msg
+                response.data["msg"] = response.data['detail']
+                del response.data['detail']
+            else:
+                pass
         except:
             pass
+
     return response
 
 class myException401(APIException):

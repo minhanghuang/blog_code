@@ -21,13 +21,13 @@ class MyPagination(PageNumberPagination):
 
     def get_paginated_response(self, data):
         return Response(OrderedDict([
-            ('count', self.page.paginator.count),
-            ('size', self.page_size),
-            ('totalpages', self.get_total_pages()),
-            ('success', True),
-            ('msg', self.msg_list),
-            ('next', self.get_next_link()),
-            ('previous', self.get_previous_link()),
-            ('results', data)
+            ('count', self.page.paginator.count), # 数量
+            ('size', self.page_size), # 每页大小
+            ('totalpages', self.get_total_pages()), # 总页数
+            ('success', True), # 成功标志
+            ('msg', self.msg_list), # 消息
+            ('next', self.get_next_link()), # 下一页地址
+            ('previous', self.get_previous_link()), # 上一页地址
+            ('results', data) # 返回数据
          ]))
 
