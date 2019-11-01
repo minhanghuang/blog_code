@@ -1,7 +1,7 @@
 """
 fied : {
-    authentication_classes : 验证
-    permission_classes : 权限
+    authentication_classes : 验证,默认需要验证
+    permission_classes : 权限,默认需要用户权限
     msg ; {
         "msg_create" : Create,返回时显示的消息,
         "msg_delete" : Delete,返回时显示的消息,
@@ -20,6 +20,8 @@ from rest_framework.mixins import (
     UpdateModelMixin,ListModelMixin,
     RetrieveModelMixin,
 )
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
@@ -27,10 +29,11 @@ from utils.common.paginations.pagination import MyPagination
 from utils.common.base.unitbase import MyUnitBase
 
 
+
 class CreateModel(CreateModelMixin,GenericViewSet,MyUnitBase):
 
-    authentication_classes = () # 验证
-    permission_classes = () # 权限
+    authentication_classes = (JSONWebTokenAuthentication,) # 验证
+    permission_classes = (permissions.IsAuthenticated,) # 权限
     msg_create = "创建成功" # 返回时显示的消息
     results_display = True  # 是否显示序列化信息, 默认显示
 
@@ -52,8 +55,8 @@ class CreateModel(CreateModelMixin,GenericViewSet,MyUnitBase):
 
 class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
-    authentication_classes = ()
-    permission_classes = ()
+    authentication_classes = (JSONWebTokenAuthentication,)  # 验证
+    permission_classes = (permissions.IsAuthenticated,)  # 权限
     msg_delete = "成功删除" # 返回时显示的消息
     lookup_field = "pk"  # 主键
 
@@ -70,8 +73,8 @@ class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
 class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
 
-    authentication_classes = ()
-    permission_classes = ()
+    authentication_classes = (JSONWebTokenAuthentication,)  # 验证
+    permission_classes = (permissions.IsAuthenticated,)  # 权限
     msg_update = "修改成功"
     lookup_field = "pk"  # 主键
     results_display = True
@@ -98,8 +101,9 @@ class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
         }, status=status.HTTP_200_OK)
 
 class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
-    authentication_classes = ()
-    permission_classes = ()
+
+    authentication_classes = (JSONWebTokenAuthentication,)  # 验证
+    permission_classes = (permissions.IsAuthenticated,)  # 权限
     pagination_class = MyPagination  # 分页
     msg_list = "成功获取列表数据"
 
@@ -122,8 +126,8 @@ class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
 
 class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
 
-    authentication_classes = ()
-    permission_classes = ()
+    authentication_classes = (JSONWebTokenAuthentication,)  # 验证
+    permission_classes = (permissions.IsAuthenticated,)  # 权限
     msg_detail = "成功获取详细数据"
     lookup_field = "pk"  # 主键
 
@@ -140,8 +144,8 @@ class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
 
 class APIViewModel(APIView,MyUnitBase):
 
-    authentication_classes = ()
-    permission_classes = ()
+    authentication_classes = (JSONWebTokenAuthentication,)  # 验证
+    permission_classes = (permissions.IsAuthenticated,)  # 权限
     msg_api = "POST API"
 
     def post(self,request):
