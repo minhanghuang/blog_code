@@ -13,7 +13,7 @@ class CreateArticleSerializer(MySerializerBase):
 
     def create(self, validated_data):
 
-
+        print(self.get_fake_obj().country())
 
         return
 

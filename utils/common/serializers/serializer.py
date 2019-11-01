@@ -1,7 +1,18 @@
 from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
+from faker import Faker
+
+fake_obj = Faker(locale='zh_CN') # 生成一个Faker对象(中文),默认不传参数时为英文
+
 
 class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
+
+    def get_fake_obj(self):
+        """
+        获取fake对象
+        :return: fake_obj
+        """
+        return fake_obj
 
     def date_to_str(self, date, detail=True):
         """
