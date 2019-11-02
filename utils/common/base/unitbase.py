@@ -24,7 +24,6 @@ class MyUnitBase(object):
         """
         try:
             ret = serializer.is_valid(raise_exception=True) # 捕获异常
-            print(serializer)
         except Exception as e:
             print("序列化异常处理函数,e:{}".format(e))
             dict_exception = e.__dict__.get("detail","")

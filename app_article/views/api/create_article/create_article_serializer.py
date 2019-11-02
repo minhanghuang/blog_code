@@ -13,9 +13,14 @@ class CreateArticleSerializer(MySerializerBase):
 
     def create(self, validated_data):
 
-        print(self.get_fake_obj().country())
+        user = self.context["request"].user # 登录用户
+        article_obj = models.Article.objects.create(
+            author = user,
+            title = validated_data["title"],
+            content = validated_data["content"],
+        )
 
-        return
+        return article_obj
 
 
 
