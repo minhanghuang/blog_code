@@ -174,7 +174,7 @@ REST_FRAMEWORK = {
         # 'anon': '2/m',
         # 'user': '5/m',
         "throttle_base_30_Min": "30/m",  # 所有接口
-        'login_throttle': '2/m', # 登录节流
+        'login_throttle': '20/m', # 登录节流
     },
 }
 
