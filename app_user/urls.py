@@ -6,9 +6,6 @@ from app_user.views.api.user.create_user.create_user_viewset import CreateUserVi
 from app_user.views.api.user.list_user.list_user_viewset import ListUserViewSet
 from app_user.views.api.login.login_viewset import LoginUserViewSet
 
-
-
-
 LoginUserViewSetRouter = routers.DefaultRouter() # 登录
 LoginUserViewSetRouter.register('', LoginUserViewSet,base_name="")
 CreateUserViewSetRouter = routers.DefaultRouter() # 新增用户

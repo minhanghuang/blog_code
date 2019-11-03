@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/settings.py" afterPath="$PROJECT_DIR$/blog_code/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/urls.py" afterPath="$PROJECT_DIR$/app_user/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/urls.py" afterPath="$PROJECT_DIR$/blog_code/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,32 +27,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog_code/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-              <folding>
-                <element signature="e#633#664#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="176" column="29" lean-forward="false" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
-              <folding>
-                <element signature="e#310#319#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,6 +58,7 @@
       <find>AUTH_USER_MODEL</find>
       <find>user</find>
       <find>/api/article/list-article/</find>
+      <find>article</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,19 +98,21 @@
         <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_viewset.py" />
         <option value="$PROJECT_DIR$/utils/common/mixins/mixinbase.py" />
-        <option value="$PROJECT_DIR$/utils/common/mixins/mixin.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py" />
         <option value="$PROJECT_DIR$/utils/common/serializers/serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_article_serializer.py" />
         <option value="$PROJECT_DIR$/utils/common/base/unitbase.py" />
-        <option value="$PROJECT_DIR$/app_article/urls.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/models.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py" />
         <option value="$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py" />
         <option value="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" />
-        <option value="$PROJECT_DIR$/blog_code/urls.py" />
         <option value="$PROJECT_DIR$/blog_code/settings.py" />
+        <option value="$PROJECT_DIR$/app_user/urls.py" />
+        <option value="$PROJECT_DIR$/app_article/urls.py" />
+        <option value="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" />
+        <option value="$PROJECT_DIR$/blog_code/urls.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py" />
+        <option value="$PROJECT_DIR$/utils/common/mixins/mixin.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" />
       </list>
     </option>
   </component>
@@ -189,20 +169,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="blog_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,7 +579,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/article_app/api/CDUL/updatearticle/update_article_serializer.py" />
     <entry file="file://$PROJECT_DIR$/article_app/api/CDUL/updatearticle/update_article_viewset.py" />
     <entry file="file://$PROJECT_DIR$/article_app/api/CDUL/createarticle/create_article_serializer.py" />
     <entry file="file://$PROJECT_DIR$/article_app/urls.py" />
@@ -655,24 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/rest_framework/routers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -709,14 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/views/api/login/login_viewset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -771,46 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/common/base/unitbase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#14#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/common/mixins/mixinbase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-          <folding>
-            <element signature="e#400#450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/common/mixins/mixin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="12" />
-          <folding>
-            <element signature="e#11#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_article/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -845,16 +744,6 @@
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,14 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_test/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -917,22 +798,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_code/urls.py">
+    <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="189">
+          <caret line="164" column="6" lean-forward="true" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
           <folding>
-            <element signature="e#633#664#0" expanded="true" />
+            <element signature="e#310#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/rest_framework/schemas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#553#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/views/api/login/login_viewset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/common/base/unitbase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#14#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/common/mixins/mixinbase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_code/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/create_article/create_article_viewset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/common/mixins/mixin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding>
+            <element signature="e#11#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
-          <caret line="176" column="29" lean-forward="false" selection-start-line="176" selection-start-column="29" selection-end-line="176" selection-end-column="29" />
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#310#319#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,11 @@
 from utils.common.mixins.mixin import MyCreateModeMixin
 from app_article.views.api.create_article.create_article_serializer import CreateArticleSerializer
 
+
+
+
+
+
 class CreateArticleViewSet(MyCreateModeMixin):
     """新增博文"""
 
