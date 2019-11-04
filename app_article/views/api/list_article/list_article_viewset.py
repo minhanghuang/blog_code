@@ -15,5 +15,5 @@ class ListArticleViewSet(MyListModeMixin):
     # authentication_classes = ()  # 验证
     # permission_classes = ()  # 权限
     queryset = models.Article.objects.all() #
-    msg_create = "查看博文列表" # 提示信息
+    msg_list = "查看博文列表" # 提示信息
     serializer_class = ListArticleSerializer # 序列化类
