@@ -15,5 +15,5 @@ class DeleteArticleViewSet(MyDeleteModelMixin):
     # authentication_classes = ()  # 验证
     # permission_classes = ()  # 权限
     queryset = models.Article.objects.all() #
-    msg_delete = "删除博文" # 提示信息
+    msg_delete = "成功删除博文" # 提示信息
     serializer_class = DeleteArticleSerializer # 序列化类
