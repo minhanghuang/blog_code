@@ -12,7 +12,6 @@ class CreateArticleSerializer(MySerializerBase):
         fields = ["title","content",]
 
     def create(self, validated_data):
-
         user = self.context["request"].user # 登录用户
         article_obj = models.Article.objects.create(
             author = user,
