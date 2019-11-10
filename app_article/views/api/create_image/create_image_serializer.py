@@ -10,7 +10,7 @@ class CreateImageSerializer(MySerializerBase):
 
     class Meta:
         model = models.Image
-        fields = ["blogid","image",]
+        fields = []
 
     def create(self, validated_data):
         """
@@ -19,7 +19,8 @@ class CreateImageSerializer(MySerializerBase):
         :return:
         """
         data = self.context["request"].data # 前端拿到的数据 (文件流,文章id)
-
+        print(data.get("id"))
+        print(data.get("file"))
         article_list = models.Article.objects.filter(
             id=data.get("id")
         ) # 文章列表
@@ -36,7 +37,7 @@ class CreateImageSerializer(MySerializerBase):
         ) # 图片列表
         if not image_list.exists(): # 图片不存在 -> 提交图片
             image_obj = models.Image.objects.create(
-                blogid = article_obj,
+                article = article_obj,
                 image = data.get("file",None),
             )
         else: # 图片存在 -> 更新图片
