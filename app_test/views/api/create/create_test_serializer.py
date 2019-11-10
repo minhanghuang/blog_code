@@ -16,16 +16,21 @@ class CreateTestSerializer(MySerializerBase):
     def create(self, validated_data):
 
         user = self.context["request"].user # 登录用户
+        image = self.context["request"].data.get("file",None)
+
         for foo in range(int(validated_data["count"])):
             article_obj = models.Article.objects.create(
                 author = user,
                 title = self.get_fake_obj().sentence(),
                 content = self.get_fake_obj().text(),
+                image = image,
+
             )
         article_obj = models.Article.objects.create(
             author=user,
             title=self.get_fake_obj().sentence(),
             content=self.get_fake_obj().text(),
+            image=image,
         )
         return article_obj
 
