@@ -12,8 +12,8 @@ class DetailArticleSerializer(MySerializerBase):
         source="author.username",
         label="作者",
     )
-    isenable = serializers.CharField(
-        source="get_isenable_display",
+    state = serializers.CharField(
+        source="get_statue_display",
         label="博文是否可见",
     )
     createdate = serializers.SerializerMethodField(label="创建时间")
@@ -21,7 +21,7 @@ class DetailArticleSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = ["id","username","title","content","createdate","updatedate","isenable",]
+        fields = ["id","username","title","content","createdate","updatedate","state",]
 
     def get_createdate(self,obj):
 
