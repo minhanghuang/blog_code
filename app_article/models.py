@@ -28,7 +28,7 @@ def default_images_path():
 
 class Article(models.Model):
     """博文"""
-    statue_choices = (
+    state_choices = (
         (0, "草稿箱"),
         (1, "公开"),
         (2, "秘密"),
@@ -66,9 +66,9 @@ class Article(models.Model):
         auto_now=True, # 更新对象时会改变
         verbose_name="修改时间",
     )
-    statue = models.IntegerField(
+    state = models.IntegerField(
         default=0,
-        choices=statue_choices,
+        choices=state_choices,
         verbose_name="文章状态"
     )
 
