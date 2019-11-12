@@ -9,7 +9,7 @@ class CreateArticleSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = ["id","title","content","statue"]
+        fields = ["id","title","content","state"]
 
     def create(self, validated_data):
 
@@ -18,7 +18,7 @@ class CreateArticleSerializer(MySerializerBase):
             author = user,
             title = validated_data.get("title",None),
             content = validated_data.get("content",""),
-            statue = validated_data.get("statue",0), # 0:草稿箱,1:公开,2:秘密
+            state = validated_data.get("state",0), # 0:草稿箱,1:公开,2:秘密
         )
 
         return article_obj

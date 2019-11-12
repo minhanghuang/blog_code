@@ -71,18 +71,9 @@ class Article(models.Model):
         choices=state_choices,
         verbose_name="文章状态"
     )
-
-class Image(models.Model):
-    """图片"""
-
-    article = models.OneToOneField(
-        to=Article,
-        on_delete=models.DO_NOTHING,
-        verbose_name="博文id",
-        related_name="image_article"
-    )
     image = models.ImageField(
         upload_to=upload_images_path,
         default="",
         verbose_name="博文列表展示的图片",
     )
+

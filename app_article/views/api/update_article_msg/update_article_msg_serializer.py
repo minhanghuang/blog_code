@@ -5,12 +5,12 @@ from rest_framework import serializers
 
 
 
-class UpdateArticleSerializer(MySerializerBase):
-    """更新博文-序列化"""
+class UpdateArticleMsgSerializer(MySerializerBase):
+    """更新文章弹框信息-序列化"""
 
     class Meta:
         model = models.Article
-        fields = ["title","content","state",]
+        fields = ["subtitle","state",]
 
     def update(self, instance, validated_data):
         """
@@ -18,11 +18,8 @@ class UpdateArticleSerializer(MySerializerBase):
         :param validated_data: Put携带的参数
         :return: instance
         """
-
-        instance.title = validated_data.get("title")
-        instance.content = validated_data.get("content")
+        instance.subtitle = validated_data.get("subtitle")
         instance.state = validated_data.get("state")
-        instance.save()
 
         return instance
 
