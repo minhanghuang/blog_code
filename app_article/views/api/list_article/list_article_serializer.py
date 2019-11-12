@@ -13,7 +13,7 @@ class ListArticleSerializer(MySerializerBase):
         label="作者",
     )
     state = serializers.CharField(
-        source="get_statue_display",
+        source="get_state_display",
         label="博文是否可见",
     )
     createdate = serializers.SerializerMethodField(label="创建时间")

@@ -9,7 +9,7 @@ class UpdateImageSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = ["image",]
+        fields = []
 
     def create(self, validated_data):
 
