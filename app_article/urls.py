@@ -28,10 +28,6 @@ UpdateArticleMsgViewSetRouter = routers.DefaultRouter()
 UpdateArticleMsgViewSetRouter.register('', UpdateArticleMsgViewSet,base_name="")
 
 
-
-
-
-
 urlpatterns = [
     path('create-article/', include(CreateArticleViewSetRouter.urls)), # 发布文章
     path('list-article/', include(ListArticleViewSetRouter.urls)), # 获取文章列表

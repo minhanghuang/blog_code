@@ -12,8 +12,8 @@ class UpdateImageSerializer(MySerializerBase):
         fields = []
 
     def create(self, validated_data):
-
-        blogid = validated_data.get("blogid",-1) # 获取文章id
+        data = self.context["request"].data
+        blogid = int(data.get("blogid",["-1"])[0]) # 获取文章id
         if blogid <= 0: # id 异常, 报错
             raise exception.myException401({
                 "success": False,
@@ -29,7 +29,7 @@ class UpdateImageSerializer(MySerializerBase):
                     "results": "",
                 })
             else: # 数据库中存在着篇文章
-                file = validated_data.get("file", None) # 获取前端传过来的图片数据流
+                file = data.get("file", None) # 获取前端传过来的图片数据流
                 if not file: # 图片为空
                     raise exception.myException401({
                         "success": False,

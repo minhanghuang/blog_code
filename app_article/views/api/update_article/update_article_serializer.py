@@ -10,7 +10,7 @@ class UpdateArticleSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = ["title","content","state",]
+        fields = ["id","title","content","state",]
 
     def update(self, instance, validated_data):
         """
