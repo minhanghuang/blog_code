@@ -23,7 +23,7 @@ class UpdateImageSerializer(MySerializerBase):
         data = self.context["request"].data
         blogid = int(data.get("blogid",["-1"])[0]) # 获取文章id
         if blogid <= 0: # id 异常, 报错
-            raise exception.myException401({
+            raise exception.myException400({
                 "success": False,
                 "msg": "保存失败,文章不存在",
                 "results": "",
@@ -31,7 +31,7 @@ class UpdateImageSerializer(MySerializerBase):
         else: # id 正常
             article_list = models.Article.objects.filter(id=blogid) # 获取id对应的文章列表
             if not article_list.exists(): # 在数据库中能找不到这个id对应的文章
-                raise exception.myException401({
+                raise exception.myException400({
                     "success": False,
                     "msg": "保存失败,文章不存在",
                     "results": "",
@@ -39,7 +39,7 @@ class UpdateImageSerializer(MySerializerBase):
             else: # 数据库中存在着篇文章
                 file = data.get("file", None) # 获取前端传过来的图片数据流
                 if not file: # 图片为空
-                    raise exception.myException401({
+                    raise exception.myException400({
                         "success": False,
                         "msg": "保存失败,后端没拿到图片",
                         "results": "",
