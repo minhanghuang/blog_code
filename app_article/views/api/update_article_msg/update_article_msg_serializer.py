@@ -20,6 +20,7 @@ class UpdateArticleMsgSerializer(MySerializerBase):
         """
         instance.subtitle = validated_data.get("subtitle")
         instance.state = validated_data.get("state")
+        instance.save()
 
         return instance
 

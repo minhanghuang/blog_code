@@ -21,7 +21,7 @@ class DetailArticleSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = ["id","username","title","content","createdate","updatedate","state",]
+        fields = ["id","username","title","subtitle","content","createdate","updatedate","state",]
 
     def get_createdate(self,obj):
 

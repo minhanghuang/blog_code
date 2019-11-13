@@ -2,14 +2,22 @@ from app_article import models
 from utils.common.serializers.serializer import MySerializerBase
 from rest_framework import serializers
 from utils.common.exceptions import exception
-
+from django.conf import settings
 
 class UpdateImageSerializer(MySerializerBase):
     """更新图片-序列化"""
 
+    image = serializers.SerializerMethodField(
+        label="图片路径",
+        required=False,
+    )
     class Meta:
         model = models.Article
-        fields = []
+        fields = ["image",]
+
+    def get_image(self,obj):
+        print(obj.image,type(obj.image))
+        return "".join((settings.UPLOAD_IMAGES_BASE_PATH,str(obj.image)))
 
     def create(self, validated_data):
         data = self.context["request"].data

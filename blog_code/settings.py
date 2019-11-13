@@ -163,6 +163,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'upload') # 注意此处不要写成列表�
 MEDIA_URL = '/media/'
 # 这里特意写成 upload 和 media，而不是统一写成 media 或 upload，是为了便于理解 MEDIA_ROOT 和 MEDIA_URL 的作用和区别
 
+UPLOAD_IMAGES_BASE_PATH = "127.0.0.1:19900"
+
 REST_FRAMEWORK = {
     "DEFAULT_VERSION": 'v1',  # 默认的版本
     "ALLOWED_VERSIONS": ['v1', 'v2'],  # 允许的版本
