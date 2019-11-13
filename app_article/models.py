@@ -1,6 +1,7 @@
 from django.db import models
 from app_user.models import UserProfile
-import time,random
+import time,random,os
+from django.conf import settings
 
 def upload_images_path(instance, filename):
     """
@@ -9,18 +10,15 @@ def upload_images_path(instance, filename):
     :param filename: 前端传来的文件的原始文件名
     :return: 拼接后生成的文件名和存储路径
     """
-    if not filename: # 如果图片为空 -> 给随机默认图片
-        print("没有上传图片")
-        return "images/blog/default/{}.png".format(random.randint(1, 7))
 
-    print("上传图片成功")
+    article_id = instance.id # 文章id
     last = filename.split(".")[1]
-    return "images/blog/{}.{}".format(str(int(time.time() * 1000000)), last)
+    old_image_path = "".join((settings.MEDIA_ROOT,"/images/blog/{}.{}".format(article_id, last))) # 拼接
 
+    if os.path.exists(old_image_path):
+        os.remove(old_image_path)
 
-def default_images_path():
-    print("ppppp")
-    return "images/blog/default/{}.png".format(random.randint(1, 7))
+    return old_image_path
 
 
 
