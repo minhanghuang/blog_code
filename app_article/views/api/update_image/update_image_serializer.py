@@ -3,6 +3,9 @@ from utils.common.serializers.serializer import MySerializerBase
 from rest_framework import serializers
 from utils.common.exceptions import exception
 from django.conf import settings
+from utils.common.files.file import FileBase
+
+
 
 class UpdateImageSerializer(MySerializerBase):
     """更新图片-序列化"""
@@ -10,18 +13,19 @@ class UpdateImageSerializer(MySerializerBase):
     image = serializers.SerializerMethodField(
         label="图片路径",
         required=False,
+        allow_null=True,
     )
     class Meta:
         model = models.Article
         fields = ["image",]
 
     def get_image(self,obj):
-        print(obj.image,type(obj.image))
-        return "".join((settings.UPLOAD_IMAGES_BASE_PATH,str(obj.image)))
+
+        return 'data:image/jpeg;base64,%s' % obj.image
 
     def create(self, validated_data):
         data = self.context["request"].data
-        blogid = int(data.get("blogid",["-1"])[0]) # 获取文章id
+        blogid = eval(data.get("blogid",["-1"])[0]) # 获取文章id
         if blogid <= 0: # id 异常, 报错
             raise exception.myException400({
                 "success": False,
@@ -45,8 +49,9 @@ class UpdateImageSerializer(MySerializerBase):
                         "results": "",
                     })
                 else: # 图片不为空
+                    base64_data = FileBase.image_to_base64(file)
                     article_obj = article_list.first() # 获取文章对象
-                    article_obj.image = file # 更新图片
+                    article_obj.image = base64_data # 更新图片
                     article_obj.save() # 保存实例
 
         return article_obj # 返回实例
