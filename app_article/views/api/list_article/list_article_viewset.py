@@ -1,7 +1,8 @@
 from utils.common.mixins.mixin import MyListModeMixin
 from app_article.views.api.list_article.list_article_serializer import ListArticleSerializer
 from app_article import models
-
+from django_filters import rest_framework
+from app_article.views.filter.article.list import GetArticleListFilter
 
 
 
@@ -16,4 +17,6 @@ class ListArticleViewSet(MyListModeMixin):
     # permission_classes = ()  # 权限
     queryset = models.Article.objects.all().order_by("-createdate") # 倒序
     msg_list = "查看博文列表" # 提示信息
+    filter_backends = (rest_framework.DjangoFilterBackend,)
+    filter_class = GetArticleListFilter
     serializer_class = ListArticleSerializer # 序列化类

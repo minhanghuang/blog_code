@@ -15,8 +15,15 @@ class UpdateArticleMsgSerializer(MySerializerBase):
     )
     class Meta:
         model = models.Article
-        fields = ["subtitle","state",]
-        extra_kwargs = {'subtitle': {'allow_null': True}}
+        fields = ["subtitle","state","tag"]
+        extra_kwargs = {
+            'subtitle':{
+                'allow_null': True,
+            },
+            'tag':{
+                'allow_null': True,
+            },
+        }
 
 
     def update(self, instance, validated_data):
@@ -25,7 +32,7 @@ class UpdateArticleMsgSerializer(MySerializerBase):
         :param validated_data: Put携带的参数
         :return: instance
         """
-
+        print(validated_data)
         state = validated_data.get("state",0)
         if state == 1: # 确认发布文章, 需要上传图片
             if not instance.image: # 图片为空
@@ -35,6 +42,7 @@ class UpdateArticleMsgSerializer(MySerializerBase):
                     "results": "",
                 })
         instance.subtitle = validated_data.get("subtitle","")
+        instance.tag = validated_data.get("tag","{}")
         instance.state = state
         instance.save()
 

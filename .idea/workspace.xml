@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/images/blog/8.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" afterPath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/models.py" afterPath="$PROJECT_DIR$/app_article/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,23 +48,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="update_image_viewset.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_article/views/api/update_image/update_image_viewset.py">
+      <file leaf-file-name="list_article_viewset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="390">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_image_serializer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py">
+      <file leaf-file-name="list.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_article/views/filter/article/list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="18" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/article_app/api/CDUL/createarticle/create_article_viewset.py" />
         <option value="$PROJECT_DIR$/article_app/api/CDUL/listarticle/get_article_list_viewset.py" />
         <option value="$PROJECT_DIR$/utils/common/paginations/pagination.py" />
         <option value="$PROJECT_DIR$/article_app/api/CDUL/createarticle/create_article_serializer.py" />
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/delete_article/delete_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/delete_article/delete_article_serializer.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_test/urls.py" />
         <option value="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_viewset.py" />
         <option value="$PROJECT_DIR$/app_test/models.py" />
@@ -160,19 +157,21 @@
         <option value="$PROJECT_DIR$/app_article/views/api/create_image/create_image_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_article_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/update_image/update_image_viewset.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/update_article/update_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/update_article/update_article_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/urls.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_viewset.py" />
         <option value="$PROJECT_DIR$/blog_code/settings.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py" />
-        <option value="$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py" />
-        <option value="$PROJECT_DIR$/app_article/models.py" />
         <option value="$PROJECT_DIR$/utils/common/serializers/serializer.py" />
         <option value="$PROJECT_DIR$/utils/common/base64/base64.py" />
         <option value="$PROJECT_DIR$/utils/common/files/file.py" />
         <option value="$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py" />
+        <option value="$PROJECT_DIR$/app_article/models.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py" />
+        <option value="$PROJECT_DIR$/app_article/views/filter/article/list.py" />
       </list>
     </option>
   </component>
@@ -290,11 +289,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="update_image" />
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,10 +312,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -754,16 +749,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_test/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_article/migrations/0002_article_author.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -981,16 +966,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-717">
@@ -1026,16 +1001,6 @@
         <state relative-caret-position="378">
           <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,30 +1054,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1135,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/common/serializers/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1431">
@@ -1151,11 +1090,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/common/files/file.py">
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="70" />
-          <folding />
+        <state relative-caret-position="1377">
+          <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,12 +1108,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api/update_image/update_image_serializer.py">
+    <entry file="file://$PROJECT_DIR$/utils/common/files/file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="23" column="104" lean-forward="false" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="104" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/update_article_msg/update_article_msg_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/detail_article/detail_article_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="71" column="9" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api/list_article/list_article_viewset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/filter/article/list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
