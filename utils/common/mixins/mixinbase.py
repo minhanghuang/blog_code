@@ -148,11 +148,11 @@ class APIViewModel(APIView,MyUnitBase):
     permission_classes = (permissions.IsAuthenticated,)  # 权限
     msg_api = "POST API"
 
-    def post(self,request):
-        # serializer = self.get_serializer(data=request.data)
-        # self.validation_error(serializer=serializer)  # 自定义Serializer异常处理
-        return Response({
-            "success": False,
-            "msg": "基类POST,请重新封装",
-            "results": ""
-        }, status=status.HTTP_400_BAD_REQUEST)
+    # def post(self,request):
+    #     # serializer = self.get_serializer(data=request.data)
+    #     # self.validation_error(serializer=serializer)  # 自定义Serializer异常处理
+    #     return Response({
+    #         "success": False,
+    #         "msg": "基类POST,请重新封装",
+    #         "results": ""
+    #     }, status=status.HTTP_400_BAD_REQUEST)

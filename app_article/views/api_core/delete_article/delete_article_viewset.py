@@ -1,5 +1,5 @@
 from utils.common.mixins.mixin import MyDeleteModelMixin
-from app_article.views.api.delete_article.delete_article_serializer import DeleteArticleSerializer
+from app_article.views.api_core.delete_article.delete_article_serializer import DeleteArticleSerializer
 from app_article import models
 
 

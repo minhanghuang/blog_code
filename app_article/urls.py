@@ -2,13 +2,14 @@ from django.urls import path
 from django.urls import include
 from rest_framework import routers
 
-from app_article.views.api.create_article.create_article_viewset import CreateArticleViewSet
-from app_article.views.api.list_article.list_article_viewset import ListArticleViewSet
-from app_article.views.api.detail_article.detail_article_viewset import DetailArticleViewSet
-from app_article.views.api.delete_article.delete_article_viewset import DeleteArticleViewSet
-from app_article.views.api.update_article.update_article_viewset import UpdateArticleViewSet
-from app_article.views.api.update_image.update_image_viewset import UpdateImageViewSet
-from app_article.views.api.update_article_msg.update_article_msg_viewset import UpdateArticleMsgViewSet
+from app_article.views.api_core.create_article.create_article_viewset import CreateArticleViewSet
+from app_article.views.api_core.list_article.list_article_viewset import ListArticleViewSet
+from app_article.views.api_core.detail_article.detail_article_viewset import DetailArticleViewSet
+from app_article.views.api_core.delete_article.delete_article_viewset import DeleteArticleViewSet
+from app_article.views.api_core.update_article.update_article_viewset import UpdateArticleViewSet
+from app_article.views.api_core.update_image.update_image_viewset import UpdateImageViewSet
+from app_article.views.api_core.update_article_msg.update_article_msg_viewset import UpdateArticleMsgViewSet
+from app_article.views.api_branch.state_article.state_article_apiview import GetStateViewSet
 
 
 
@@ -36,4 +37,5 @@ urlpatterns = [
     path('update-article/', include(UpdateArticleViewSetRouter.urls)), # 更新文章
     path('update-image/', include(UpdateImageViewSetRouter.urls)), # 更新图片
     path('update-msg-article/', include(UpdateArticleMsgViewSetRouter.urls)), # 更新文章弹框信息 (注意路由,匹配问题)
+    path('get-state-article/', GetStateViewSet.as_view()), # 更新文章弹框信息 (注意路由,匹配问题)
 ]

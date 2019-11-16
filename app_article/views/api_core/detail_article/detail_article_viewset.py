@@ -1,5 +1,5 @@
 from utils.common.mixins.mixin import MyRetrieveModelMixin
-from app_article.views.api.detail_article.detail_article_serializer import DetailArticleSerializer
+from app_article.views.api_core.detail_article.detail_article_serializer import DetailArticleSerializer
 from app_article import models
 
 

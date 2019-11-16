@@ -1,5 +1,5 @@
 from utils.common.mixins.mixin import MyUpdateModelMixin
-from app_article.views.api.update_article_msg.update_article_msg_serializer import UpdateArticleMsgSerializer
+from app_article.views.api_core.update_article_msg.update_article_msg_serializer import UpdateArticleMsgSerializer
 from app_article import models
 
 
