@@ -27,10 +27,11 @@ class GetStateArticleViewSet(MyListModeMixin):
         queryset = self.filter_queryset(self.get_queryset())
 
         results_dict = {}
-        results_dict["all"] = len(queryset.exclude(state=3))
+        results_dict["all"] = len(queryset)
         results_dict["public"] = len(queryset.filter(state=1))
         results_dict["private"] = len(queryset.filter(state=2))
         results_dict["draft"] = len(queryset.filter(state=0))
+        results_dict["delete"] = len(queryset.filter(state=3))
 
         return Response({
             "success": True,

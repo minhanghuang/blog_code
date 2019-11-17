@@ -1,7 +1,5 @@
 from app_article import models
 from utils.common.serializers.serializer import MySerializerBase
-from rest_framework import serializers
-
 
 
 
@@ -10,8 +8,20 @@ class DeleteArticleSerializer(MySerializerBase):
 
     class Meta:
         model = models.Article
-        fields = []
+        fields = ["state"]
+        extra_kwargs = {
+            'state': {
+                'allow_null': False,
+                'allow_blank': False,
+                'required': True,
+            },
+        }
 
+    def update(self, instance, validated_data):
+        print("validated_data:",validated_data)
+        instance.state = validated_data.get("state",3) # 将文章状态改为 3:已删除, 0:草稿箱
+        instance.save()
 
+        return instance
 
 

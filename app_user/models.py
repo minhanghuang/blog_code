@@ -13,6 +13,35 @@ class UserProfile(AbstractUser):
         choices=role_choices,
         default=1,
     )
+    description = models.CharField(
+        default="",
+        max_length=128,
+        verbose_name="签名描述",
+    )
+    company = models.CharField(
+        default="",
+        max_length=128,
+        verbose_name="公司",
+    )
+    department= models.CharField(
+        default="",
+        max_length=128,
+        verbose_name="部门",
+    )
+    position = models.CharField(
+        default="",
+        max_length=128,
+        verbose_name="职位",
+    )
+    city = models.CharField(
+        default="",
+        max_length=128,
+        verbose_name="城市",
+    )
+    tags = models.TextField(
+        default="",
+        verbose_name="标签",
+    )
 
     class Meta:
         db_table = 'app_user_UserProfile' # 数据库名
