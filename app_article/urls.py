@@ -9,7 +9,7 @@ from app_article.views.api_core.delete_article.delete_article_viewset import Del
 from app_article.views.api_core.update_article.update_article_viewset import UpdateArticleViewSet
 from app_article.views.api_core.update_image.update_image_viewset import UpdateImageViewSet
 from app_article.views.api_core.update_article_msg.update_article_msg_viewset import UpdateArticleMsgViewSet
-from app_article.views.api_branch.state_article.state_article_apiview import GetStateViewSet
+from app_article.views.api_branch.state_article.state_article_viewset import GetStateArticleViewSet
 
 
 
@@ -27,6 +27,8 @@ UpdateImageViewSetRouter = routers.DefaultRouter()
 UpdateImageViewSetRouter.register('', UpdateImageViewSet,base_name="")
 UpdateArticleMsgViewSetRouter = routers.DefaultRouter()
 UpdateArticleMsgViewSetRouter.register('', UpdateArticleMsgViewSet,base_name="")
+GetStateArticleViewSetRouter = routers.DefaultRouter()
+GetStateArticleViewSetRouter.register('', GetStateArticleViewSet,base_name="")
 
 
 urlpatterns = [
@@ -37,5 +39,5 @@ urlpatterns = [
     path('update-article/', include(UpdateArticleViewSetRouter.urls)), # 更新文章
     path('update-image/', include(UpdateImageViewSetRouter.urls)), # 更新图片
     path('update-msg-article/', include(UpdateArticleMsgViewSetRouter.urls)), # 更新文章弹框信息 (注意路由,匹配问题)
-    path('get-state-article/', GetStateViewSet.as_view()), # 更新文章弹框信息 (注意路由,匹配问题)
+    path('get-state-article/', include(GetStateArticleViewSetRouter.urls)), #
 ]
