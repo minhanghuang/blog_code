@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app_article/migrations/0003_auto_20191115_2237.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" afterPath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/models.py" afterPath="$PROJECT_DIR$/app_user/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/urls.py" afterPath="$PROJECT_DIR$/app_user/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,36 +44,39 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="detail_user_viewset.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="app_article_article" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/a46d33bd/4b7e9a57-316c-43e5-add5-9d5cc858bbbb/app_article_article">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail_user_serializer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="57" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/models.py">
+      <file leaf-file-name="list_article_serializer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="201">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_article/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-581">
+              <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_article/views/api/create_article/create_viewset.py" />
         <option value="$PROJECT_DIR$/utils/common/base/unitbase.py" />
         <option value="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" />
         <option value="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" />
@@ -188,6 +180,7 @@
         <option value="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py" />
         <option value="$PROJECT_DIR$/app_user/models.py" />
         <option value="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" />
+        <option value="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" />
       </list>
     </option>
   </component>
@@ -230,6 +223,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api_core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api_core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list_article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -752,19 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/a46d33bd/4b7e9a57-316c-43e5-add5-9d5cc858bbbb/app_article_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/images/blog/1-1573656586678469.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -849,16 +909,6 @@
         <state relative-caret-position="486">
           <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="23" column="104" lean-forward="false" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,7 +1055,7 @@
         <state relative-caret-position="363">
           <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="23" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1033,7 +1083,7 @@
         <state relative-caret-position="351">
           <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1043,7 +1093,7 @@
         <state relative-caret-position="390">
           <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1071,8 +1121,16 @@
         <state relative-caret-position="283">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,16 +1139,9 @@
         <state relative-caret-position="378">
           <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="false" />
+            <marker date="1574004182396" expanded="true" signature="230:467" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1148">
-          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,15 +1150,38 @@
         <state relative-caret-position="324">
           <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="8" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py">
+    <entry file="dbDummy://dbtable:/a46d33bd/4b7e9a57-316c-43e5-add5-9d5cc858bbbb/app_article_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="57" />
+        <state relative-caret-position="201">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-581">
+          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding />
         </state>
       </provider>
