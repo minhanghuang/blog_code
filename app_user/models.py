@@ -42,6 +42,10 @@ class UserProfile(AbstractUser):
         default="",
         verbose_name="标签",
     )
+    avatar = models.TextField(
+        default="",
+        verbose_name="用户头像",
+    )
 
     class Meta:
         db_table = 'app_user_UserProfile' # 数据库名

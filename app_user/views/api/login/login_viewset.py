@@ -36,5 +36,6 @@ class LoginUserViewSet(MyCreateModeMixin):
             "msg": self.msg_create,
             "results": {
                 "TOKEN":token,
+                "username":username,
             }
         }, status=status.HTTP_200_OK)

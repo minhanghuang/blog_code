@@ -39,5 +39,5 @@ urlpatterns = [
     path('update-article/', include(UpdateArticleViewSetRouter.urls)), # 更新文章
     path('update-image/', include(UpdateImageViewSetRouter.urls)), # 更新图片
     path('update-msg-article/', include(UpdateArticleMsgViewSetRouter.urls)), # 更新文章弹框信息 (注意路由,匹配问题)
-    path('get-state-article/', include(GetStateArticleViewSetRouter.urls)), #
+    path('get-state-article/', include(GetStateArticleViewSetRouter.urls)), # 获取文章状态数量
 ]

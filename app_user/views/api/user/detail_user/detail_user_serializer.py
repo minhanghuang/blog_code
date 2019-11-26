@@ -12,7 +12,7 @@ class DetailUserSerializer(MySerializerBase):
 
     class Meta:
         model = models.UserProfile
-        fields = ["username","email","role","description","company","department","position","city","tags",]
+        fields = ["username","email","role","description","company","department","position","city","tags","avatar",]
 
 
 
