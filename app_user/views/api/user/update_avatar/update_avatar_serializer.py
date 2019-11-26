@@ -10,10 +10,20 @@ from utils.common.files.file import FileBase
 class UpdateAvatarSerializer(MySerializerBase):
     """更新用户头像-序列化"""
 
+    avatar = serializers.SerializerMethodField(
+        label="图片路径",
+        required=False,
+        allow_null=True,
+    )
+
     class Meta:
         model = models.UserProfile
-        fields = []
-        # fields = ["username","email","role","description","company","department","position","city","tags","avatar",]
+        fields = ["avatar",]
+
+    def get_avatar(self,obj):
+
+        return 'data:image/jpeg;base64,%s' % obj.avatar
+
     def create(self, validated_data):
 
         data = self.context["request"].data

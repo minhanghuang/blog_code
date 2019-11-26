@@ -38,8 +38,8 @@ class UserProfile(AbstractUser):
         max_length=128,
         verbose_name="城市",
     )
-    tags = models.TextField(
-        default="",
+    tag = models.TextField(
+        default="[]",
         verbose_name="标签",
     )
     avatar = models.TextField(

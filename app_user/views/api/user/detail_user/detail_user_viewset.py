@@ -14,3 +14,5 @@ class DetailUserViewSet(MyRetrieveModelMixin):
     msg_detail = "查看用户详细信息" # 提示信息
     serializer_class = DetailUserSerializer # 序列化类
     queryset = models.UserProfile.objects.all() # models
+    lookup_field = "username" # 用户名
+
