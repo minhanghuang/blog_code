@@ -8,6 +8,11 @@ class UserProfile(AbstractUser):
         (0,"管理员"),
         (1,"游客"),
     )
+    name = models.CharField(
+        default="",
+        max_length=64,
+        verbose_name="姓名,并非用户名",
+    )
     role = models.PositiveIntegerField(
         verbose_name="用户角色",
         choices=role_choices,
