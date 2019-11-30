@@ -28,7 +28,7 @@ class LoginUserViewSet(MyCreateModeMixin):
                 "msg": self.msg_create,
                 "results": {
                     "TOKEN": ret["results"]["TOKEN"],
-                    "username": ret["results"]["username"],
+                    "username": "admin",
                 }
             }, status=status.HTTP_200_OK)
 
@@ -59,6 +59,7 @@ class LoginUserViewSet(MyCreateModeMixin):
         from django.contrib.auth import authenticate
 
         user = authenticate(username=username, password=password)
+
 
         if user: # admin
             return {
