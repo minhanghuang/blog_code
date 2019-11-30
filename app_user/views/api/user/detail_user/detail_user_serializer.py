@@ -16,7 +16,7 @@ class DetailUserSerializer(MySerializerBase):
     )
     class Meta:
         model = models.UserProfile
-        fields = ["name","email","role","description","company","department","position","city","tag","avatar",]
+        fields = ["name","email","role","description","company","department","position","city","tag","avatar","wechat","telegram","phone"]
 
     def get_avatar(self,obj):
 

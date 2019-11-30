@@ -53,6 +53,10 @@ class CreateModel(CreateModelMixin,GenericViewSet,MyUnitBase):
             "results": data
         }, status=status.HTTP_201_CREATED)
 
+    def initial(self, request, *args, **kwargs):
+        super(CreateModel, self).initial(request, *args, **kwargs)
+
+
 class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
     authentication_classes = (JSONWebTokenAuthentication,)  # 验证
@@ -70,6 +74,9 @@ class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
             "msg": self.msg_delete,
             "results": None
         }, status=status.HTTP_200_OK)
+
+    def initial(self, request, *args, **kwargs):
+        super(DestroyModel, self).initial(request, *args, **kwargs)
 
 class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
 
@@ -100,6 +107,11 @@ class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
             "results": data
         }, status=status.HTTP_200_OK)
 
+
+    def initial(self, request, *args, **kwargs):
+        super(UpdateModel, self).initial(request, *args, **kwargs)
+
+
 class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
 
     authentication_classes = (JSONWebTokenAuthentication,)  # 验证
@@ -122,7 +134,11 @@ class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
             "success": True,
             "msg": self.msg_list,
             "results": serializer.data
-        }, status=status.HTTP_200_OK)
+        }, status=status.HTTP_201_CREATED)
+
+    def initial(self, request, *args, **kwargs):
+        super(ListModel, self).initial(request, *args, **kwargs)
+
 
 class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
 
@@ -132,7 +148,8 @@ class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
     lookup_field = "pk"  # 主键
 
     def retrieve(self, request, *args, **kwargs):
-
+        import time
+        print("xxxxxxx", time.time())
         instance = self.get_object()
         serializer = self.get_serializer(instance)
 
@@ -141,6 +158,10 @@ class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
             "msg": self.msg_detail,
             "results": [serializer.data] # 以列表的格式给
         }, status=status.HTTP_200_OK)
+
+    def initial(self, request, *args, **kwargs):
+        super(RetrieveModel, self).initial(request, *args, **kwargs)
+        print("RetrieveModel_initial")
 
 class APIViewModel(APIView,MyUnitBase):
 
@@ -156,3 +177,6 @@ class APIViewModel(APIView,MyUnitBase):
     #         "msg": "基类POST,请重新封装",
     #         "results": ""
     #     }, status=status.HTTP_400_BAD_REQUEST)
+
+    def initial(self, request, *args, **kwargs):
+        super(APIViewModel, self).initial(request, *args, **kwargs)

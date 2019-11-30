@@ -16,7 +16,7 @@ class UpdateUserSerializer(MySerializerBase):
 
     class Meta:
         model = models.UserProfile
-        fields = ["name","email","description","company","department","position","city","tag","avatar",]
+        fields = ["name","email","description","company","department","position","city","tag","avatar","wechat"]
         extra_kwargs = {
             'avatar': {
                 'allow_null': True,
@@ -31,6 +31,7 @@ class UpdateUserSerializer(MySerializerBase):
 
     def update(self, instance, validated_data):
         instance.name = validated_data.get("name")
+        instance.wechat = validated_data.get("wechat")
         instance.description = validated_data.get("description")
         instance.email = validated_data.get("email")
         instance.company = validated_data.get("company")

@@ -2,8 +2,8 @@ from django.utils.deprecation import MiddlewareMixin
 from utils.common.exceptions import exception
 
 
-# class MySystemMiddleware(MiddlewareMixin):  # 继承Middlewaremixin
-
+class MySystemMiddleware(MiddlewareMixin):  # 继承Middlewaremixin
+    pass
     # def process_exception(self, request, exceptions):
     #     print(request)
     #     print(exceptions,type(exceptions))
@@ -13,5 +13,15 @@ from utils.common.exceptions import exception
     #     print(response)
     #
     #     return response
+
+    # def process_request(self, request):
+    #     print("This is process_request : ", request.user)
+    #
+    #     return None
+
+    # def process_view(self, request, callback, callback_args, callback_kwargs):
+    #     print("This is process_view : ", request.user)
+
+
 
 

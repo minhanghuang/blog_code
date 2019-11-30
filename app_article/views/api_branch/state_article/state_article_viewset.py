@@ -15,7 +15,7 @@ class GetStateArticleViewSet(MyListModeMixin):
     # authentication_classes = ()  # 验证
     # permission_classes = ()  # 权限
     queryset = models.Article.objects.all().order_by("-createdate") # 倒序
-    msg_list = "获取文章状态数量" # 提示信息
+    msg_list = "获取文章状态数量1" # 提示信息
     filter_backends = (rest_framework.DjangoFilterBackend,filters.SearchFilter,)
     filter_class = GetArticleListFilter
     search_fields = ('title', 'subtitle', 'content',)
@@ -31,7 +31,7 @@ class GetStateArticleViewSet(MyListModeMixin):
         results_dict["public"] = len(queryset.filter(state=1))
         results_dict["private"] = len(queryset.filter(state=2))
         results_dict["draft"] = len(queryset.filter(state=0))
-        results_dict["delete"] = len(queryset.filter(state=3))
+        results_dict["del"] = len(queryset.filter(state=3))
 
         return Response({
             "success": True,
