@@ -55,7 +55,7 @@ class CreateModel(CreateModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(CreateModel, self).initial(request, *args, **kwargs)
-
+        self.intercept_visitor_request(request=request)
 
 class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
@@ -77,6 +77,8 @@ class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(DestroyModel, self).initial(request, *args, **kwargs)
+        self.intercept_visitor_request(request=request)
+
 
 class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
 
@@ -110,6 +112,7 @@ class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(UpdateModel, self).initial(request, *args, **kwargs)
+        self.intercept_visitor_request(request=request)
 
 
 class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
@@ -138,6 +141,7 @@ class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(ListModel, self).initial(request, *args, **kwargs)
+        self.intercept_visitor_request(request=request)
 
 
 class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
@@ -161,7 +165,7 @@ class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(RetrieveModel, self).initial(request, *args, **kwargs)
-        print("RetrieveModel_initial")
+        self.intercept_visitor_request(request=request)
 
 class APIViewModel(APIView,MyUnitBase):
 
@@ -180,3 +184,4 @@ class APIViewModel(APIView,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(APIViewModel, self).initial(request, *args, **kwargs)
+        self.intercept_visitor_request(request=request)

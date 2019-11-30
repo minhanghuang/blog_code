@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate
 from rest_framework_jwt.settings import api_settings
 from django.shortcuts import get_object_or_404
 from utils.common.exceptions import exception
-
+from rest_framework import status
+from rest_framework.response import Response
 
 class MyUnitBase(object):
     """基本单元类"""
@@ -94,5 +95,18 @@ class MyUnitBase(object):
 
         return token
 
-    
+    def intercept_visitor_request(self, request):
+
+        action = self.action
+        username = request.user.username
+        print("action:",action)
+        print("action:",request.user.username)
+        if action in ["create","destroy","update"] and username == "coco": # retrieve list
+            raise exception.myException403({
+                "success": False,
+                "msg": "游客暂无权限",
+                "results": "",
+            })
+
+        return None
 
