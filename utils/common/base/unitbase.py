@@ -99,8 +99,6 @@ class MyUnitBase(object):
 
         action = self.action
         username = request.user.username
-        print("action:",action)
-        print("action:",request.user.username)
         if action in ["create","destroy","update"] and username == "coco": # retrieve list
             raise exception.myException403({
                 "success": False,

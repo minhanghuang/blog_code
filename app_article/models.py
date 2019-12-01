@@ -84,7 +84,7 @@ class Article(models.Model):
         verbose_name="置顶",
     )
     tag = models.CharField(
-        default="{}",
+        default="[]",
         max_length=127,
         verbose_name="标签",
     )

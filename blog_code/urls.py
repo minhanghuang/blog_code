@@ -19,7 +19,7 @@ from django.urls import path
 # from rest_framework_swagger.renderers import SwaggerUIRenderer,OpenAPIRenderer # swagger
 # schema_view = get_schema_view(title='API',renderer_classes=[SwaggerUIRenderer,OpenAPIRenderer])
 from rest_framework.documentation import include_docs_urls
-
+from rest_framework_jwt.views import verify_jwt_token
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('api/article/', include('app_article.urls')),
     path('api/user/', include('app_user.urls')),
     path('api/test/', include('app_test.urls')),
+    path('api/token-verify/', verify_jwt_token),
 ]

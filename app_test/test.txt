@@ -1,0 +1,21 @@
+server {
+        listen 19701;
+        server_name api.minhung.me; # 如果服务器已经被域名解析,必须填域名
+        access_log  /var/log/nginx/access.log  main;
+        charset  utf-8;
+        gzip on;
+        gzip_types text/plain application/x-javascript text/css text/javascript application/x-httpd-php application/json text/json image/jpeg image/gif image/png application/octet-stream;
+        error_page  404           /404.html;
+        error_page   500 502 503 504  /50x.html;
+        # 指定项目路径uwsgi
+        location / {
+            include uwsgi_params;
+            uwsgi_connect_timeout 30;
+            uwsgi_pass unix:/opt/blog/api/blog_code/script/uwsgi.sock;
+        }
+        # 指定静态文件路径
+        # location /static/ {
+        #    alias  /opt/pro/pro/static/;
+        #    index  index.html index.htm;
+        # }
+    }
