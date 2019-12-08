@@ -13,6 +13,6 @@ class ListArticleViewSetBlog(MyListModeMixin):
 
     authentication_classes = ()  # 验证
     permission_classes = ()  # 权限
-    queryset = models.Article.objects.all().order_by("-createdate") # 倒序
+    queryset = models.Article.objects.all().filter(state=1).order_by("-createdate") # 公开+倒序
     msg_list = "查看博文列表_客户端" # 提示信息
     serializer_class = ListArticleSerializerBlog # 序列化类
