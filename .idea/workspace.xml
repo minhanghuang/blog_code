@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_article/views_blog/utils/pages/page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/settings.py" afterPath="$PROJECT_DIR$/blog_code/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
