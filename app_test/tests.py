@@ -14,6 +14,37 @@ from django.test import TestCase
 #
 # print(upload_images_path("","njjbjkn.jpg"))
 
-import random
+# import random
+#
+# print(random.randint(1,2))
 
-print(random.randint(1,2))
+import jieba
+
+from wordcloud import WordCloud
+
+# with open("word.txt") as fp:
+#     txt = fp.read()  # 读取文本
+#
+# words = jieba.lcut(txt)  # 精确分词
+#
+# nextword = ''.join(words)  # 空格连接字符
+#
+# print(nextword)
+import numpy as np
+x, y = np.ogrid[:400, :400]
+
+mask = (x - 200) ** 2 + (y - 200) ** 2 > 200 ** 2
+mask = 255 * mask.astype(int)
+print(mask)
+text = "Python Python Django Vue Vue Nginx Apache Celery iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
+wordshow = WordCloud(background_color='white',
+                     # width=500,
+                     # height=500,
+                     # max_words=50,
+                     # max_font_size=100,
+                    repeat=True,
+                    mask=mask,
+                     font_path='/System/Library/Fonts/Monaco.dfont',  # 用微软雅黑作为字体显示效果
+                     ).generate(text)
+
+wordshow.to_file('tes4.png')  # 转换成图片
