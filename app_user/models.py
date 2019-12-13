@@ -69,3 +69,11 @@ class UserProfile(AbstractUser):
 
     class Meta:
         db_table = 'app_user_UserProfile' # 数据库名
+
+class UserData(models.Model):
+    """用户资料-目前仅仅支持一个用户"""
+
+    cloudword = models.TextField(
+        default="",
+        verbose_name="云词图base64",
+    )
