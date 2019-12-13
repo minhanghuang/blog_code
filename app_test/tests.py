@@ -36,7 +36,7 @@ x, y = np.ogrid[:400, :400]
 mask = (x - 200) ** 2 + (y - 200) ** 2 > 200 ** 2
 mask = 255 * mask.astype(int)
 print(mask)
-text = "Python Python Django Vue Vue Nginx Apache Celery iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
+text = "Python Python Django Vue Vue Nginx Apache  iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
 wordshow = WordCloud(background_color='white',
                      # width=500,
                      # height=500,
