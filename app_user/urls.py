@@ -9,6 +9,8 @@ from app_user.views.api.user.detail_user.detail_user_viewset import DetailUserVi
 from app_user.views_blog.api.detail_user.detail_user_viewset import DetailUserViewSetBlog
 from app_user.views.api.user.update_user.update_user_viewset import UpdateUserViewSet
 from app_user.views.api.user.update_avatar.update_avatar_viewset import UpdateAvatarViewSet
+from app_user.views.api.data.updata_cloudword.updata_cloudword_viewset import UpdateCloudWordViewSet
+from app_user.views.api.data.detail_data.detail_data_viewset import DetailDataViewSet
 
 LoginUserViewSetRouter = routers.DefaultRouter() # 登录
 LoginUserViewSetRouter.register('', LoginUserViewSet,base_name="")
@@ -24,6 +26,10 @@ UpdateUserViewSetRouter = routers.DefaultRouter() # 更新用户详细信息
 UpdateUserViewSetRouter.register('', UpdateUserViewSet,base_name="")
 UpdateAvatarViewSetRouter = routers.DefaultRouter() # 更新用户头像
 UpdateAvatarViewSetRouter.register('', UpdateAvatarViewSet,base_name="")
+UpdateCloudWordViewSetRouter = routers.DefaultRouter() # 更新用户云词图
+UpdateCloudWordViewSetRouter.register('', UpdateCloudWordViewSet,base_name="")
+DetailDataViewSetRouter = routers.DefaultRouter() # 查看data信息
+DetailDataViewSetRouter.register('', DetailDataViewSet,base_name="")
 
 
 
@@ -35,4 +41,6 @@ urlpatterns = [
     path('blog/detail-user/', include(DetailUserViewSetBlogSetRouter.urls)), # 查看用户详细信息_客户端
     path('update-user/', include(UpdateUserViewSetRouter.urls)), # 更新用户详细信息
     path('update-avataruser/', include(UpdateAvatarViewSetRouter.urls)), # 更新用户头像
+    path('data/update-cloudword/', include(UpdateCloudWordViewSetRouter.urls)), # 更新用户云词图
+    path('data/detail-data/', include(DetailDataViewSetRouter.urls)), # 查看data信息
 ]

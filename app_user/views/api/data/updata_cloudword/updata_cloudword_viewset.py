@@ -14,5 +14,10 @@ class UpdateCloudWordViewSet(MyCreateModeMixin):
     msg_detail = "更新云词图" # 提示信息
     serializer_class = UpdateCloudWordSerializer # 序列化类
     queryset = models.UserData.objects.all() # models
-    # lookup_field = "pk"  # 主键
+
+
+    # def create(self, request, *args, **kwargs):
+    #     print("request:",request.data)
+    #
+    #     return
 

@@ -31,9 +31,9 @@ from wordcloud import WordCloud
 #
 # print(nextword)
 import numpy as np
-x, y = np.ogrid[:400, :400]
+x, y = np.ogrid[:600, :600]
 
-mask = (x - 200) ** 2 + (y - 200) ** 2 > 200 ** 2
+mask = (x - 300) ** 2 + (y - 300) ** 2 > 300 ** 2
 mask = 255 * mask.astype(int)
 print(mask)
 text = "Python Python Django Vue Vue Nginx Apache  iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "

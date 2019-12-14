@@ -1,11 +1,39 @@
 from drf_dynamic_fields import DynamicFieldsMixin
 from rest_framework import serializers
 from faker import Faker
+from wordcloud import WordCloud
+import numpy as np
+
 
 fake_obj = Faker(locale='zh_CN') # 生成一个Faker对象(中文),默认不传参数时为英文
 
 
 class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
+
+
+    def create_cloudword_base64(self, circle, width, tag, color, full):
+        """
+        生成云词图
+        :param circle: 是否是圆形
+        :param width: 大小
+        :param tag: 关键字
+        :param color: 背景颜色
+        :param full: 是否填充
+        :return: 云词图base64
+        """
+
+        tag_str = "" # 空格隔开
+        tag = eval(tag)
+        if isinstance(tag, list):
+            for foo in tag:
+                tag_str = " ".join((tag_str,foo))
+
+        
+
+
+        print("tag_str:",tag_str)
+
+        return ""
 
     def get_fake_obj(self):
         """

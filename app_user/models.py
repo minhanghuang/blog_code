@@ -77,3 +77,7 @@ class UserData(models.Model):
         default="",
         verbose_name="云词图base64",
     )
+    tag = models.TextField(
+        default="[]",
+        verbose_name="标签",
+    )
