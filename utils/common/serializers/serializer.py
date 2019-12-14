@@ -29,18 +29,19 @@ class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
             for foo in tag:
                 tag_str = " ".join((tag_str,foo))
 
-        mask = None # 设置默认
         if circle: # 圆形
 
             x, y = np.ogrid[:width, :width]
             mask = (x - int(width/2)) ** 2 + (y - int(width/2)) ** 2 > int(width/2) ** 2
             mask = 255 * mask.astype(int)
+        else:
+            mask = None  # 设置默认
 
         wordshow = WordCloud(
             background_color=color,
             width=width,
             height=width,
-            repeat= True if full =="true" else False,
+            repeat= full,
             mask=mask,
             font_path='/System/Library/Fonts/Monaco.dfont',
         ).generate(tag_str)

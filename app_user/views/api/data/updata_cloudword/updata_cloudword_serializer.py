@@ -62,11 +62,11 @@ class UpdateCloudWordSerializer(MySerializerBase):
     def create(self, validated_data):
 
         cloudword_base64 = self.create_cloudword_base64(
-            circle = validated_data.get("circle", True),
+            circle = True if validated_data.get("circle")=="true" else False,
             width = validated_data.get("width", 300),
             tag = validated_data.get("tag", '["Python"]'),
             color = validated_data.get("color", 'rgba(255,255,255,1)'),
-            full = validated_data.get("full", True),
+            full = True if validated_data.get("full")=="true" else False,
         )
         data_list = models.UserData.objects.filter(id=1)
         if not data_list.exists(): # 如果id=1的数据不存在, 新建

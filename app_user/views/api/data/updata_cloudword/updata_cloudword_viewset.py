@@ -16,8 +16,3 @@ class UpdateCloudWordViewSet(MyCreateModeMixin):
     queryset = models.UserData.objects.all() # models
 
 
-    # def create(self, request, *args, **kwargs):
-    #     print("request:",request.data)
-    #
-    #     return
-
