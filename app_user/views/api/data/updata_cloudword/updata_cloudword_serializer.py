@@ -15,6 +15,11 @@ class UpdateCloudWordSerializer(MySerializerBase):
         required=False,
         allow_null=True,
     )
+    cloudword_width = serializers.SerializerMethodField(
+        label="返回图片大小",
+        required=False,
+        allow_null=True,
+    )
     circle = serializers.CharField(
         label="图片形状(True:圆形,False:正方形)",
         required=False,
@@ -26,7 +31,7 @@ class UpdateCloudWordSerializer(MySerializerBase):
         required=False,
         allow_null=True,
     )
-    width = serializers.CharField(
+    width = serializers.IntegerField(
         label="图片大小",
         required=False,
         allow_null=True,
@@ -44,15 +49,17 @@ class UpdateCloudWordSerializer(MySerializerBase):
 
     class Meta:
         model = models.UserData
-        fields = ["cloudword","circle","tag","width","color","full",]
+        fields = ["cloudword","circle","tag","width","color","full","cloudword_width"]
 
     def get_cloudword(self,obj):
 
         return 'data:image/jpeg;base64,%s' % obj.cloudword
 
-    def create(self, validated_data):
+    def get_cloudword_width(self,obj):
 
-        print("validated_data:",validated_data)
+        return obj.cloudword_width
+
+    def create(self, validated_data):
 
         cloudword_base64 = self.create_cloudword_base64(
             circle = validated_data.get("circle", True),
@@ -65,12 +72,15 @@ class UpdateCloudWordSerializer(MySerializerBase):
         if not data_list.exists(): # 如果id=1的数据不存在, 新建
             data_obj = models.UserData.objects.create(
                 id = 1,
-                tag = validated_data.get("tag",'["Python"]')
+                tag = validated_data.get("tag",'["Python"]'),
+                width = validated_data.get("width","260"),
             )
         else:
             data_obj = data_list.first()
 
         data_obj.cloudword = cloudword_base64
+        data_obj.cloudword_width = validated_data.get("width","260")
+        data_obj.tag = validated_data.get("tag",'["Python"]')
         data_obj.save()
 
         return data_obj

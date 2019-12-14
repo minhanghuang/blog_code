@@ -16,10 +16,9 @@ class DetailDataSerializer(MySerializerBase):
         allow_null=True,
     )
 
-
     class Meta:
         model = models.UserData
-        fields = ["cloudword","tag",]
+        fields = ["cloudword","tag","cloudword_width"]
 
     def get_cloudword(self,obj):
 

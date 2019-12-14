@@ -3,7 +3,8 @@ from rest_framework import serializers
 from faker import Faker
 from wordcloud import WordCloud
 import numpy as np
-
+from django.conf import settings
+import base64
 
 fake_obj = Faker(locale='zh_CN') # 生成一个Faker对象(中文),默认不传参数时为英文
 
@@ -28,12 +29,28 @@ class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
             for foo in tag:
                 tag_str = " ".join((tag_str,foo))
 
-        
+        mask = None # 设置默认
+        if circle: # 圆形
 
+            x, y = np.ogrid[:width, :width]
+            mask = (x - int(width/2)) ** 2 + (y - int(width/2)) ** 2 > int(width/2) ** 2
+            mask = 255 * mask.astype(int)
 
-        print("tag_str:",tag_str)
+        wordshow = WordCloud(
+            background_color=color,
+            width=width,
+            height=width,
+            repeat= True if full =="true" else False,
+            mask=mask,
+            font_path='/System/Library/Fonts/Monaco.dfont',
+        ).generate(tag_str)
 
-        return ""
+        path = "".join((settings.MEDIA_ROOT,"/images/cloudword/temp.png"))
+        wordshow.to_file(path)
+        with open(path,"rb") as f:
+            base64_data = base64.b64encode(f.read()).decode()
+
+        return base64_data
 
     def get_fake_obj(self):
         """

@@ -77,6 +77,11 @@ class UserData(models.Model):
         default="",
         verbose_name="云词图base64",
     )
+    cloudword_width = models.CharField(
+        default="260",
+        verbose_name="云词图大小",
+        max_length=64,
+    )
     tag = models.TextField(
         default="[]",
         verbose_name="标签",

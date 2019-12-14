@@ -37,13 +37,13 @@ mask = (x - 300) ** 2 + (y - 300) ** 2 > 300 ** 2
 mask = 255 * mask.astype(int)
 print(mask)
 text = "Python Python Django Vue Vue Nginx Apache  iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
-wordshow = WordCloud(background_color='white',
-                     # width=500,
-                     # height=500,
+wordshow = WordCloud(background_color='rgba(255,255,255,1)',
+                     width=100,
+                     height=100,
                      # max_words=50,
                      # max_font_size=100,
                     repeat=True,
-                    mask=mask,
+                    mask=None,
                      font_path='/System/Library/Fonts/Monaco.dfont',  # 用微软雅黑作为字体显示效果
                      ).generate(text)
 
