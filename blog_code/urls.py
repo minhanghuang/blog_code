@@ -20,13 +20,20 @@ from django.urls import path
 # schema_view = get_schema_view(title='API',renderer_classes=[SwaggerUIRenderer,OpenAPIRenderer])
 from rest_framework.documentation import include_docs_urls
 from rest_framework_jwt.views import verify_jwt_token
+from blog_code.config import myconfig
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('', schema_view, name='docs'),  # 配置swagger的url路径
-    path('', include_docs_urls(title='接口文档')),  # coreapi接口路径
     path('api/article/', include('app_article.urls')),
     path('api/user/', include('app_user.urls')),
     path('api/test/', include('app_test.urls')),
     path('api/token-verify/', verify_jwt_token),
 ]
+
+
+if myconfig.APIDOCSROUTER: # 允许打开Api文档路由
+    urlpatterns.append(
+        path('docs/', include_docs_urls(title='接口文档')),  # coreapi接口路径
+    )
+

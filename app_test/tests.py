@@ -31,20 +31,24 @@ from wordcloud import WordCloud
 #
 # print(nextword)
 import numpy as np
-x, y = np.ogrid[:600, :600]
+# x, y = np.ogrid[:600, :600]
+#
+# mask = (x - 300) ** 2 + (y - 300) ** 2 > 300 ** 2
+# mask = 255 * mask.astype(int)
+# print(mask)
+# text = "Python Python Django Vue Vue Nginx Apache  iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
+# wordshow = WordCloud(background_color='rgba(255,255,255,1)',
+#                      width=100,
+#                      height=100,
+#                      # max_words=50,
+#                      # max_font_size=100,
+#                     repeat=True,
+#                     mask=None,
+#                      font_path='/System/Library/Fonts/Monaco.dfont',  # 用微软雅黑作为字体显示效果
+#                      ).generate(text)
+#
+# wordshow.to_file('tes4.png')  # 转换成图片
 
-mask = (x - 300) ** 2 + (y - 300) ** 2 > 300 ** 2
-mask = 255 * mask.astype(int)
-print(mask)
-text = "Python Python Django Vue Vue Nginx Apache  iView Element RabbitMQ Redis MySQL Scrapy Mac CentOS JavaScript MongoDB C/C++ webSocket ARM STM32 NPN "
-wordshow = WordCloud(background_color='rgba(255,255,255,1)',
-                     width=100,
-                     height=100,
-                     # max_words=50,
-                     # max_font_size=100,
-                    repeat=True,
-                    mask=None,
-                     font_path='/System/Library/Fonts/Monaco.dfont',  # 用微软雅黑作为字体显示效果
-                     ).generate(text)
+import platform
 
-wordshow.to_file('tes4.png')  # 转换成图片
+print(platform.platform())
