@@ -43,7 +43,7 @@ class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
             height=width,
             repeat= full,
             mask=mask,
-            font_path='/System/Library/Fonts/Monaco.dfont',
+            font_path=settings.FONTPATH,
         ).generate(tag_str)
 
         path = "".join((settings.MEDIA_ROOT,"/images/cloudword/temp.png"))

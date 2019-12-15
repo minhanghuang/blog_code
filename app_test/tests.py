@@ -52,3 +52,4 @@ import numpy as np
 import platform
 
 print(platform.platform())
+print(platform.uname().system)

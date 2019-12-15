@@ -252,3 +252,6 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
     'token',
 )
+
+
+FONTPATH = myconfig.FONTPATH
