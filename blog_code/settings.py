@@ -254,4 +254,4 @@ CORS_ALLOW_HEADERS = (
 )
 
 
-FONTPATH = myconfig.FONTPATH
+FONTPATH = myconfig.FONTPATH # 系统字体
