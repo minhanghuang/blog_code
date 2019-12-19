@@ -86,3 +86,7 @@ class UserData(models.Model):
         default="[]",
         verbose_name="标签",
     )
+    timeline = models.TextField(
+        default="",
+        verbose_name="时光轴内容"
+    )

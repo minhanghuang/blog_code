@@ -60,7 +60,15 @@ class UpdateCloudWordSerializer(MySerializerBase):
         return obj.cloudword_width
 
     def create(self, validated_data):
-
+        """
+        生成Data数据
+        无论Data里面数据的id是多少,总是选择id=1的数据进行修改/新增
+        不存在id=1的数据就新增, 存在就修改
+        仅仅涉及 id tag cloudword_width cloudword 这四个字段
+        其他字段, 单独新增接口操作
+        :param validated_data:
+        :return:
+        """
         cloudword_base64 = self.create_cloudword_base64(
             circle = True if validated_data.get("circle")=="true" else False,
             width = validated_data.get("width", 300),
@@ -73,14 +81,14 @@ class UpdateCloudWordSerializer(MySerializerBase):
             data_obj = models.UserData.objects.create(
                 id = 1,
                 tag = validated_data.get("tag",'["Python"]'),
-                width = validated_data.get("width","260"),
+                cloudword_width = validated_data.get("width","260"),
             )
         else:
             data_obj = data_list.first()
 
-        data_obj.cloudword = cloudword_base64
-        data_obj.cloudword_width = validated_data.get("width","260")
-        data_obj.tag = validated_data.get("tag",'["Python"]')
+        data_obj.cloudword = cloudword_base64 # 赋值 云词图base64
+        data_obj.cloudword_width = validated_data.get("width","260") # 赋值 云词图 宽度
+        data_obj.tag = validated_data.get("tag",'["Python"]') # 赋值 标签
         data_obj.save()
 
         return data_obj
