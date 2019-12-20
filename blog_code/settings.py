@@ -257,14 +257,29 @@ CORS_ALLOW_HEADERS = (
 FONTPATH = myconfig.FONTPATH # 系统字体
 
 
-# 缓存
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",  # 这里设定了本机的redis数据
-        # "LOCATION": "redis://:passwordpassword@47.193.146.xxx:6379/0", # 如果redis设置密码的话，需要以这种格式host前面是密码
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# # 缓存
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379",  # 这里设定了本机的redis数据
+#         # "LOCATION": "redis://:passwordpassword@47.193.146.xxx:6379/0", # 如果redis设置密码的话，需要以这种格式host前面是密码
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
+
+
+# 配置redis
+# CACHESREDIS = {
+#     "BASEDB":{ # 基本的数据库
+#         "HOST": "127.0.0.1",
+#         "PORT": 6379,
+#         "DB": 0,
+#     },
+#     "CELERYDB":{ # celery中间人数据库
+#         "HOST": "127.0.0.1",
+#         "PORT": 6379,
+#         "DB": 1,
+#     }
+# }

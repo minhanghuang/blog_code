@@ -1,5 +1,5 @@
 import platform
-
+from basedata.initdata import init_data
 
 
 class MyConfig(object):
@@ -47,6 +47,15 @@ class MyConfig(object):
             self.FONTPATH = "C:/Windows/Fonts/STFANGSO.ttf"
 
         return None
+
+    def get_redis_config(self):
+
+        redis_dict = {}
+        redis_dict["host"] = init_data["redis"]["basedb"]["host"]
+        redis_dict["port"] = init_data["redis"]["basedb"]["port"]
+        redis_dict["db"] = init_data["redis"]["basedb"]["db"]
+
+        return redis_dict
 
 
 
