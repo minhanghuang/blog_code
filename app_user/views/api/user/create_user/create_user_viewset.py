@@ -1,9 +1,8 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
-from app_user.views.api.user.create_user.create_user_serializer import CreateUserSerializer
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework import permissions
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
-
+from app.utils.common.mixins.mixin import MyCreateModeMixin
+from app_user.views.api.user.create_user.create_user_serializer import CreateUserSerializer
 
 
 class CreateUserViewSet(MyCreateModeMixin):

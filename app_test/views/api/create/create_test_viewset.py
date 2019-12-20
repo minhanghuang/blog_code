@@ -1,7 +1,5 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_test.views.api.create.create_test_serializer import CreateTestSerializer
-from rest_framework import status
-from rest_framework.response import Response
 
 
 class CreateTestViewSet(MyCreateModeMixin):

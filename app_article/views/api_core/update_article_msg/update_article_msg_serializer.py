@@ -1,9 +1,8 @@
-from app_article import models
-from utils.common.serializers.serializer import MySerializerBase
 from rest_framework import serializers
-from utils.common.exceptions import exception
+from app.utils.common.serializers.serializer import MySerializerBase
 
-
+from app.utils.common.exceptions import exception
+from app_article import models
 
 
 class UpdateArticleMsgSerializer(MySerializerBase):

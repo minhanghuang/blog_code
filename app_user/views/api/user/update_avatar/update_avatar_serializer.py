@@ -1,10 +1,9 @@
 from rest_framework import serializers
+from app.utils.common.files.file import FileBase
+from app.utils.common.serializers.serializer import MySerializerBase
+
+from app.utils.common.exceptions import exception
 from app_user import models
-from utils.common.serializers.serializer import MySerializerBase
-from utils.common.exceptions import exception
-from utils.common.files.file import FileBase
-
-
 
 
 class UpdateAvatarSerializer(MySerializerBase):

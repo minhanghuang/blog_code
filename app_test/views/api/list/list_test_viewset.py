@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyListModeMixin
-from app_test.views.api.list.list_test_serializer import ListTestSerializer
+from app.utils.common.mixins.mixin import MyListModeMixin
 from app_test import models
-
-
-
+from app_test.views.api.list.list_test_serializer import ListTestSerializer
 
 
 class ListTestViewSet(MyListModeMixin):

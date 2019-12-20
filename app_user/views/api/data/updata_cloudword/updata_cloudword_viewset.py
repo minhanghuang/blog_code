@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
-from app_user.views.api.data.updata_cloudword.updata_cloudword_serializer import UpdateCloudWordSerializer
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_user import models
-
-
-
+from app_user.views.api.data.updata_cloudword.updata_cloudword_serializer import UpdateCloudWordSerializer
 
 
 class UpdateCloudWordViewSet(MyCreateModeMixin):

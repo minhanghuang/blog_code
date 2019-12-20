@@ -1,7 +1,5 @@
+from app.utils.common.serializers.serializer import MySerializerBase
 from app_article import models
-from utils.common.serializers.serializer import MySerializerBase
-
-
 
 
 class CreateArticleSerializer(MySerializerBase):

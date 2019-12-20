@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyUpdateModelMixin
-from app_user.views.api.user.update_user.update_user_serializer import UpdateUserSerializer
+from app.utils.common.mixins.mixin import MyUpdateModelMixin
 from app_user import models
-
-
-
+from app_user.views.api.user.update_user.update_user_serializer import UpdateUserSerializer
 
 
 class UpdateUserViewSet(MyUpdateModelMixin):

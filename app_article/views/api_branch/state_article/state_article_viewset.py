@@ -1,12 +1,12 @@
-from rest_framework import status
-from rest_framework.response import Response
-from utils.common.mixins.mixin import MyListModeMixin
-from app_article.views.api_branch.state_article.state_article_serializer import GetStateArticleSerializer
-from app_article import models
 from django_filters import rest_framework
 from rest_framework import filters
-from app_article.views.filter.article.list import GetArticleListFilter
+from rest_framework import status
+from rest_framework.response import Response
 
+from app.utils.common.mixins.mixin import MyListModeMixin
+from app_article import models
+from app_article.views.api_branch.state_article.state_article_serializer import GetStateArticleSerializer
+from app_article.views.filter.article.list import GetArticleListFilter
 
 
 class GetStateArticleViewSet(MyListModeMixin):

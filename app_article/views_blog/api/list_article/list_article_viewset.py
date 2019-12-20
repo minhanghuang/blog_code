@@ -1,11 +1,7 @@
-from utils.common.mixins.mixin import MyListModeMixin
-from app_article.views_blog.api.list_article.list_article_serializer import ListArticleSerializerBlog
+from app.utils.common.mixins.mixin import MyListModeMixin
 from app_article import models
+from app_article.views_blog.api.list_article.list_article_serializer import ListArticleSerializerBlog
 from app_article.views_blog.utils.pages.page import MyArticlePagination
-
-
-
-
 
 
 class ListArticleViewSetBlog(MyListModeMixin):

@@ -1,4 +1,4 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_article.views.api_core.create_article.create_article_serializer import CreateArticleSerializer
 
 

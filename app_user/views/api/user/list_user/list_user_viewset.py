@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyListModeMixin
-from app_user.views.api.user.list_user.list_user_serializer import ListUserSerializer
+from app.utils.common.mixins.mixin import MyListModeMixin
 from app_user import models
-
-
-
+from app_user.views.api.user.list_user.list_user_serializer import ListUserSerializer
 
 
 class ListUserViewSet(MyListModeMixin):

@@ -1,8 +1,6 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_test.views.api.create_imag.create_test_serializer import CreateImagSerializer
-from rest_framework import status
-from rest_framework.response import Response
-from app_test import models
+
 
 class CreateImagViewSet(MyCreateModeMixin):
     """新增图片"""

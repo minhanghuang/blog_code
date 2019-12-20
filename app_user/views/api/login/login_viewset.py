@@ -1,8 +1,10 @@
-from rest_framework.response import Response
 from rest_framework import status
-from utils.common.mixins.mixin import MyCreateModeMixin
-from app_user.views.api.login.login_serializer import LoginUserSerializer
+from rest_framework.response import Response
+
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_user import models
+from app_user.views.api.login.login_serializer import LoginUserSerializer
+
 
 class LoginUserViewSet(MyCreateModeMixin):
     """用户登录"""

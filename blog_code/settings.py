@@ -17,7 +17,6 @@ from blog_code.config import myconfig
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -176,7 +175,7 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer', # 浏览器模式
     ),
-    'EXCEPTION_HANDLER': 'utils.common.exceptions.exception.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'app.utils.common.exceptions.exception.custom_exception_handler',
 
     'DEFAULT_THROTTLE_CLASSES': (
         # 'rest_framework.throttling.AnonRateThrottle',
@@ -202,7 +201,7 @@ JWT_AUTH = {
 
 # from django.contrib.auth import authenticate # 验证使用
 AUTHENTICATION_BACKENDS = (
-    'utils.common.authenticates.authenticate.CustomBackend',
+    'app.utils.common.authenticates.authenticate.CustomBackend',
 )
 
 
@@ -269,7 +268,14 @@ FONTPATH = myconfig.FONTPATH # 系统字体
 #     }
 # }
 
-
+import fakeredis
+CACHES = {
+    "default": {
+        "OPTIONS": {
+            "REDIS_CLIENT_CLASS": "fakeredis.FakeStrictRedis",
+        }
+    }
+}
 # 配置redis
 # CACHESREDIS = {
 #     "BASEDB":{ # 基本的数据库

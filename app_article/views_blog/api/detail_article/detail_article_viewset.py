@@ -1,14 +1,10 @@
+from django.db.models import F
 from rest_framework import status
 from rest_framework.response import Response
-from utils.common.mixins.mixin import MyRetrieveModelMixin
-from app_article.views_blog.api.detail_article.detail_article_serializer import DetailArticleSerializerBlog
+
+from app.utils.common.mixins.mixin import MyRetrieveModelMixin
 from app_article import models
-from django.db.models import F
-
-
-
-
-
+from app_article.views_blog.api.detail_article.detail_article_serializer import DetailArticleSerializerBlog
 
 
 class DetailArticleViewSetBlog(MyRetrieveModelMixin):

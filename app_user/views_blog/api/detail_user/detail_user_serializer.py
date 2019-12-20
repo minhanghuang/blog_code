@@ -1,8 +1,7 @@
 from rest_framework import serializers
+
+from app.utils.common.serializers.serializer import MySerializerBase
 from app_user import models
-from utils.common.serializers.serializer import MySerializerBase
-
-
 
 
 class DetailUserSerializerBlog(MySerializerBase):

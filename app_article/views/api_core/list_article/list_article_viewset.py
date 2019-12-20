@@ -1,14 +1,10 @@
-from utils.common.mixins.mixin import MyListModeMixin
-from app_article.views.api_core.list_article.list_article_serializer import ListArticleSerializer
-from app_article import models
 from django_filters import rest_framework
 from rest_framework import filters
+
+from app.utils.common.mixins.mixin import MyListModeMixin
+from app_article import models
+from app_article.views.api_core.list_article.list_article_serializer import ListArticleSerializer
 from app_article.views.filter.article.list import GetArticleListFilter
-
-
-
-
-
 
 
 class ListArticleViewSet(MyListModeMixin):

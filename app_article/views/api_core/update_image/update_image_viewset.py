@@ -1,4 +1,4 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_article.views.api_core.update_image.update_image_serializer import UpdateImageSerializer
 
 

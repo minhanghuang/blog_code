@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyCreateModeMixin
-from app_user.views.api.user.update_avatar.update_avatar_serializer import UpdateAvatarSerializer
+from app.utils.common.mixins.mixin import MyCreateModeMixin
 from app_user import models
-
-
-
+from app_user.views.api.user.update_avatar.update_avatar_serializer import UpdateAvatarSerializer
 
 
 class UpdateAvatarViewSet(MyCreateModeMixin):

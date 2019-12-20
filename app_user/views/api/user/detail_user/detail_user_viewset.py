@@ -1,9 +1,6 @@
-from utils.common.mixins.mixin import MyRetrieveModelMixin
-from app_user.views.api.user.detail_user.detail_user_serializer import DetailUserSerializer
+from app.utils.common.mixins.mixin import MyRetrieveModelMixin
 from app_user import models
-
-
-
+from app_user.views.api.user.detail_user.detail_user_serializer import DetailUserSerializer
 
 
 class DetailUserViewSet(MyRetrieveModelMixin):
