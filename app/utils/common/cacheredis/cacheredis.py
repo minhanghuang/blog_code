@@ -192,5 +192,3 @@ if __name__ == "__main__":
     # print(my_redis.redis_zrevrange("kk",0,10))
     # # my_redis.flushall()
 
-    my_redis.set()
-

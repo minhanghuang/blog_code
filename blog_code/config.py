@@ -1,5 +1,6 @@
 import platform
-from basedata.initdata import init_data
+
+from basedata.target.initdata import init_data
 
 
 class MyConfig(object):
@@ -38,13 +39,16 @@ class MyConfig(object):
         """
 
         if self.SYSVERSION == "Darwin": # Mac
-            self.FONTPATH = "/System/Library/Fonts/Monaco.dfont" # 不支持中文
+            # self.FONTPATH = "/System/Library/Fonts/Monaco.dfont" # 不支持中文
+            self.FONTPATH = init_data["ttf"]["Mac"]
 
         elif self.SYSVERSION == "Linux": # Linux
-            self.FONTPATH = "/usr/share/fonts/windows/msyh.ttf" # 支持中文
+            # self.FONTPATH = "/usr/share/fonts/windows/msyh.ttf" # 支持中文
+            self.FONTPATH = init_data["ttf"]["Linux"]
 
         else: # Windows
-            self.FONTPATH = "C:/Windows/Fonts/STFANGSO.ttf"
+            # self.FONTPATH = "C:/Windows/Fonts/STFANGSO.ttf"
+            self.FONTPATH = init_data["ttf"]["Windows"]
 
         return None
 
