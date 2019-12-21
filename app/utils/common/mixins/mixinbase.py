@@ -151,8 +151,6 @@ class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
     lookup_field = "pk"  # 主键
 
     def retrieve(self, request, *args, **kwargs):
-        import time
-        print("xxxxxxx", time.time())
         instance = self.get_object()
         serializer = self.get_serializer(instance)
 

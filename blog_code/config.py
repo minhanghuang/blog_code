@@ -68,6 +68,14 @@ class MyConfig(object):
 
         return init_data["celery"]
 
+    def get_sysinit_data(self):
+        """
+        获取系统初始化数据
+        :return: dict
+        """
+
+        return init_data["init"]
+
 
 
 myconfig = MyConfig(
