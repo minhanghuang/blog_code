@@ -267,3 +267,13 @@ FONTPATH = myconfig.FONTPATH # 系统字体
 #         }
 #     }
 # }
+
+
+
+# celery config
+CELERY_BROKER_URL = myconfig.get_celery_config()["CELERY_BROKER_URL"] # redis作为中间件
+CELERY_ACCEPT_CONTENT = myconfig.get_celery_config()["CELERY_ACCEPT_CONTENT"]
+CELERY_TASK_SERIALIZER = myconfig.get_celery_config()["CELERY_TASK_SERIALIZER"]
+CELERY_RESULT_BACKEND = myconfig.get_celery_config()["CELERY_RESULT_BACKEND"] # 数据结果存储地址
+CELERY_BEAT_SCHEDULE = myconfig.get_celery_config()["CELERY_BEAT_SCHEDULE"]
+CELERY_TIMEZONE = myconfig.get_celery_config()["CELERY_TIMEZONE"] # 时区

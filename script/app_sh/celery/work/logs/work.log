@@ -1,0 +1,5 @@
+[2019-12-21 21:57:23,784: WARNING/MainProcess] /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-12-21 22:10:54,102: WARNING/MainProcess] /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-12-21 22:11:25,545: WARNING/MainProcess] Restoring 16 unacknowledged message(s)

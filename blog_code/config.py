@@ -1,5 +1,4 @@
 import platform
-
 from basedata.target.initdata import init_data
 
 
@@ -61,8 +60,21 @@ class MyConfig(object):
 
         return redis_dict
 
+    def get_celery_config(self):
+        """
+        获取celery配置文件
+        :return: dict
+        """
+
+        return init_data["celery"]
+
 
 
 myconfig = MyConfig(
     evn="dev", # dev-本地调试环境; prod-生产环境
 )
+
+
+if __name__ == "__main__":
+
+    print("__main__")
