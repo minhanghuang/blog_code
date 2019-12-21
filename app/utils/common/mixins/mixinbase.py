@@ -26,7 +26,6 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from app.utils.common.paginations.pagination import MyPagination
-
 from app.utils.common.base.unitbase import MyUnitBase
 
 
@@ -184,4 +183,4 @@ class APIViewModel(APIView,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(APIViewModel, self).initial(request, *args, **kwargs)
-        self.intercept_visitor_request(request=request)
+        # self.intercept_visitor_request(request=request) # apiview 没有action

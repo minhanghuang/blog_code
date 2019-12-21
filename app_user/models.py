@@ -73,6 +73,13 @@ class UserProfile(AbstractUser):
 class UserData(models.Model):
     """用户资料-目前仅仅支持一个用户"""
 
+    user = models.OneToOneField(
+        to=UserProfile,
+        on_delete=models.DO_NOTHING,
+        verbose_name="用户",
+        related_name="userdata_user",
+    )
+
     cloudword = models.TextField(
         default="",
         verbose_name="云词图base64",
