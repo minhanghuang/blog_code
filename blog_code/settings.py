@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'app',
     'app_user',
     'app_test',
-    'app_article',
+    'app_article', # 按照app创建的先后循序添加
 ]
 
 MIDDLEWARE = [
@@ -265,27 +265,5 @@ FONTPATH = myconfig.FONTPATH # 系统字体
 #         "OPTIONS": {
 #             "CLIENT_CLASS": "django_redis.client.DefaultClient",
 #         }
-#     }
-# }
-
-import fakeredis
-CACHES = {
-    "default": {
-        "OPTIONS": {
-            "REDIS_CLIENT_CLASS": "fakeredis.FakeStrictRedis",
-        }
-    }
-}
-# 配置redis
-# CACHESREDIS = {
-#     "BASEDB":{ # 基本的数据库
-#         "HOST": "127.0.0.1",
-#         "PORT": 6379,
-#         "DB": 0,
-#     },
-#     "CELERYDB":{ # celery中间人数据库
-#         "HOST": "127.0.0.1",
-#         "PORT": 6379,
-#         "DB": 1,
 #     }
 # }

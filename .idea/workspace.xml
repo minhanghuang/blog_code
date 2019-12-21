@@ -2,80 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/authenticates/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/base/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/cacheredis/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/exceptions/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/files/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/jsonschemas/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/middlewares/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/middlewares/system/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/mixins/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/paginations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/serializers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/signals/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/common/viewsets/__init__.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/authenticates/authenticate.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/base/unitbase.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/cacheredis/cacheredis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/exceptions/exception.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/files/file.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/jsonschemas/jsonschema.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/middlewares/system/middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/mixins/mixin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/mixins/mixinbase.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/paginations/pagination.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/serializers/serializer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/signals/signal.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/common/viewsets/viewset.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/apps.py" afterPath="$PROJECT_DIR$/app/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/list/list_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/list/list_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/list/list_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/list/list_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/login/login_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/login/login_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/login/login_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/login/login_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_viewset.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/utils/common/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/utils/common/cacheredis/__init__.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" afterPath="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/settings.py" afterPath="$PROJECT_DIR$/blog_code/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,6 +18,7 @@
     <SUITE FILE_PATH="coverage/blog_code$jsonschema.coverage" NAME="jsonschema Coverage Results" MODIFIED="1564327234169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/common/jsonschemas" />
     <SUITE FILE_PATH="coverage/blog_code$cacheredis.coverage" NAME="cacheredis Coverage Results" MODIFIED="1576857960989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/common/cacheredis" />
     <SUITE FILE_PATH="coverage/blog_code$redis.coverage" NAME="redis Coverage Results" MODIFIED="1576851672414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/common/redis" />
+    <SUITE FILE_PATH="coverage/blog_code$cacheredis__1_.coverage" NAME="cacheredis (1) Coverage Results" MODIFIED="1576896908263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/utils/common/cacheredis" />
     <SUITE FILE_PATH="coverage/blog_code$test.coverage" NAME="test Coverage Results" MODIFIED="1564500276683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/blog_code$tests.coverage" NAME="tests Coverage Results" MODIFIED="1576422144460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_test" />
   </component>
@@ -118,7 +48,20 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="cacheredis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -129,13 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create-image</find>
-      <find>Image</find>
-      <find>UpdateArticleViewSet</find>
-      <find>update-article</find>
-      <find>validated_data</find>
-      <find>update-msg-article</find>
-      <find>search</find>
       <find>UpdateAvatarSerializer</find>
       <find>update-user</find>
       <find>me</find>
@@ -159,6 +95,13 @@
       <find>CACHES</find>
       <find>set</find>
       <find>hset</find>
+      <find>zincrby</find>
+      <find>zrevrange</find>
+      <find>ZINCRBY</find>
+      <find>ttl</find>
+      <find>delete</find>
+      <find>keys</find>
+      <find>iter_keys</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" />
         <option value="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_serializer.py" />
         <option value="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" />
         <option value="$PROJECT_DIR$/utils/common/middlewares/system/middleware.py" />
@@ -218,6 +160,7 @@
         <option value="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_serializer.py" />
         <option value="$PROJECT_DIR$/app/utils/common/exceptions/exception.py" />
         <option value="$PROJECT_DIR$/blog_code/settings.py" />
+        <option value="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" />
       </list>
     </option>
   </component>
@@ -262,6 +205,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -293,7 +282,7 @@
       <recent name="$PROJECT_DIR$/app_user/views/api/user/update_avatar" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cacheredis">
+  <component name="RunManager" selected="Django server.blog_code">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,24 +297,6 @@
       <module name="blog_code" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="jsonschema" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils/common/jsonschemas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="blog_code" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/common/jsonschemas/myjsonschema.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -380,6 +351,24 @@
       <module name="blog_code" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/common/cacheredis/cacheredis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cacheredis (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/utils/common/cacheredis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="blog_code" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -648,18 +637,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.blog_code" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.jsonschema" />
-      <item index="3" class="java.lang.String" itemvalue="Python.tests" />
-      <item index="4" class="java.lang.String" itemvalue="Python.redis" />
-      <item index="5" class="java.lang.String" itemvalue="Python.cacheredis" />
+      <item index="2" class="java.lang.String" itemvalue="Python.tests" />
+      <item index="3" class="java.lang.String" itemvalue="Python.redis" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cacheredis" />
+      <item index="5" class="java.lang.String" itemvalue="Python.cacheredis (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.cacheredis" />
-        <item index="1" class="java.lang.String" itemvalue="Python.redis" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tests" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.jsonschema" />
+        <item index="0" class="java.lang.String" itemvalue="Python.cacheredis (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cacheredis" />
+        <item index="2" class="java.lang.String" itemvalue="Python.redis" />
+        <item index="3" class="java.lang.String" itemvalue="Python.tests" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -678,7 +667,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17358893" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -687,7 +676,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35569105" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35569105" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -974,22 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-502983299/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="4465" column="8" lean-forward="false" selection-start-line="4465" selection-start-column="8" selection-end-line="4465" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/redis/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3578">
-          <caret line="471" column="6" lean-forward="false" selection-start-line="471" selection-start-column="6" selection-end-line="471" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django_redis/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1021,16 +994,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,20 +1029,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utils/common/exceptions/exception.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="9" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1137,6 +1092,40 @@
         <state relative-caret-position="81">
           <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="268" column="3" lean-forward="false" selection-start-line="268" selection-start-column="3" selection-end-line="268" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-502983299/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="3055" column="6" lean-forward="false" selection-start-line="3055" selection-start-column="6" selection-end-line="3055" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/redis/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1384" column="8" lean-forward="false" selection-start-line="1384" selection-start-column="8" selection-end-line="1384" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
