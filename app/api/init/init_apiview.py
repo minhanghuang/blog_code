@@ -29,16 +29,17 @@ class InitApiView(MyAPIView):
                 "results": ""
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # self.set_lock() # 0 用完一次后,锁住,禁止使用该接口
         self.set_init() # 1 自定义初始化
         self.init_user(request) # 2 初始化用户
         self.init_data() # 3 初始化个人中心
+        # self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
+
 
         return Response({
             "success": True,
             "msg": self.msg_api,
             "results": {
-                "admin_password":self.password,
+                "admin_password":self.admin_password,
                 "admin_username":self.admin_username,
             }
         }, status=status.HTTP_200_OK)
@@ -79,7 +80,7 @@ class InitApiView(MyAPIView):
         :return: None
         """
 
-        self.password = request.data.get("password","haha123456")
+        self.admin_password = request.data.get("password","haha123456")
 
         return None
 
@@ -92,20 +93,23 @@ class InitApiView(MyAPIView):
 
         self.set_admin_password(request) # 设置管理员密码
         for foo in self.data_user:
-            if foo["admin"] == "admin":
-                foo["password"] = "" # 设置密码
-                self.admin_username = foo["admin"]
-            models.UserProfile.objects.create(**foo)
+            if foo["username"] == "admin":
+                foo["password"] = self.admin_password # 设置密码
+                self.admin_username = foo["username"]
+            models.UserProfile.objects.create_user(**foo)
 
         return None
 
     def init_data(self):
         """
-        初始化个人中心
+        初始化个人中心,必须放在init_user之后
         :return: None
         """
 
         obj_admin = models.UserProfile.objects.get(username="admin")
         UserData.objects.create(user=obj_admin, **self.data_data)
+
+        obj_coco = models.UserProfile.objects.get(username="coco")
+        UserData.objects.create(user=obj_coco, **self.data_data)
 
         return None

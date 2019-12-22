@@ -16,5 +16,5 @@ class CustomBackend(ModelBackend):
             if user.check_password(password):
                 return user
         except Exception as e:
-            print("用户登录验证异常except:", e)
+            print("自定义用户验证规则-用户登录验证异常except:", e)
             return None
