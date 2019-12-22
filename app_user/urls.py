@@ -13,6 +13,7 @@ from app_user.views.api.data.detail_data.detail_data_viewset import DetailDataVi
 from app_user.views.api.data.update_timeline.updata_timeline_viewset import UpdateTimeLineViewSet
 from app_user.views.api.data.reset_data.reset_cloudword.reset_cloudword_viewset import ResetCloudWordViewSet
 from app_user.views.api.data.reset_data.reset_data.reset_data_viewset import ResetDataViewSet
+from app_user.views.api.data.reset_data.reset_timeline.reset_timeline_viewset import ResetTimeLineViewSet
 
 LoginUserViewSetRouter = routers.DefaultRouter() # 登录
 LoginUserViewSetRouter.register('', LoginUserViewSet,base_name="")
@@ -38,6 +39,8 @@ ResetCloudWordViewSetRouter = routers.DefaultRouter() # 重置云词图
 ResetCloudWordViewSetRouter.register('', ResetCloudWordViewSet,base_name="")
 ResetDataViewSetRouter = routers.DefaultRouter() # 重置个人中心
 ResetDataViewSetRouter.register('', ResetDataViewSet,base_name="")
+ResetTimeLineViewSetRouter = routers.DefaultRouter() # 重置时光轴
+ResetTimeLineViewSetRouter.register('', ResetTimeLineViewSet,base_name="")
 
 
 
@@ -54,4 +57,5 @@ urlpatterns = [
     path('data/update-timeline/', include(UpdateTimeLineViewSetRouter.urls)), # 更新时光轴
     path('data/reset-cloudword/', include(ResetCloudWordViewSetRouter.urls)), # 重置云词图
     path('data/reset-data/', include(ResetDataViewSetRouter.urls)), # 重置个人中心
+    path('data/reset-timeline/', include(ResetTimeLineViewSetRouter.urls)), # 重置时光轴
 ]

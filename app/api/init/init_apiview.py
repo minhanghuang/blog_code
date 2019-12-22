@@ -29,20 +29,20 @@ class InitApiView(MyAPIView):
                 "results": ""
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # self.my_init() # 1 自定义初始化
-        # self.init_user(request) # 2 初始化用户
-        # self.init_data() # 3 初始化个人中心
-        # self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
+        self.my_init() # 1 自定义初始化
+        self.init_user(request) # 2 初始化用户
+        self.init_data() # 3 初始化个人中心
+        self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
 
-        self.test()
+        # self.test()
 
         return Response({
             "success": True,
             "msg": self.msg_api,
-            # "results": {
-            #     "admin_password":self.admin_password,
-            #     "admin_username":self.admin_username,
-            # }
+            "results": {
+                "admin_password":self.admin_password,
+                "admin_username":self.admin_username,
+            }
         }, status=status.HTTP_200_OK)
 
     def my_init(self):

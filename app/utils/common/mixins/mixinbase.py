@@ -136,11 +136,11 @@ class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):
             "success": True,
             "msg": self.msg_list,
             "results": serializer.data
-        }, status=status.HTTP_201_CREATED)
+        }, status=status.HTTP_200_OK)
 
     def initial(self, request, *args, **kwargs):
         super(ListModel, self).initial(request, *args, **kwargs)
-        self.intercept_visitor_request(request=request)
+        # self.intercept_visitor_request(request=request)
 
 
 class RetrieveModel(RetrieveModelMixin,GenericViewSet,MyUnitBase):
