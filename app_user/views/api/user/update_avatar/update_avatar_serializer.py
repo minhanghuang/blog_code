@@ -25,6 +25,7 @@ class UpdateAvatarSerializer(MySerializerBase):
 
     def create(self, validated_data):
 
+
         data = self.context["request"].data
         user = self.context["request"].user
         file = data.get("file", None)  # 获取前端传过来的图片数据流
@@ -40,6 +41,8 @@ class UpdateAvatarSerializer(MySerializerBase):
             user.save()  # 保存实例
 
         return user
+
+
 
 
 

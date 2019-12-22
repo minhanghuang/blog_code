@@ -33,7 +33,7 @@ class ResetDataSerializer(MySerializerBase):
 
     def update(self, instance, validated_data):
 
-        username = instance.user.username # 用户名
+        username = instance.username # 用户名
 
         cache_data_field = myconfig.get_sysinit_data()["cache"]["field"]["init"][username] # 获取指标文件cache缓存字段
 
@@ -48,6 +48,7 @@ class ResetDataSerializer(MySerializerBase):
         instance.position = value.get("position")
         instance.city = value.get("city")
         instance.tag = value.get("tag")
+        instance.avatar = value.get("avatar")
         instance.save()
 
         return instance

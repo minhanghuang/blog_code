@@ -54,7 +54,7 @@ class CreateModel(CreateModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(CreateModel, self).initial(request, *args, **kwargs)
-        self.intercept_visitor_request(request=request)
+        # self.intercept_visitor_request(request=request)
 
 class DestroyModel(DestroyModelMixin,GenericViewSet,MyUnitBase):
 
