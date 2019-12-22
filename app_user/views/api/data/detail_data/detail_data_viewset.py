@@ -8,7 +8,7 @@ class DetailDataViewSet(MyRetrieveModelMixin):
 
     # authentication_classes = () # 验证
     # permission_classes = () # 权限
-    msg_detail = "查看data详细信息" # 提示信息
+    msg_detail = "查看用户个人中心" # 提示信息
     serializer_class = DetailDataSerializer # 序列化类
     queryset = models.UserData.objects.all() # models
     lookup_field = "user__username"  # 主键

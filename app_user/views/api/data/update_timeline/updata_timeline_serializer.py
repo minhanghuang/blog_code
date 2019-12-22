@@ -17,8 +17,15 @@ class UpdateTimeLineSerializer(MySerializerBase):
 
     def update(self, instance, validated_data):
 
-        print("validated_data:",validated_data,type(validated_data))
-        instance.timeline = validated_data.get("timeline")  # 赋值 云词图 宽度
+        value = validated_data.get("timeline", {})
+        value = eval(value)
+
+        for index, foo in enumerate(value):
+            foo["id"] = str(index)
+
+        instance.timeline = str(value).replace("'","\"")
+        # 后端存储单引号, 前端JSON.parse()的时候,不能识别单引号, 需要在后端存储数据的时候处理,
+        # 因为在前面几行代码,做了强制类型转化,Python会将双引号转成单引号,如果没有做强制类型转换,直接保存前端传来的字符串,没这个问题
         instance.save()
 
         return instance
