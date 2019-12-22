@@ -29,7 +29,7 @@ class InitApiView(MyAPIView):
                 "results": ""
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        self.set_init() # 1 自定义初始化
+        self.my_init() # 1 自定义初始化
         self.init_user(request) # 2 初始化用户
         self.init_data() # 3 初始化个人中心
         # self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
@@ -44,7 +44,7 @@ class InitApiView(MyAPIView):
             }
         }, status=status.HTTP_200_OK)
 
-    def set_init(self):
+    def my_init(self):
         """
         自定义初始化
         :return: None
@@ -111,5 +111,18 @@ class InitApiView(MyAPIView):
 
         obj_coco = models.UserProfile.objects.get(username="coco")
         UserData.objects.create(user=obj_coco, **self.data_data)
+        self.set_data_cache("coco_data",str(self.data_data)) # 设置coco数据缓存
+
+        return None
+
+    def set_data_cache(self, key="coco", value=""):
+        """
+        设置coco数据缓存
+        :param key: 键名
+        :param value: 数据
+        :return: None
+        """
+
+        my_redis.hash_set("init_data_cache", key, value) # 写入redis
 
         return None

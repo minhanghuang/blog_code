@@ -73,15 +73,17 @@ class UpdateCloudWordSerializer(MySerializerBase):
             color = validated_data.get("color", 'rgba(255,255,255,1)'),
             full = True if validated_data.get("full")=="true" else False,
         )
-        data_list = models.UserData.objects.filter(id=1)
-        if not data_list.exists(): # 如果id=1的数据不存在, 新建
-            data_obj = models.UserData.objects.create(
-                id = 1,
-                tag = validated_data.get("tag",'["Python"]'),
-                cloudword_width = validated_data.get("width","260"),
-            )
-        else:
-            data_obj = data_list.first()
+        # data_list = models.UserData.objects.filter(id=1)
+        # if not data_list.exists(): # 如果id=1的数据不存在, 新建
+        #     data_obj = models.UserData.objects.create(
+        #         id = 1,
+        #         tag = validated_data.get("tag",'["Python"]'),
+        #         cloudword_width = validated_data.get("width","260"),
+        #     )
+        # else:
+        #     data_obj = data_list.first()
+
+        data_obj = self.context["request"].user
 
         data_obj.cloudword = cloudword_base64 # 赋值 云词图base64
         data_obj.cloudword_width = validated_data.get("width","260") # 赋值 云词图 宽度

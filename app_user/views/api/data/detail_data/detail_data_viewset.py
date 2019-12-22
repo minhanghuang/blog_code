@@ -11,6 +11,6 @@ class DetailDataViewSet(MyRetrieveModelMixin):
     msg_detail = "查看data详细信息" # 提示信息
     serializer_class = DetailDataSerializer # 序列化类
     queryset = models.UserData.objects.all() # models
-    lookup_field = "pk"  # 主键
+    lookup_field = "user__username"  # 主键
 
 
