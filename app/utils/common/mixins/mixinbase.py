@@ -111,7 +111,7 @@ class UpdateModel(UpdateModelMixin,GenericViewSet,MyUnitBase):
 
     def initial(self, request, *args, **kwargs):
         super(UpdateModel, self).initial(request, *args, **kwargs)
-        self.intercept_visitor_request(request=request)
+        # self.intercept_visitor_request(request=request)
 
 
 class ListModel(ListModelMixin,GenericViewSet,MyUnitBase):

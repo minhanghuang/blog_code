@@ -29,19 +29,20 @@ class InitApiView(MyAPIView):
                 "results": ""
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        self.my_init() # 1 自定义初始化
-        self.init_user(request) # 2 初始化用户
-        self.init_data() # 3 初始化个人中心
+        # self.my_init() # 1 自定义初始化
+        # self.init_user(request) # 2 初始化用户
+        # self.init_data() # 3 初始化个人中心
         # self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
 
+        self.test()
 
         return Response({
             "success": True,
             "msg": self.msg_api,
-            "results": {
-                "admin_password":self.admin_password,
-                "admin_username":self.admin_username,
-            }
+            # "results": {
+            #     "admin_password":self.admin_password,
+            #     "admin_username":self.admin_username,
+            # }
         }, status=status.HTTP_200_OK)
 
     def my_init(self):
@@ -51,6 +52,9 @@ class InitApiView(MyAPIView):
         """
         self.data_user = myconfig.get_sysinit_data()["user"] # 获取指标文件的数据
         self.data_data = myconfig.get_sysinit_data()["data"] # 获取指标文件的数据
+        self.coco_cache_data_field = myconfig.get_sysinit_data()["cache"]["field"]["init"]["coco"] # 获取指标文件cache缓存字段
+        self.admin_cache_data_field = myconfig.get_sysinit_data()["cache"]["field"]["init"]["admin"] # 获取指标文件cache缓存字段
+
         return None
 
     def get_lock(self):
@@ -95,6 +99,9 @@ class InitApiView(MyAPIView):
         for foo in self.data_user:
             if foo["username"] == "admin":
                 foo["password"] = self.admin_password # 设置密码
+                foo["email"] = "job@minhung.me" # 设置邮箱
+                foo["is_superuser"] = True # 设置超级管理员
+                foo["role"] = 0 # 设置管理员
                 self.admin_username = foo["username"]
             models.UserProfile.objects.create_user(**foo)
 
@@ -111,7 +118,12 @@ class InitApiView(MyAPIView):
 
         obj_coco = models.UserProfile.objects.get(username="coco")
         UserData.objects.create(user=obj_coco, **self.data_data)
-        self.set_data_cache("coco_data",str(self.data_data)) # 设置coco数据缓存
+
+        data = {}
+        data.update(self.data_data)
+        data.update(self.data_user[0])
+        self.set_data_cache(self.coco_cache_data_field,str(data)) # 设置coco数据缓存
+        self.set_data_cache(self.admin_cache_data_field,str(data)) # 设置admin数据缓存
 
         return None
 
@@ -126,3 +138,13 @@ class InitApiView(MyAPIView):
         my_redis.hash_set("init_data_cache", key, value) # 写入redis
 
         return None
+
+    def test(self):
+        self.my_init()
+        d = {}
+        d.update(self.data_data)
+        d.update(self.data_user[0])
+        self.set_data_cache(self.coco_cache_data_field, str(d))  # 设置coco数据缓存
+        self.set_data_cache(self.admin_cache_data_field, str(d))  # 设置admin数据缓存
+        return None
+

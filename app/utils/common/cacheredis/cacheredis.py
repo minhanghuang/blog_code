@@ -178,6 +178,7 @@ class MyRedisConf(Redis):
 
 my_redis = MyRedisConf(**myconfig.get_redis_config())
 
+# from app.utils.common.cacheredis.cacheredis import my_redis
 
 if __name__ == "__main__":
     """"""

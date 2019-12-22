@@ -4,13 +4,21 @@ from celery.schedules import crontab
 
 init_data = { # 所有初始化数据
     "init":{
+        "cache":{
+            "field":{
+                "init":{
+                    "coco":"coco_data",
+                    "admin":"admin_data",
+                }
+            }
+        },
         "user":[
             {
                 "username":"admin", # 名字不能修改
                 "password":"123456",
-                "email":"job@minhung.me",
-                "is_superuser":True,
-                "role":0,
+                "email":"coco@minhung.me",
+                "is_superuser":False,
+                "role":1,
                 "name":"Cox",
                 "wechat":"minhang13",
                 "telegram":"17688765206",

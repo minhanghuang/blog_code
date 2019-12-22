@@ -15,23 +15,33 @@ class UpdateTimeLineSerializer(MySerializerBase):
         model = models.UserData
         fields = ["timeline",]
 
-    def create(self, validated_data):
-        """"""
-        data_list = models.UserData.objects.filter(id=1)
-        if not data_list.exists(): # 如果id=1的数据不存在, 新建
-            data_obj = models.UserData.objects.create(
-                id = 1,
-                tag = '["Python"]',
-                cloudword_width = "260",
-                timeline = validated_data.get("timeline",""),
-            )
-        else:
-            data_obj = data_list.first()
+    # def create(self, validated_data):
+    #     """"""
+    #     data_list = models.UserData.objects.filter(id=1)
+    #     if not data_list.exists(): # 如果id=1的数据不存在, 新建
+    #         data_obj = models.UserData.objects.create(
+    #             id = 1,
+    #             tag = '["Python"]',
+    #             cloudword_width = "260",
+    #             timeline = validated_data.get("timeline",""),
+    #         )
+    #     else:
+    #         data_obj = data_list.first()
+    #
+    #     data_obj.timeline = validated_data.get("timeline") # 赋值 云词图 宽度
+    #     data_obj.save()
+    #
+    #     return data_obj
 
-        data_obj.timeline = validated_data.get("timeline") # 赋值 云词图 宽度
-        data_obj.save()
+    def update(self, instance, validated_data):
 
-        return data_obj
+        instance.timeline = validated_data.get("timeline")  # 赋值 云词图 宽度
+        instance.save()
+
+        return instance
+
+
+
 
 
 

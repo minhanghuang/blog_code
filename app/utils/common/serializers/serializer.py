@@ -5,6 +5,7 @@ from wordcloud import WordCloud
 import numpy as np
 from django.conf import settings
 import base64
+from app.utils.common.cacheredis.cacheredis import my_redis
 
 fake_obj = Faker(locale='zh_CN') # 生成一个Faker对象(中文),默认不传参数时为英文
 
@@ -99,3 +100,13 @@ class MySerializerBase(DynamicFieldsMixin,serializers.ModelSerializer):
             'overflow': "{}日期时间值超出范围。".format(field),
         }
 
+    def get_init_cache_data(self, field="coco_data"):
+        """
+        获取缓存数据
+        :param field:
+        :return:
+        """
+
+        value = my_redis.hash_get("init_data_cache",field)
+
+        return eval(value)
