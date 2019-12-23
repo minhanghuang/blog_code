@@ -5,6 +5,7 @@ from app.utils.common.cacheredis.cacheredis import my_redis
 from blog_code.config import myconfig
 from app_article import models
 from app_user.models import UserData
+import os
 
 
 
@@ -22,26 +23,26 @@ class InitApiView(MyAPIView):
         :param request:
         :return:
         """
-        if self.get_lock():
-            return Response({
-                "success": False,
-                "msg": "来晚了,兄弟",
-                "results": ""
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # if self.get_lock():
+        #     return Response({
+        #         "success": False,
+        #         "msg": "来晚了,兄弟",
+        #         "results": ""
+        #     }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        self.my_init() # 1 自定义初始化
-        self.init_user(request) # 2 初始化用户
-        self.init_data() # 3 初始化个人中心
-        self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
+        # self.my_init() # 1 自定义初始化
+        # self.init_user(request) # 2 初始化用户
+        # self.init_data() # 3 初始化个人中心
+        # self.set_lock() # 99 用完一次后,锁住,禁止使用该接口
 
-        # self.test()
+        self.test()
 
         return Response({
             "success": True,
             "msg": self.msg_api,
             "results": {
-                "admin_password":self.admin_password,
-                "admin_username":self.admin_username,
+                # "admin_password":self.admin_password,
+                # "admin_username":self.admin_username,
             }
         }, status=status.HTTP_200_OK)
 
@@ -139,12 +140,36 @@ class InitApiView(MyAPIView):
 
         return None
 
+    def get_article_count(self):
+        """
+        获取二进制文件中文章的数量, 一个json算一篇文章, 计算json的个数
+        :return: int
+        """
+
+        project_path = os.path.abspath('.').split("blog_code") + "blog_code/" # 项目根目录
+        article_path = project_path + "basedata/binary/article/" # 文章所在路径
+        for home, dirs, files in os.walk(article_path):
+            print("#######dir list#######")
+            for dir in dirs:
+                print(dir)
+            print("#######dir list#######")
+
+            print("#######file list#######")
+            for filename in files:
+                print(filename)
+                fullname = os.path.join(home, filename)
+                print(fullname)
+            print("#######file list#######")
+
+        return
+
     def test(self):
-        self.my_init()
-        d = {}
-        d.update(self.data_data)
-        d.update(self.data_user[0])
-        self.set_data_cache(self.coco_cache_data_field, str(d))  # 设置coco数据缓存
-        self.set_data_cache(self.admin_cache_data_field, str(d))  # 设置admin数据缓存
+
+        # self.my_init()
+        # d = {}
+        # d.update(self.data_data)
+        # d.update(self.data_user[0])
+        # self.set_data_cache(self.coco_cache_data_field, str(d))  # 设置coco数据缓存
+        # self.set_data_cache(self.admin_cache_data_field, str(d))  # 设置admin数据缓存
         return None
 
