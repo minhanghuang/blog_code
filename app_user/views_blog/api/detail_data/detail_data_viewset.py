@@ -1,0 +1,16 @@
+from app.utils.common.mixins.mixin import MyRetrieveModelMixin
+from app_user import models
+from app_user.views_blog.api.detail_data.detail_data_serializer import DetailDataSerializerBlog
+
+
+class DetailDataViewSetBlog(MyRetrieveModelMixin):
+    """查看data详细信息"""
+
+    authentication_classes = () # 验证
+    permission_classes = () # 权限
+    msg_detail = "查看用户个人中心" # 提示信息
+    serializer_class = DetailDataSerializerBlog # 序列化类
+    queryset = models.UserData.objects.all() # models
+    lookup_field = "user__username"  # 主键
+
+

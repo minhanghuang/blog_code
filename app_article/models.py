@@ -48,8 +48,7 @@ class Article(models.Model):
         default="",
         verbose_name="标题",
     )
-    subtitle = models.CharField(
-        max_length=64,
+    subtitle = models.TextField(
         default="",
         verbose_name="副标题",
     )
