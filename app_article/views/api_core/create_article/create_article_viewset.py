@@ -12,7 +12,7 @@ class CreateArticleViewSet(MyCreateModeMixin):
     """新增博文"""
 
     # authentication_classes = ()  # 验证
-    permission_classes = (mypermission.IsMyAdminUser)  # 权限, 只允许自定义的管理员通过
+    permission_classes = (mypermission.IsMyAdminUser,)  # 权限, 只允许自定义的管理员通过
     msg_create = "成功新增博文" # 提示信息
     results_display = True  # 是否显示序列化信息, 默认显示
     serializer_class = CreateArticleSerializer # 序列化类
