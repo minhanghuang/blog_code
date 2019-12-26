@@ -14,7 +14,6 @@ fied : {
 },
 自定义异常 : [ "Create", "Put" ]
 """
-from rest_framework import permissions
 from rest_framework import status
 from rest_framework.mixins import (
     CreateModelMixin,DestroyModelMixin,
@@ -24,6 +23,7 @@ from rest_framework.mixins import (
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
+from rest_framework import permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from app.utils.common.paginations.pagination import MyPagination
 from app.utils.common.base.unitbase import MyUnitBase
