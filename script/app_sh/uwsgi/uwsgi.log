@@ -1,0 +1,153 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Dec 27 23:20:30 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7fdd67406ea0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x7fdd67406ea0 pid: 88724 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 88724)
+spawned uWSGI worker 1 (pid: 88729, cores: 1)
+spawned uWSGI worker 2 (pid: 88730, cores: 1)
+spawned uWSGI worker 3 (pid: 88731, cores: 1)
+spawned uWSGI worker 4 (pid: 88732, cores: 1)
+spawned uWSGI worker 5 (pid: 88733, cores: 1)
+spawned uWSGI http 1 (pid: 88734)
+Not Found: /
+[pid: 88729|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 691 bytes} [Fri Dec 27 23:20:39 2019] GET / => generated 2479 bytes in 2430 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Dec 27 23:21:12 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7f9a1d503f30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x7f9a1d503f30 pid: 88756 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 88756)
+spawned uWSGI worker 1 (pid: 88760, cores: 1)
+spawned uWSGI worker 2 (pid: 88761, cores: 1)
+spawned uWSGI worker 3 (pid: 88762, cores: 1)
+spawned uWSGI worker 4 (pid: 88763, cores: 1)
+spawned uWSGI worker 5 (pid: 88764, cores: 1)
+spawned uWSGI http 1 (pid: 88765)
+Not Found: /
+Not Found: /
+Fri Dec 27 23:21:18 2019 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 127.0.0.1) !!!
+[pid: 88763|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 691 bytes} [Fri Dec 27 23:21:16 2019] GET / => generated 2479 bytes in 1557 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Fri Dec 27 23:21:18 2019 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET / (127.0.0.1)
+OSError: write error
+[pid: 88760|app: 0|req: 1/2] 127.0.0.1 () {38 vars in 691 bytes} [Fri Dec 27 23:21:16 2019] GET / => generated 0 bytes in 1559 msecs (HTTP/1.1 404) 3 headers in 0 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Dec 27 23:31:23 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7fe5d1701c00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 6 seconds on interpreter 0x7fe5d1701c00 pid: 88844 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 88844)
+spawned uWSGI worker 1 (pid: 88849, cores: 1)
+spawned uWSGI worker 2 (pid: 88850, cores: 1)
+spawned uWSGI worker 3 (pid: 88851, cores: 1)
+spawned uWSGI worker 4 (pid: 88852, cores: 1)
+spawned uWSGI worker 5 (pid: 88853, cores: 1)
+spawned uWSGI http 1 (pid: 88854)
+Not Found: /
+[pid: 88849|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 690 bytes} [Fri Dec 27 23:31:29 2019] GET / => generated 2479 bytes in 2297 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Dec 27 23:32:20 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7f912ac04d50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x7f912ac04d50 pid: 88881 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 88881)
+spawned uWSGI worker 1 (pid: 88884, cores: 1)
+spawned uWSGI worker 2 (pid: 88885, cores: 1)
+spawned uWSGI worker 3 (pid: 88886, cores: 1)
+spawned uWSGI worker 4 (pid: 88887, cores: 1)
+spawned uWSGI worker 5 (pid: 88888, cores: 1)
+spawned uWSGI http 1 (pid: 88889)
+Not Found: /
+[pid: 88884|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 691 bytes} [Fri Dec 27 23:32:24 2019] GET / => generated 2479 bytes in 2098 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)

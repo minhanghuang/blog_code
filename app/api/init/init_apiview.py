@@ -5,6 +5,7 @@ from app.utils.common.cacheredis.cacheredis import my_redis
 from blog_code.config import myconfig
 from app_article import models
 from app_user.models import UserData
+import os
 
 
 

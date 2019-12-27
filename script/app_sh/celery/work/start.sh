@@ -8,5 +8,5 @@ echo $logdir
 echo $projectdir
 echo $piddir
 
-cd $projectdir
-celery multi start worker1 -A $projectname --logfile=$logdir/work.log --pidfile=$piddir/work.pid
+# cd $projectdir
+# celery multi start worker1 -A $projectname --logfile=$logdir/work.log --pidfile=$piddir/work.pid
