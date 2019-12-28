@@ -24,3 +24,6 @@
 127.0.0.1 - - [28/Dec/2019:00:49:56 +0800] "GET / HTTP/1.1" 502 560 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 127.0.0.1 - - [28/Dec/2019:00:52:03 +0800] "GET / HTTP/1.1" 404 994 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
 127.0.0.1 - - [28/Dec/2019:16:16:01 +0800] "GET / HTTP/1.1" 404 994 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
+127.0.0.1 - - [28/Dec/2019:16:23:18 +0800] "GET / HTTP/1.1" 404 994 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
+127.0.0.1 - - [28/Dec/2019:18:57:48 +0800] "GET / HTTP/1.1" 499 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
+127.0.0.1 - - [28/Dec/2019:18:57:48 +0800] "GET / HTTP/1.1" 404 994 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"

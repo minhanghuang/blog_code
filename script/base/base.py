@@ -2,8 +2,39 @@ import os
 import platform
 import sys
 from threading import Thread
+from configparser import ConfigParser
 
-
+# TODO
+SYSTEM_DATA = {
+    "nginx":{
+        "Darwin":{
+            "nginx_start_cmd":"sudo nginx",
+            "nginx_stop_cmd":"sudo nginx -s stop",
+            "nginx_restart_cmd":"sudo nginx -s reload",
+        },
+        "Linux":{
+            "nginx_start_cmd":"/etc/init.d/nginx start",
+            "nginx_stop_cmd":"/etc/init.d/nginx stop",
+            "nginx_restart_cmd":"/etc/init.d/nginx restart",
+        },
+        "Windows":{
+            "nginx_start_cmd":"",
+            "nginx_stop_cmd":"",
+            "nginx_restart_cmd":"",
+        },
+    },
+    "http":{
+        "Darwin":{
+            "http":"127.0.0.1:19900",
+        },
+        "Linux":{
+            "http": "api.minhung.me:19900",
+        },
+        "Windows":{
+            "http": "127.0.0.1:19900",
+        },
+    },
+}
 
 class MyBasePyScripy(Thread):
 
@@ -11,13 +42,26 @@ class MyBasePyScripy(Thread):
         Thread.__init__(self)
 
         self.state = payload.get("state", "pass")
-
-
+        self.server_name = payload.get("server_name", "blog_code")
 
     def run(self):
         self.do_init() # 初始化
-        self.do_test()
+        self.do_test() # 测试单元
+        self.do_exit() # 退出
 
+    def do_exit(self):
+        print("==== 系统: {} ".format(self.sys_version))
+        print("==== server: {} ".format(self.http))
+        print("==== 服务名: {} ".format(self.server_name))
+        print("==== 服务路径: {} ".format(self.project_path))
+        print("==== 脚本路径: {} ".format(self.script_path))
+        print("==== uwsgi路径: {} ".format(self.uwsgi_path))
+        print("======== uwsgi.ini 路径: {} ".format(self.uwsgi_ini_path))
+        print("======== uwsgi.sock 路径: {} ".format(self.uwsgi_sock_path))
+        print("======== uwsgi.log 路径: {} ".format(self.uwsgi_log_path))
+        print("======== uwsgi.pid 路径: {} ".format(self.uwsgi_pid_path))
+        print("==== nginx路径: {} ".format(self.nginx_path))
+        return None
 
     def do_test(self):
         """
@@ -34,33 +78,32 @@ class MyBasePyScripy(Thread):
         基类自定义初始化
         :return:
         """
-        self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
-        self.set_path() # 设置路径
-        self.get_nginx_cmd() # 设置Nginx命令
 
+        self.set_sys_data() # 根据系统的不一样, 设置不同的信息
+        self.set_path() # 设置路径
 
         return None
 
-    def get_nginx_cmd(self):
+    def set_sys_data(self):
+        """
+        根据不同的系统,配置不同的信息
+        :return: None
+        """
+        self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
 
-        if self.sys_version == "Darwin": # Mac
-            self.nginx_start_cmd = "sudo nginx"
-            self.nginx_stop_cmd = "sudo nginx -s stop"
-            self.nginx_restart_cmd = "sudo nginx -s reload"
+        nginx_data = SYSTEM_DATA.get("nginx").get(self.sys_version)
+        self.nginx_start_cmd = nginx_data.get("nginx_start_cmd")
+        self.nginx_stop_cmd = nginx_data.get("nginx_stop_cmd")
+        self.nginx_restart_cmd = nginx_data.get("nginx_restart_cmd")
 
-        elif self.sys_version == "Linux": # Linux
-            self.nginx_start_cmd = "/etc/init.d/nginx start"
-            self.nginx_stop_cmd = "/etc/init.d/nginx stop "
-            self.nginx_restart_cmd = "/etc/init.d/nginx restart"
+        http_data = SYSTEM_DATA.get("http").get(self.sys_version)
+        self.http = http_data.get("http") # 设置 ip:port
 
-        else: # other
-            self.nginx_start_cmd = ""
-            self.nginx_stop_cmd = ""
-            self.nginx_restart_cmd = ""
-
-        return
+        return None
 
     def set(self, command):
+
+        print("正在发送命令: {}".format(command))
 
         return os.system(command)
 
@@ -74,7 +117,7 @@ class MyBasePyScripy(Thread):
             for foo in command_list:
                 self.set_command(foo)
         else:
-            print("[set_command_group]--参数并不是列表格式,请传入列表")
+            pass
 
         return None
 
@@ -92,10 +135,17 @@ class MyBasePyScripy(Thread):
         获取项目路径
         :return: None
         """
+        self.script_path = os.path.abspath('.') # script 绝对路径
+        self.project_path = self.script_path.split("script")[0] # server 绝对路径
 
-        self.project_path = os.path.abspath('.') # script 绝对路径
-        self.uwsgi_path = self.project_path + "/app_sh/uwsgi" # uwsgi绝对路径
-        self.nginx_path = self.project_path + "/app_sh/nginx" # nginx绝对路径
+        self.uwsgi_path = self.script_path + "/app_sh/uwsgi" # uwsgi 绝对路径
+        self.uwsgi_ini_path = self.script_path + "/app_sh/uwsgi/uwsgi.ini" # uwsgi.ini 绝对路径
+        self.uwsgi_pid_path = self.script_path + "/app_sh/uwsgi/uwsgi.pid" # uwsgi.pid 绝对路径
+        self.uwsgi_log_path = self.script_path + "/app_sh/uwsgi/uwsgi.log" # uwsgi.log 绝对路径
+        self.uwsgi_sock_path = self.script_path + "/app_sh/uwsgi/uwsgi.sock" # uwsgi.sock 绝对路径
+
+
+        self.nginx_path = self.script_path + "/app_sh/nginx" # nginx绝对路径
 
         return None
 
@@ -107,7 +157,6 @@ class MyBasePyScripy(Thread):
         """
         if isinstance(pid_list,list):
             for foo in pid_list:
-                print("kill -9 {}".format(foo))
                 self.set_command("sudo kill -9 {}".format(foo))
         else:
             pass
@@ -126,7 +175,6 @@ class MyBasePyScripy(Thread):
         for line in out.splitlines():
             ret_list.append(line.split()[1])
 
-        print("uwsgi的所有进程: ",ret_list)
 
         return ret_list
 
@@ -141,7 +189,89 @@ class MyBasePyScripy(Thread):
         for line in out.splitlines():
             ret_list.append(line.split()[1])
 
-        print("nginx的所有进程: ",ret_list)
-
         return ret_list
+
+    def create_uwsgi_ini_file(self):
+        """生成uwsgi.ini文件"""
+
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "chdir", self.project_path) # 服务路径
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "module", self.server_name+".wsgi:application") # 服务名
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "socket", self.uwsgi_sock_path) # sock路径
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "pidfile", self.uwsgi_pid_path) # pid文件 路径
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "daemonize", self.uwsgi_log_path) # ip:port
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "http", self.http) # ip:port
+
+        return None
+
+    def has_file_exists(self, file_path, data=""):
+        """
+        判断文件是否存在,
+        :param file_path: 文件路径
+        :param data: 数据
+        :return: None
+        """
+
+        ret_path = os.path.isfile(file_path)
+        if ret_path: # 文件存在
+
+            pass
+
+        else: # 文件不存在
+            pass
+
+        return None
+
+    def read_ini(self, file_path, out_key, inner_key):
+        """
+        读ini文件
+        :param file_path: ini文件路径
+        :param key: 大键
+        :param value: 小键
+        :return: 数据
+        """
+
+        config = ConfigParser()
+        config.read(file_path)
+        value = config.get(out_key, inner_key)
+
+        return value
+
+    def read_uwsgi_ini(self,file_path, key):
+        """
+        读取uwsgi文件的内容
+        :param file_path: uwsgi.ini文件路径
+        :param key: 键
+        :return: 值
+        """
+
+        value = self.read_ini(file_path=file_path, out_key="uwsgi", inner_key=key)
+
+        return value
+
+    def set_ini(self, file_path, out_key, inner_key, value=""):
+        """
+        判断文件是否存在,
+        :param file_path: 文件路径
+        :param data: 数据
+        :return: None
+        """
+
+        config = ConfigParser()
+        config.read(file_path)
+        config.set(out_key, inner_key, value)
+        config.write(open(file_path, "r+", encoding="utf-8"))
+
+        return None
+
+    def set_uwsgi_ini(self, file_path, key, value):
+        """
+        修改uwsgi文件的内容
+        :param file_path: uwsgi.ini文件路径
+        :param key: 键
+        :return: None
+        """
+
+        self.set_ini(file_path=file_path, out_key="uwsgi", inner_key=key, value=value)
+
+        return None
 

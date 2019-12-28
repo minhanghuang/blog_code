@@ -16,14 +16,12 @@ class MyTerminal(MyBasePyScripy):
 
             print("===================== 启动服务 start ==========================")
 
-            uwsgi_cmd_list = [
-                "uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),
-            ]
-            self.set_command_group(uwsgi_cmd_list)
-            nginx_cmd_list = [
-                "{}".format(self.nginx_start_cmd),
-            ]
-            self.set_command_group(nginx_cmd_list)
+            self.create_uwsgi_ini_file() # 设置uwsgi.ini文件
+
+            uwsgi_cmd_list = ["uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),]
+            self.set_command_group(uwsgi_cmd_list) # 启动uwsgi
+            nginx_cmd_list = ["{}".format(self.nginx_start_cmd),]
+            self.set_command_group(nginx_cmd_list) # 启动nginx
 
         elif self.state == "stop": # 结束服务
 
@@ -34,6 +32,15 @@ class MyTerminal(MyBasePyScripy):
             self.kill_pid(uwsgi_pid_list)  # 杀死uwsgi的所有进程
             self.kill_pid(nginx_pid_list)  # 杀死uwsgi的所有进程
 
+        elif self.state == "restart":  # 重启服务
+
+            print("===================== 重启服务 restart ==========================")
+
+            uwsgi_cmd_list = ["uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),]
+            self.set_command_group(uwsgi_cmd_list)
+            nginx_cmd_list = ["{}".format(self.nginx_restart_cmd),]
+            self.set_command_group(nginx_cmd_list)
+
         else:
             pass
 
@@ -41,12 +48,6 @@ class MyTerminal(MyBasePyScripy):
         print("===================== 退出 服务脚本 ==========================")
 
         return None
-
-
-
-
-
-
 
 
 
@@ -68,6 +69,7 @@ if __name__ == "__main__":
     if has_gpus:
         payload = {
             "state":state,
+            "server_name":"blog_code",
         }
         terminal = MyTerminal(**payload)
         terminal.start()
