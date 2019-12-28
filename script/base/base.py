@@ -1,10 +1,8 @@
 import os
 import platform
-import sys
 from threading import Thread
 from configparser import ConfigParser
 
-# TODO
 SYSTEM_DATA = {
     "nginx":{
         "Darwin":{
@@ -202,7 +200,7 @@ class MyBasePyScripy(Thread):
         """
 
         ret_list = []
-        out = os.popen("ps -ef | grep uwsgi").read()
+        out = os.popen("ps -ef | grep uwsgi | grep {}".format(self.server_name)).read()
         for line in out.splitlines():
             ret_list.append(line.split()[1])
 
@@ -216,7 +214,7 @@ class MyBasePyScripy(Thread):
         """
 
         ret_list = []
-        out = os.popen("ps -ef | grep nginx").read()
+        out = os.popen("ps -ef | grep nginx | grep {}".format(self.server_name)).read()
         for line in out.splitlines():
             ret_list.append(line.split()[1])
 

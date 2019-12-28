@@ -61,18 +61,11 @@ if __name__ == "__main__":
     if state not in ["start","stop","restart"]:
         print("请输入: start / stop / restart, 例如: python3 blog.py start")
         print("服务脚本没有启动")
-        has_gpus = False
     else:
-        has_gpus = True
-
-    if has_gpus:
         payload = {
-            "state":state,
-            "server_name":"blog_code",
+            "state": state,
+            "server_name": "blog_code",
         }
         terminal = MyTerminal(**payload)
         terminal.start()
-        print("线程开启")
 
-    else:
-        pass
