@@ -405,3 +405,22 @@ Not Found: /
 [pid: 98909|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 752 bytes} [Sat Dec 28 20:57:09 2019] GET / => generated 2479 bytes in 2549 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
 Not Found: /
 [pid: 98911|app: 0|req: 1/2] 127.0.0.1 () {38 vars in 691 bytes} [Sat Dec 28 20:57:13 2019] GET / => generated 2479 bytes in 503 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Dec 28 23:44:10 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (127.0.0.1:19900).
+bind(): Address already in use [core/socket.c line 769]

@@ -48,13 +48,14 @@ SYSTEM_DATA = {
     },
 }
 
-class MyBasePyScripy(Thread):
+class MyBasePyScript(Thread):
 
     def __init__(self,  **payload):
         Thread.__init__(self)
 
         self.state = payload.get("state", "pass")
         self.server_name = payload.get("server_name", "blog_code")
+        self.python_evn = payload.get("python_evn", "python3")
 
     def run(self):
 
@@ -64,22 +65,7 @@ class MyBasePyScripy(Thread):
 
     def do_exit(self):
 
-        if self.state != "stop":
-            print("==== 系统: {} ".format(self.sys_version))
-            print("==== 服务名: {} ".format(self.server_name))
-            print("==== 服务路径: {} ".format(self.project_path))
-            print("==== 脚本路径: {} ".format(self.script_path))
-            print("==== uwsgi路径: {} ".format(self.uwsgi_path))
-            print("======== uwsgi_http: {} ".format(self.uwsgi_http))
-            print("======== uwsgi.ini 路径: {} ".format(self.uwsgi_ini_path))
-            print("======== uwsgi.sock 路径: {} ".format(self.uwsgi_sock_path))
-            print("======== uwsgi.log 路径: {} ".format(self.uwsgi_log_path))
-            print("======== uwsgi.pid 路径: {} ".format(self.uwsgi_pid_path))
-            print("==== nginx路径: {} ".format(self.nginx_path))
-            print("======== nginx.监听端口: {} ".format(self.nginx_listen))
-            print("======== nginx.域名: {} ".format(self.nginx_server_name))
-            print("======== nginx.access日志: {} ".format(self.nginx_access_log_path))
-            print("======== nginx.error日志: {} ".format(self.nginx_error_log_path))
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已结束 $$$$$$$$$$$$$$$$$$$$$$$$$")
 
         return None
 
@@ -98,9 +84,7 @@ class MyBasePyScripy(Thread):
         基类自定义初始化
         :return:
         """
-
-        self.set_sys_data() # 根据系统的不一样, 设置不同的信息
-        self.set_path() # 设置路径
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已开启 $$$$$$$$$$$$$$$$$$$$$$$$$")
 
         return None
 
@@ -214,7 +198,7 @@ class MyBasePyScripy(Thread):
         """
 
         ret_list = []
-        out = os.popen("ps -ef | grep nginx | grep {}".format(self.server_name)).read()
+        out = os.popen("ps -ef | grep nginx").read()
         for line in out.splitlines():
             ret_list.append(line.split()[1])
 
