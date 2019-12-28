@@ -36,11 +36,47 @@ class MyBasePyScripy(Thread):
         """
         self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
         self.set_path() # 设置路径
+        self.get_nginx_cmd() # 设置Nginx命令
+
+
         return None
+
+    def get_nginx_cmd(self):
+
+        if self.sys_version == "Darwin": # Mac
+            self.nginx_start_cmd = "sudo nginx"
+            self.nginx_stop_cmd = "sudo nginx -s stop"
+            self.nginx_restart_cmd = "sudo nginx -s reload"
+
+        elif self.sys_version == "Linux": # Linux
+            self.nginx_start_cmd = "/etc/init.d/nginx start"
+            self.nginx_stop_cmd = "/etc/init.d/nginx stop "
+            self.nginx_restart_cmd = "/etc/init.d/nginx restart"
+
+        else: # other
+            self.nginx_start_cmd = ""
+            self.nginx_stop_cmd = ""
+            self.nginx_restart_cmd = ""
+
+        return
 
     def set(self, command):
 
         return os.system(command)
+
+    def set_command_group(self, command_list):
+        """
+        设置命令 - 多条
+        :param command_list:
+        :return: None
+        """
+        if isinstance(command_list,list):
+            for foo in command_list:
+                self.set_command(foo)
+        else:
+            print("[set_command_group]--参数并不是列表格式,请传入列表")
+
+        return None
 
     def set_command(self, command="pwd"):
         """
@@ -72,7 +108,7 @@ class MyBasePyScripy(Thread):
         if isinstance(pid_list,list):
             for foo in pid_list:
                 print("kill -9 {}".format(foo))
-                self.set_command("kill -9 {}".format(foo))
+                self.set_command("sudo kill -9 {}".format(foo))
         else:
             pass
 

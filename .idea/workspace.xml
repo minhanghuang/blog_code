@@ -2,166 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/base/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/blog.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload/images/cloudword/temp.png" afterPath="$PROJECT_DIR$/upload/images/cloudword/temp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blog_code.iml" afterPath="$PROJECT_DIR$/.idea/blog_code.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4b7e9a57-316c-43e5-add5-9d5cc858bbbb.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4b7e9a57-316c-43e5-add5-9d5cc858bbbb.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin.py" afterPath="$PROJECT_DIR$/app/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/init/init_apiview.py" afterPath="$PROJECT_DIR$/app/api/init/init_apiview.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/apps.py" afterPath="$PROJECT_DIR$/app/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/migrations/__init__.py" afterPath="$PROJECT_DIR$/app/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests.py" afterPath="$PROJECT_DIR$/app/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/urls.py" afterPath="$PROJECT_DIR$/app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/authenticates/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/authenticates/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/authenticates/authenticate.py" afterPath="$PROJECT_DIR$/app/utils/common/authenticates/authenticate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/base/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/base/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/base/unitbase.py" afterPath="$PROJECT_DIR$/app/utils/common/base/unitbase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" afterPath="$PROJECT_DIR$/app/utils/common/cacheredis/cacheredis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/exceptions/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/exceptions/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/exceptions/exception.py" afterPath="$PROJECT_DIR$/app/utils/common/exceptions/exception.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/files/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/files/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/files/file.py" afterPath="$PROJECT_DIR$/app/utils/common/files/file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/jsonschemas/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/jsonschemas/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/jsonschemas/jsonschema.py" afterPath="$PROJECT_DIR$/app/utils/common/jsonschemas/jsonschema.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/middlewares/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/middlewares/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/middlewares/system/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/middlewares/system/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/middlewares/system/middleware.py" afterPath="$PROJECT_DIR$/app/utils/common/middlewares/system/middleware.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/mixins/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/mixins/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/mixins/mixin.py" afterPath="$PROJECT_DIR$/app/utils/common/mixins/mixin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/mixins/mixinbase.py" afterPath="$PROJECT_DIR$/app/utils/common/mixins/mixinbase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/mypermissions/mypermission.py" afterPath="$PROJECT_DIR$/app/utils/common/mypermissions/mypermission.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/paginations/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/paginations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/paginations/pagination.py" afterPath="$PROJECT_DIR$/app/utils/common/paginations/pagination.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/serializers/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/serializers/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/serializers/serializer.py" afterPath="$PROJECT_DIR$/app/utils/common/serializers/serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/signals/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/signals/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/signals/signal.py" afterPath="$PROJECT_DIR$/app/utils/common/signals/signal.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/viewsets/__init__.py" afterPath="$PROJECT_DIR$/app/utils/common/viewsets/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/common/viewsets/viewset.py" afterPath="$PROJECT_DIR$/app/utils/common/viewsets/viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/__init__.py" afterPath="$PROJECT_DIR$/app_article/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/admin.py" afterPath="$PROJECT_DIR$/app_article/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/apps.py" afterPath="$PROJECT_DIR$/app_article/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_article/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" afterPath="$PROJECT_DIR$/app_article/migrations/0002_article_author.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/migrations/__init__.py" afterPath="$PROJECT_DIR$/app_article/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/models.py" afterPath="$PROJECT_DIR$/app_article/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/tests.py" afterPath="$PROJECT_DIR$/app_article/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/urls.py" afterPath="$PROJECT_DIR$/app_article/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_branch/state_article/state_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/delete_article/delete_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/detail_article/detail_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_article_msg/update_article_msg_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_serializer.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_viewset.py" afterPath="$PROJECT_DIR$/app_article/views/api_core/update_image/update_image_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views/filter/article/list.py" afterPath="$PROJECT_DIR$/app_article/views/filter/article/list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/detail_article/detail_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" afterPath="$PROJECT_DIR$/app_article/views_blog/api/list_article/list_article_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_article/views_blog/utils/pages/page.py" afterPath="$PROJECT_DIR$/app_article/views_blog/utils/pages/page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/__init__.py" afterPath="$PROJECT_DIR$/app_base/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/admin.py" afterPath="$PROJECT_DIR$/app_base/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/apps.py" afterPath="$PROJECT_DIR$/app_base/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/migrations/__init__.py" afterPath="$PROJECT_DIR$/app_base/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/models.py" afterPath="$PROJECT_DIR$/app_base/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/tests.py" afterPath="$PROJECT_DIR$/app_base/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_base/views.py" afterPath="$PROJECT_DIR$/app_base/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/__init__.py" afterPath="$PROJECT_DIR$/app_test/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/admin.py" afterPath="$PROJECT_DIR$/app_test/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/apps.py" afterPath="$PROJECT_DIR$/app_test/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_test/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/migrations/__init__.py" afterPath="$PROJECT_DIR$/app_test/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/models.py" afterPath="$PROJECT_DIR$/app_test/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/tasks.py" afterPath="$PROJECT_DIR$/app_test/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/test.txt" afterPath="$PROJECT_DIR$/app_test/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/tests.py" afterPath="$PROJECT_DIR$/app_test/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/urls.py" afterPath="$PROJECT_DIR$/app_test/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/create/create_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/create/create_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/create_imag/create_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/list/list_test_serializer.py" afterPath="$PROJECT_DIR$/app_test/views/api/list/list_test_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/views/api/list/list_test_viewset.py" afterPath="$PROJECT_DIR$/app_test/views/api/list/list_test_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_test/word.txt" afterPath="$PROJECT_DIR$/app_test/word.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/__init__.py" afterPath="$PROJECT_DIR$/app_user/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/admin.py" afterPath="$PROJECT_DIR$/app_user/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/apps.py" afterPath="$PROJECT_DIR$/app_user/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app_user/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/migrations/__init__.py" afterPath="$PROJECT_DIR$/app_user/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/models.py" afterPath="$PROJECT_DIR$/app_user/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/tests.py" afterPath="$PROJECT_DIR$/app_user/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/urls.py" afterPath="$PROJECT_DIR$/app_user/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_cloudword/reset_cloudword_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_cloudword/reset_cloudword_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_cloudword/reset_cloudword_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_cloudword/reset_cloudword_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_data/reset_data_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_data/reset_data_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_data/reset_data_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_data/reset_data_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_timeline/reset_timeline_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_timeline/reset_timeline_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_timeline/reset_timeline_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/reset_data/reset_timeline/reset_timeline_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/updata_cloudword/updata_cloudword_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/update_timeline/updata_timeline_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/update_timeline/updata_timeline_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/data/update_timeline/updata_timeline_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/data/update_timeline/updata_timeline_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/login/login_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/login/login_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/login/login_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/login/login_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/create_user/create_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/detail_user/detail_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/list_user/list_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_avatar/update_avatar_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views/api/user/update_user/update_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_data/detail_data_serializer.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_data/detail_data_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_data/detail_data_viewset.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_data/detail_data_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_serializer.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_viewset.py" afterPath="$PROJECT_DIR$/app_user/views_blog/api/detail_user/detail_user_viewset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basedata/target/initdata.py" afterPath="$PROJECT_DIR$/basedata/target/initdata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/__init__.py" afterPath="$PROJECT_DIR$/blog_code/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/celery.py" afterPath="$PROJECT_DIR$/blog_code/celery.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/config.py" afterPath="$PROJECT_DIR$/blog_code/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/settings.py" afterPath="$PROJECT_DIR$/blog_code/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/urls.py" afterPath="$PROJECT_DIR$/blog_code/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/wsgi.py" afterPath="$PROJECT_DIR$/blog_code/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirement.txt" afterPath="$PROJECT_DIR$/requirement.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/app.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/app.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/beat/start.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/beat/start.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/beat/stop.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/beat/stop.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/test.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/work/logs/work.log" afterPath="$PROJECT_DIR$/script/app_sh/celery/work/logs/work.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/work/start.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/work/start.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/celery/work/stop.sh" afterPath="$PROJECT_DIR$/script/app_sh/celery/work/stop.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/nginx/nginx.sh" afterPath="$PROJECT_DIR$/script/app_sh/nginx/nginx.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/sh/stop_uwsgi.sh" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/sh/stop_uwsgi.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.ini" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.log" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.pid" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.pid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.sh" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/base/base.py" afterPath="$PROJECT_DIR$/script/base/base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/blog.py" afterPath="$PROJECT_DIR$/script/blog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -207,11 +51,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="blog.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="blog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/blog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            <state relative-caret-position="479">
+              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -219,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/base/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+            <state relative-caret-position="447">
+              <caret line="110" column="36" lean-forward="true" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -329,8 +173,8 @@
         <option value="$PROJECT_DIR$/logs/nginx/access.log" />
         <option value="$PROJECT_DIR$/logs/nginx/error.log" />
         <option value="$PROJECT_DIR$/script/__init__.py" />
-        <option value="$PROJECT_DIR$/script/base/base.py" />
         <option value="$PROJECT_DIR$/script/blog.py" />
+        <option value="$PROJECT_DIR$/script/base/base.py" />
       </list>
     </option>
   </component>
@@ -386,28 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_sh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uwsgi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1208,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/app_sh/nginx/nginx.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/nginx/error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
@@ -1314,22 +1128,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/base/base.py">
+    <entry file="file://$PROJECT_DIR$/script/app_sh/nginx/nginx.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/blog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="479">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/base/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="110" column="36" lean-forward="true" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

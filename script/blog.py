@@ -14,11 +14,20 @@ class MyTerminal(MyBasePyScripy):
 
         if self.state == "start": # 开启服务
 
-            print("===================== 开启服务 start ==========================")
+            print("===================== 启动服务 start ==========================")
+
+            uwsgi_cmd_list = [
+                "uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),
+            ]
+            self.set_command_group(uwsgi_cmd_list)
+            nginx_cmd_list = [
+                "{}".format(self.nginx_start_cmd),
+            ]
+            self.set_command_group(nginx_cmd_list)
 
         elif self.state == "stop": # 结束服务
 
-            print("===================== 结束服务 stop ==========================")
+            print("===================== 杀死服务 stop ==========================")
 
             uwsgi_pid_list = self.get_uwsgi_pid()  # 获取uwsgi的所有进程
             nginx_pid_list = self.get_nginx_pid()  # 获取nginx的所有进程
@@ -49,8 +58,8 @@ if __name__ == "__main__":
     except:
         state = ""
 
-    if state not in ["start","stop"]:
-        print("请输入: start Or stop, 例如: python3 blog.py start")
+    if state not in ["start","stop","restart"]:
+        print("请输入: start / stop / restart, 例如: python3 blog.py start")
         print("服务脚本没有启动")
         has_gpus = False
     else:
