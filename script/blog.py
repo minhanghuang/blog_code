@@ -15,13 +15,12 @@ class MyTerminal(MyBasePyScripy):
         if self.state == "start": # 开启服务
 
             print("===================== 启动服务 start ==========================")
-
-            self.create_uwsgi_ini_file() # 设置uwsgi.ini文件
-
+            self.set_nginx_conf_file(self.nginx_conf_path) # 配置nginx.conf文件
+            self.set_uwsgi_conf_file() # 配置uwsgi.ini文件
             uwsgi_cmd_list = ["uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),]
-            self.set_command_group(uwsgi_cmd_list) # 启动uwsgi
+            self.set_command_group(uwsgi_cmd_list, "uwsgi") # 启动uwsgi
             nginx_cmd_list = ["{}".format(self.nginx_start_cmd),]
-            self.set_command_group(nginx_cmd_list) # 启动nginx
+            self.set_command_group(nginx_cmd_list, "nginx") # 启动nginx
 
         elif self.state == "stop": # 结束服务
 

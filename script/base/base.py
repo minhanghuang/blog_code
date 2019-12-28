@@ -23,15 +23,29 @@ SYSTEM_DATA = {
             "nginx_restart_cmd":"",
         },
     },
-    "http":{
+    "uwsgi_http":{
         "Darwin":{
             "http":"127.0.0.1:19900",
         },
         "Linux":{
-            "http": "api.minhung.me:19900",
+            "http": "0.0.0.0:19900", # 部署到服务器上之后, uwsgi的ip必须是0.0.0.0
         },
         "Windows":{
             "http": "127.0.0.1:19900",
+        },
+    },
+    "nginx_http":{
+        "Darwin":{
+            "listen":"19800",
+            "server_name":"localhost",
+        },
+        "Linux":{
+            "listen":"19800",
+            "server_name":"api.minhung.me", # 如果服务器已经被域名解析,必须填域名
+        },
+        "Windows":{
+            "listen":"19800",
+            "server_name":"localhost",
         },
     },
 }
@@ -45,22 +59,30 @@ class MyBasePyScripy(Thread):
         self.server_name = payload.get("server_name", "blog_code")
 
     def run(self):
+
         self.do_init() # 初始化
         self.do_test() # 测试单元
         self.do_exit() # 退出
 
     def do_exit(self):
-        print("==== 系统: {} ".format(self.sys_version))
-        print("==== server: {} ".format(self.http))
-        print("==== 服务名: {} ".format(self.server_name))
-        print("==== 服务路径: {} ".format(self.project_path))
-        print("==== 脚本路径: {} ".format(self.script_path))
-        print("==== uwsgi路径: {} ".format(self.uwsgi_path))
-        print("======== uwsgi.ini 路径: {} ".format(self.uwsgi_ini_path))
-        print("======== uwsgi.sock 路径: {} ".format(self.uwsgi_sock_path))
-        print("======== uwsgi.log 路径: {} ".format(self.uwsgi_log_path))
-        print("======== uwsgi.pid 路径: {} ".format(self.uwsgi_pid_path))
-        print("==== nginx路径: {} ".format(self.nginx_path))
+
+        if self.state != "stop":
+            print("==== 系统: {} ".format(self.sys_version))
+            print("==== 服务名: {} ".format(self.server_name))
+            print("==== 服务路径: {} ".format(self.project_path))
+            print("==== 脚本路径: {} ".format(self.script_path))
+            print("==== uwsgi路径: {} ".format(self.uwsgi_path))
+            print("======== uwsgi_http: {} ".format(self.uwsgi_http))
+            print("======== uwsgi.ini 路径: {} ".format(self.uwsgi_ini_path))
+            print("======== uwsgi.sock 路径: {} ".format(self.uwsgi_sock_path))
+            print("======== uwsgi.log 路径: {} ".format(self.uwsgi_log_path))
+            print("======== uwsgi.pid 路径: {} ".format(self.uwsgi_pid_path))
+            print("==== nginx路径: {} ".format(self.nginx_path))
+            print("======== nginx.监听端口: {} ".format(self.nginx_listen))
+            print("======== nginx.域名: {} ".format(self.nginx_server_name))
+            print("======== nginx.access日志: {} ".format(self.nginx_access_log_path))
+            print("======== nginx.error日志: {} ".format(self.nginx_error_log_path))
+
         return None
 
     def do_test(self):
@@ -96,8 +118,12 @@ class MyBasePyScripy(Thread):
         self.nginx_stop_cmd = nginx_data.get("nginx_stop_cmd")
         self.nginx_restart_cmd = nginx_data.get("nginx_restart_cmd")
 
-        http_data = SYSTEM_DATA.get("http").get(self.sys_version)
-        self.http = http_data.get("http") # 设置 ip:port
+        nginx_http_data = SYSTEM_DATA.get("nginx_http").get(self.sys_version)
+        self.nginx_listen = nginx_http_data.get("listen")
+        self.nginx_server_name = nginx_http_data.get("server_name")
+
+        http_data = SYSTEM_DATA.get("uwsgi_http").get(self.sys_version)
+        self.uwsgi_http = http_data.get("http") # 设置 ip:port
 
         return None
 
@@ -107,12 +133,13 @@ class MyBasePyScripy(Thread):
 
         return os.system(command)
 
-    def set_command_group(self, command_list):
+    def set_command_group(self, command_list, msg=""):
         """
         设置命令 - 多条
         :param command_list:
         :return: None
         """
+        print("===================== 开始发送命令 -- {} ==========================".format(msg))
         if isinstance(command_list,list):
             for foo in command_list:
                 self.set_command(foo)
@@ -145,7 +172,11 @@ class MyBasePyScripy(Thread):
         self.uwsgi_sock_path = self.script_path + "/app_sh/uwsgi/uwsgi.sock" # uwsgi.sock 绝对路径
 
 
-        self.nginx_path = self.script_path + "/app_sh/nginx" # nginx绝对路径
+        self.nginx_path = self.script_path + "/app_sh/nginx" # nginx 绝对路径
+        self.nginx_conf_path = self.nginx_path + "/nginx.conf" # nginx.conf 绝对路径
+        self.nginx_access_log_path = self.project_path + "logs/nginx/access.log" # access.log 绝对路径
+        self.nginx_error_log_path = self.project_path + "logs/nginx/error.log" # error.log 绝对路径
+        self.nginx_uwsgi_pass_path = self.uwsgi_sock_path # uwsgi.sock 绝对路径
 
         return None
 
@@ -191,15 +222,17 @@ class MyBasePyScripy(Thread):
 
         return ret_list
 
-    def create_uwsgi_ini_file(self):
-        """生成uwsgi.ini文件"""
+    def set_uwsgi_conf_file(self):
+        """配置uwsgi.ini文件
+        """
+        print("===================== 配置uwsgi.ini文件 ==========================")
 
         self.set_uwsgi_ini(self.uwsgi_ini_path, "chdir", self.project_path) # 服务路径
         self.set_uwsgi_ini(self.uwsgi_ini_path, "module", self.server_name+".wsgi:application") # 服务名
         self.set_uwsgi_ini(self.uwsgi_ini_path, "socket", self.uwsgi_sock_path) # sock路径
         self.set_uwsgi_ini(self.uwsgi_ini_path, "pidfile", self.uwsgi_pid_path) # pid文件 路径
         self.set_uwsgi_ini(self.uwsgi_ini_path, "daemonize", self.uwsgi_log_path) # ip:port
-        self.set_uwsgi_ini(self.uwsgi_ini_path, "http", self.http) # ip:port
+        self.set_uwsgi_ini(self.uwsgi_ini_path, "http", self.uwsgi_http) # ip:port
 
         return None
 
@@ -275,3 +308,54 @@ class MyBasePyScripy(Thread):
 
         return None
 
+    def read_file(self, feil_path):
+
+        print("feil_path:",feil_path)
+
+        with open(feil_path,"r") as f:
+            for line in f:
+                print(line)
+
+        return None
+
+    def set_nginx_conf_file(self, feil_path):
+        """
+
+        :param feil_path:
+        :return:
+        """
+        print("===================== 配置Nginx.conf文件 ==========================")
+
+        set_data_list = ["listen","server_name","access_log","error_log","uwsgi_pass"]
+        temp_path = self.nginx_path + "/nginx.temp"
+        # open两个文件, 一个读, 一个写, 最后把被读的文件删除, 将被写入的文件改名为被读的文件
+        with open(feil_path,"r") as f, open(temp_path, "w", encoding="utf-8") as f_temp:
+            for line in f:
+                for foo in set_data_list:
+                    if line.find(foo) != -1: # 待修改行
+                        if foo == "listen":
+                            line = "        listen {};\n".format(self.nginx_listen)
+                        elif foo == "server_name":
+                            line = "        server_name {}; \n".format(self.nginx_server_name)
+
+                        elif foo == "access_log":
+                            line = "        access_log {} main; \n".format(self.nginx_access_log_path)
+
+                        elif foo == "error_log":
+                            line = "        error_log {}; \n".format(self.nginx_error_log_path)
+
+                        elif foo == "uwsgi_pass":
+                            line = "            uwsgi_pass unix:{}; \n".format(self.uwsgi_sock_path)
+
+                        else:
+                            line = ""
+
+                        break
+                    else: # 不需要修改
+                        pass
+
+                f_temp.write(line)
+            os.remove(feil_path) # 删掉原来的conf文件
+            os.rename(temp_path, feil_path) # 将temp文件改名为conf
+
+        return None
