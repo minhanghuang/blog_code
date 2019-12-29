@@ -1,4 +1,5 @@
 import os
+import re
 import platform
 from threading import Thread
 from configparser import ConfigParser
@@ -65,8 +66,6 @@ class MyBasePyScript(Thread):
 
     def do_exit(self):
 
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已结束 $$$$$$$$$$$$$$$$$$$$$$$$$")
-
         return None
 
     def do_test(self):
@@ -84,7 +83,6 @@ class MyBasePyScript(Thread):
         基类自定义初始化
         :return:
         """
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已开启 $$$$$$$$$$$$$$$$$$$$$$$$$")
 
         return None
 
@@ -111,7 +109,7 @@ class MyBasePyScript(Thread):
 
     def set(self, command):
 
-        print("正在发送命令: {}".format(command))
+        self.output_cmd(command)
 
         return os.system(command)
 
@@ -121,7 +119,8 @@ class MyBasePyScript(Thread):
         :param command_list:
         :return: None
         """
-        print("===================== 开始发送命令 -- {} ==========================".format(msg))
+
+        self.output_msg("开始发送命令",msg)
         if isinstance(command_list,list):
             for foo in command_list:
                 self.set_command(foo)
@@ -207,7 +206,7 @@ class MyBasePyScript(Thread):
     def set_uwsgi_conf_file(self):
         """配置uwsgi.ini文件
         """
-        print("===================== 配置uwsgi.ini文件 ==========================")
+        self.output_msg("配置文件","uwsgi.ini")
 
         self.set_uwsgi_ini(self.uwsgi_ini_path, "chdir", self.project_path) # 服务路径
         self.set_uwsgi_ini(self.uwsgi_ini_path, "module", self.server_name+".wsgi:application") # 服务名
@@ -292,8 +291,6 @@ class MyBasePyScript(Thread):
 
     def read_file(self, feil_path):
 
-        print("feil_path:",feil_path)
-
         with open(feil_path,"r") as f:
             for line in f:
                 print(line)
@@ -306,7 +303,8 @@ class MyBasePyScript(Thread):
         :param feil_path:
         :return:
         """
-        print("===================== 配置Nginx.conf文件 ==========================")
+
+        self.output_msg("配置文件","Nginx.conf")
 
         set_data_list = ["listen","server_name","access_log","error_log","uwsgi_pass"]
         temp_path = self.nginx_path + "/nginx.temp"
@@ -341,3 +339,52 @@ class MyBasePyScript(Thread):
             os.rename(temp_path, feil_path) # 将temp文件改名为conf
 
         return None
+
+    def output_msg(self, title="", msg="OK", *args, **kwargs):
+        """
+        输出日志
+        :param msg: 日志内容
+        :return: None
+        """
+
+        print("--- {}: {} ".format(title, msg).ljust(60-self.string_chinese_count(title+msg),"-")) # 不够60个字符, 左边补"+"
+        return None
+
+    def output_cmd(self,  msg="", *args, **kwargs):
+        """
+        输出命令日志
+        :param msg: 日志内容
+        :return: None
+        """
+
+        print("*** 正在执行命令: {} ".format(msg).ljust(60-self.string_chinese_count(msg),"*")) # 不够60个字符, 左边补"+"
+        return None
+
+    def output_system(self, *args, **kwargs):
+        """
+        输出系统日志
+        :param msg: 日志内容
+        :return: None
+        """
+
+        print("++++++++++++++++++++ {} ".format(self.getName()).ljust(60-self.string_chinese_count(self.getName()), "+")) # 不够60个字符, 左边补"+"
+        for title, msg in kwargs.items():
+            print("++++++{}:{}".format(title, msg).ljust(60-self.string_chinese_count(title+msg), "+"))  # 不够60个字符, 左边补"+"
+        print("++++++++++++++++++++ {} ".format(self.getName()).ljust(60-self.string_chinese_count(self.getName()), "+")) # 不够60个字符, 左边补"+"
+        return None
+
+    def string_chinese_count(self, msg=""):
+        """
+        统计字符串中, 中文的个数
+        :param msg: 被统计的字符串
+        :return: 中文的个数
+        """
+
+        count = len(re.findall(r'[\u4E00-\u9FFF]', msg))
+        if isinstance(count,int):
+            return count
+        elif isinstance(count,float):
+            return int(count)
+        else:
+            return 0
+

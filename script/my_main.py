@@ -20,5 +20,6 @@ if __name__ == "__main__":
         }
         # terminal = MyTerminal(**payload)
         # terminal.start()
-        mysqltest = MySqlClass(**payload)
-        mysqltest.start()
+        mysqltest = MySqlClass(**payload) # 实例化
+        mysqltest.setName("数据库自动化-线程") # 设置线程名
+        mysqltest.start() # 开始
