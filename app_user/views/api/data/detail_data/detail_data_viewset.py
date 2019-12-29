@@ -42,7 +42,7 @@ class DetailDataViewSet(MyRetrieveModelMixin):
 
         reverse = request.query_params.get("reverse",None)
 
-        if reverse == None: # 不排序
+        if reverse is None: # 不排序
             return None, False
         else: # 排序
             return not (True if reverse == "true" else False), True

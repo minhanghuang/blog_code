@@ -83,9 +83,6 @@ class MyTerminal(MyBasePyScript):
         uwsgi_pid_list = self.get_uwsgi_pid()  # 获取uwsgi的所有进程
         self.kill_pid(uwsgi_pid_list)  # 杀死uwsgi的所有进程
         self.del_pid_and_sock_file(self.uwsgi_path,["pid","sock"]) # 删除uwsgi文件夹下的pid文件和sock文件
-        print("暂停10秒")
-        import time
-        time.sleep(10)
         return None
 
     def stop_nginx_web(self):
