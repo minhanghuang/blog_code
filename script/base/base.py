@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import platform
 from threading import Thread
 from configparser import ConfigParser
@@ -53,10 +54,11 @@ class MyBasePyScript(Thread):
 
     def __init__(self,  **payload):
         Thread.__init__(self)
-
+        # 公共初始化, 请在这里配置
         self.state = payload.get("state", "pass")
         self.server_name = payload.get("server_name", "blog_code")
         self.python_evn = payload.get("python_evn", "python3")
+        self.set_base_abspath() # 初始化基本路径
 
     def run(self):
 
@@ -80,9 +82,21 @@ class MyBasePyScript(Thread):
 
     def do_init(self):
         """
-        基类自定义初始化
+        基类自定义初始化, 子类需要初始化的数据放在这里
         :return:
         """
+
+        return None
+
+    def set_base_abspath(self):
+        """
+        初始化基本路径
+        :return: None
+        """
+
+        self.script_path = os.path.abspath('.')  # script 绝对路径
+        self.project_path = self.script_path.split("script")[0]  # server 绝对路径
+        # sys.path.insert(0, self.project_path)
 
         return None
 
@@ -143,8 +157,9 @@ class MyBasePyScript(Thread):
         获取项目路径
         :return: None
         """
-        self.script_path = os.path.abspath('.') # script 绝对路径
-        self.project_path = self.script_path.split("script")[0] # server 绝对路径
+        # self.script_path = os.path.abspath('.') # script 绝对路径
+        # self.project_path = self.script_path.split("script")[0] # server 绝对路径
+        # sys.path.append(self.project_path)
 
         self.uwsgi_path = self.script_path + "/app_sh/uwsgi" # uwsgi 绝对路径
         self.uwsgi_ini_path = self.script_path + "/app_sh/uwsgi/uwsgi.ini" # uwsgi.ini 绝对路径
@@ -286,14 +301,6 @@ class MyBasePyScript(Thread):
         """
 
         self.set_ini(file_path=file_path, out_key="uwsgi", inner_key=key, value=value)
-
-        return None
-
-    def read_file(self, feil_path):
-
-        with open(feil_path,"r") as f:
-            for line in f:
-                print(line)
 
         return None
 

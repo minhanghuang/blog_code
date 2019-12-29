@@ -1,8 +1,9 @@
 from .base import MyBasePyScript
-import MySQLdb
 import pymysql
 import platform
 import os
+import sys
+import requests
 
 
 SQL_DATA = {
@@ -47,15 +48,14 @@ class MyBaseSqlPyScript(MyBasePyScript):
 
     def do_init(self):
         self.get_sql_data() # 根据系统的不同, 设置不同的属性
-        self.set_sql_path() # 配置路径
+        self.set_sql_path() # 配置路径, 基本的路径已经在基类的__init__设置过了
         self.init_db() # 初始化数据库
-
+        
         return None
 
     def set_sql_path(self):
 
-        self.script_path = os.path.abspath('.')  # script 绝对路径
-        self.project_path = self.script_path.split("script")[0]  # server 绝对路径
+        self.sql_files_path = self.script_path + "/sql"  # .sql文件 绝对路径
 
         return None
 
@@ -119,7 +119,7 @@ class MyBaseSqlPyScript(MyBasePyScript):
 
         return None
 
-    def execute_db(self):
+    def crete_db(self):
         """
         操作数据库
         :return: None
@@ -133,14 +133,14 @@ class MyBaseSqlPyScript(MyBasePyScript):
 
         return None
 
-    def execute_db_cmd(self, cmd="show databases;"):
+    def execute_db_cmd(self, cmd="show databases"):
         """
         执行数据库命令
         :param cmd: 命令
         :return: 返回执行结果
         """
 
-        self.output_cmd("Sql命令>{}".format(cmd))
+        self.output_cmd("Sql命令> {};".format(cmd))
 
         return self.db_cursor.execute(cmd + ";")
 
@@ -149,29 +149,59 @@ class MyBaseSqlPyScript(MyBasePyScript):
         关闭链接
         :return: None
         """
+
         self.db_cursor.close()
         self.output_msg("关闭光标完成")
+
+        self.db_connect.commit()
+        self.output_msg("提交数据库")
 
         self.db_connect.close()
         self.output_msg("关闭连接完成")
 
-
         return None
 
-    def create_db_databases(self):
+    def copy_sql_files(self):
         """
-        创建数据库
+        拷贝.sql到数据库
         :return: None
         """
 
-
+        sql_file_abspath = self.get_sql_file_path_list(dir_path=self.sql_files_path, file_name="app_article_article.sql")
+        self.set_command_group(["mysql -u {} -p{} -D{}  < {}".format(
+            self.sql_user,
+            self.sql_password,
+            self.sql_db_name,
+            sql_file_abspath
+        )]) # 拷贝sql文件
 
         return None
 
+    def get_sql_file_path_list(self, dir_path, file_name=""):
+        """
+        获取.sql文件的绝对路径
+        :param dir_path: 文件夹路径
+        :return:
+        """
+
+        for maindir, subdir, file_name_list in os.walk(dir_path):
+
+            for filename in file_name_list:
+                if file_name == filename:
+                    return os.path.join(maindir, filename)  # 合并成一个完整路径
+        return None
+
     def init_db(self):
-        """"""
+        """
+        初始化数据库
+        :return: None
+        """
+
+        self.connect_db()  # 链接数据库
+        # self.crete_db()  # 操作数据库
         # self.del_db_migrations_files() # 删除数据库迁移文件
         # self.create_db_models() # 生成数据库模型
-        self.connect_db() # 链接数据库
-        self.execute_db() # 操作数据库 
-        self.close_db() # 关闭链接
+        self.copy_sql_files() # 拷贝.sql文件到数据库中
+        self.close_db()  # 关闭链接
+
+        return None
