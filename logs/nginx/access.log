@@ -1,0 +1,2 @@
+127.0.0.1 - - [29/Dec/2019:18:19:45 +0800] "GET / HTTP/1.1" 404 994 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
+127.0.0.1 - - [29/Dec/2019:21:06:55 +0800] "POST /api/app/init/ HTTP/1.1" 200 125 "-" "python-requests/2.20.1" "-"

@@ -32,9 +32,9 @@ urlpatterns = [
     path('api/token-verify/', verify_jwt_token),
 ]
 
-
-if myconfig.APIDOCSROUTER: # 允许打开Api文档路由
-    urlpatterns.append(
-        path('docs/', include_docs_urls(title='接口文档')),  # coreapi接口路径
-    )
+#
+# if myconfig.APIDOCSROUTER: # 允许打开Api文档路由
+#     urlpatterns.append(
+#         path('docs/', include_docs_urls(title='接口文档')),  # coreapi接口路径
+#     )
 

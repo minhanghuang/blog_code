@@ -199,10 +199,9 @@ class MyBasePyScript(Thread):
         """
 
         ret_list = []
-        out = os.popen("ps -ef | grep uwsgi | grep {}".format(self.server_name)).read()
+        out = os.popen("ps -ef | grep uwsgi").read()
         for line in out.splitlines():
             ret_list.append(line.split()[1])
-
 
         return ret_list
 
@@ -410,5 +409,24 @@ class MyBasePyScript(Thread):
 
         self.my_redis.flushall()
         self.output_msg("清空redis数据","OK")
+
+        return None
+
+    def del_pid_and_sock_file(self, dir_path, type_list):
+        """
+        删除路径下的所有pid和sock文件
+        :return: None
+        """
+
+        if isinstance(type_list,list):
+            for maindir, subdir, file_name_list in os.walk(dir_path):
+
+                for filename in file_name_list:
+                    if filename.split(".")[1] in type_list:
+                        target_file_abspath = os.path.join(maindir, filename)  # 合并成一个完整路径
+                        os.remove(target_file_abspath) # 删除文件
+        else:
+            pass
+
 
         return None

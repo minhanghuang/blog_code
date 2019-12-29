@@ -665,3 +665,213 @@ spawned uWSGI worker 3 (pid: 7636, cores: 1)
 spawned uWSGI worker 4 (pid: 7637, cores: 1)
 spawned uWSGI worker 5 (pid: 7638, cores: 1)
 spawned uWSGI http 1 (pid: 7639)
+Not Found: /
+[pid: 7634|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 752 bytes} [Sun Dec 29 18:19:42 2019] GET / => generated 2479 bytes in 2372 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7637|app: 0|req: 1/2] 127.0.0.1 () {40 vars in 712 bytes} [Sun Dec 29 18:28:27 2019] OPTIONS /api/token-verify/ => generated 0 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 434 bytes (1 switches on core 0)
+[pid: 7637|app: 0|req: 2/3] 127.0.0.1 () {44 vars in 1029 bytes} [Sun Dec 29 18:28:28 2019] POST /api/token-verify/ => generated 47 bytes in 2754 msecs (HTTP/1.1 400) 7 headers in 246 bytes (1 switches on core 0)
+[pid: 7636|app: 0|req: 1/4] 127.0.0.1 () {38 vars in 711 bytes} [Sun Dec 29 18:28:30 2019] GET /api/user/data/detail-data/null/ => generated 56 bytes in 793 msecs (HTTP/1.1 401) 8 headers in 289 bytes (1 switches on core 0)
+ret: {'success': True, 'msg': 'coco', 'results': {'TOKEN': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImNvY28iLCJleHAiOjE1Nzc3MDE3MTQsImVtYWlsIjoiY29jb0BtaW5odW5nLm1lIiwib3JpZ19pYXQiOjE1Nzc2MTUzMTQsImlzcyI6Imh0dHA6Ly9mYXNmZGFzLmJhaWN1In0.gfClZqervZ2-ewtfTm637MkgVEf-9LtvGTfkdywk7Xs', 'username': 'coco'}}
+[pid: 7637|app: 0|req: 3/5] 127.0.0.1 () {42 vars in 749 bytes} [Sun Dec 29 18:28:34 2019] POST /api/user/login/ => generated 326 bytes in 238 msecs (HTTP/1.1 200) 7 headers in 238 bytes (1 switches on core 0)
+[pid: 7636|app: 0|req: 2/6] 127.0.0.1 () {40 vars in 747 bytes} [Sun Dec 29 18:28:34 2019] OPTIONS /api/user/data/reset-cloudword/coco/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (2 switches on core 0)
+[pid: 7636|app: 0|req: 3/7] 127.0.0.1 () {40 vars in 745 bytes} [Sun Dec 29 18:28:34 2019] OPTIONS /api/user/data/reset-timeline/coco/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (1 switches on core 0)
+[pid: 7636|app: 0|req: 4/8] 127.0.0.1 () {40 vars in 737 bytes} [Sun Dec 29 18:28:34 2019] OPTIONS /api/user/data/reset-data/coco/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (1 switches on core 0)
+[pid: 7636|app: 0|req: 5/9] 127.0.0.1 () {44 vars in 1030 bytes} [Sun Dec 29 18:28:34 2019] POST /api/token-verify/ => generated 260 bytes in 86 msecs (HTTP/1.1 200) 7 headers in 238 bytes (1 switches on core 0)
+[pid: 7637|app: 0|req: 4/10] 127.0.0.1 () {42 vars in 1014 bytes} [Sun Dec 29 18:28:34 2019] PUT /api/user/data/reset-cloudword/coco/ => generated 152197 bytes in 89 msecs (HTTP/1.1 200) 7 headers in 247 bytes (32 switches on core 0)
+[pid: 7636|app: 0|req: 6/11] 127.0.0.1 () {42 vars in 1012 bytes} [Sun Dec 29 18:28:35 2019] PUT /api/user/data/reset-timeline/coco/ => generated 4043 bytes in 57 msecs (HTTP/1.1 200) 7 headers in 245 bytes (1 switches on core 0)
+[pid: 7637|app: 0|req: 5/12] 127.0.0.1 () {42 vars in 1004 bytes} [Sun Dec 29 18:28:35 2019] PUT /api/user/data/reset-data/coco/ => generated 37567 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 246 bytes (7 switches on core 0)
+[pid: 7636|app: 0|req: 7/13] 127.0.0.1 () {40 vars in 739 bytes} [Sun Dec 29 18:28:37 2019] OPTIONS /api/user/data/detail-data/coco/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (1 switches on core 0)
+[pid: 7636|app: 0|req: 8/14] 127.0.0.1 () {40 vars in 987 bytes} [Sun Dec 29 18:28:37 2019] GET /api/user/data/detail-data/coco/ => generated 156142 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 246 bytes (37 switches on core 0)
+[pid: 7636|app: 0|req: 9/15] 127.0.0.1 () {40 vars in 766 bytes} [Sun Dec 29 18:28:38 2019] OPTIONS /api/user/data/detail-data/coco/?reverse=false => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (2 switches on core 0)
+[pid: 7636|app: 0|req: 10/16] 127.0.0.1 () {40 vars in 1014 bytes} [Sun Dec 29 18:28:38 2019] GET /api/user/data/detail-data/coco/?reverse=false => generated 156142 bytes in 21 msecs (HTTP/1.1 200) 7 headers in 246 bytes (38 switches on core 0)
+[pid: 7636|app: 0|req: 11/17] 127.0.0.1 () {40 vars in 729 bytes} [Sun Dec 29 18:28:42 2019] OPTIONS /api/user/detail-user/coco/ => generated 0 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 434 bytes (2 switches on core 0)
+[pid: 7636|app: 0|req: 12/18] 127.0.0.1 () {40 vars in 977 bytes} [Sun Dec 29 18:28:42 2019] GET /api/user/detail-user/coco/ => generated 37638 bytes in 24 msecs (HTTP/1.1 200) 7 headers in 245 bytes (9 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Dec 29 18:39:51 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (127.0.0.1:19900).
+bind(): Address already in use [core/socket.c line 769]
+Sun Dec 29 18:40:00 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sun Dec 29 18:40:00 2019 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Dec 29 18:40:18 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7f84efe050f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f84efe050f0 pid: 7949 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7949)
+spawned uWSGI worker 1 (pid: 7955, cores: 1)
+spawned uWSGI worker 2 (pid: 7956, cores: 1)
+spawned uWSGI worker 3 (pid: 7957, cores: 1)
+spawned uWSGI worker 4 (pid: 7958, cores: 1)
+spawned uWSGI worker 5 (pid: 7959, cores: 1)
+spawned uWSGI http 1 (pid: 7960)
+[pid: 7955|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 719 bytes} [Sun Dec 29 20:01:11 2019] OPTIONS /api/token-verify/ => generated 0 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 441 bytes (1 switches on core 0)
+[pid: 7955|app: 0|req: 2/2] 127.0.0.1 () {44 vars in 1024 bytes} [Sun Dec 29 20:01:11 2019] POST /api/token-verify/ => generated 47 bytes in 3120 msecs (HTTP/1.1 400) 7 headers in 253 bytes (1 switches on core 0)
+[pid: 7957|app: 0|req: 1/3] 127.0.0.1 () {38 vars in 725 bytes} [Sun Dec 29 20:01:15 2019] GET /api/user/data/detail-data/null/ => generated 56 bytes in 871 msecs (HTTP/1.1 401) 8 headers in 296 bytes (1 switches on core 0)
+自定义用户验证规则-用户登录验证异常except: UserProfile matching query does not exist.
+[pid: 7955|app: 0|req: 3/4] 127.0.0.1 () {42 vars in 763 bytes} [Sun Dec 29 20:01:17 2019] POST /api/user/login/ => generated 59 bytes in 99 msecs (HTTP/1.1 400) 7 headers in 253 bytes (2 switches on core 0)
+自定义用户验证规则-用户登录验证异常except: UserProfile matching query does not exist.
+[pid: 7957|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 763 bytes} [Sun Dec 29 20:01:33 2019] POST /api/user/login/ => generated 59 bytes in 51 msecs (HTTP/1.1 400) 7 headers in 253 bytes (2 switches on core 0)
+自定义用户验证规则-用户登录验证异常except: UserProfile matching query does not exist.
+[pid: 7957|app: 0|req: 3/6] 127.0.0.1 () {42 vars in 763 bytes} [Sun Dec 29 20:01:44 2019] POST /api/user/login/ => generated 59 bytes in 9 msecs (HTTP/1.1 400) 7 headers in 253 bytes (2 switches on core 0)
+自定义用户验证规则-用户登录验证异常except: UserProfile matching query does not exist.
+[pid: 7957|app: 0|req: 4/7] 127.0.0.1 () {42 vars in 763 bytes} [Sun Dec 29 20:02:05 2019] POST /api/user/login/ => generated 59 bytes in 8 msecs (HTTP/1.1 400) 7 headers in 253 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 5/8] 127.0.0.1 () {36 vars in 653 bytes} [Sun Dec 29 21:04:41 2019] GET / => generated 2477 bytes in 93 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 6/9] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:03 2019] GET / => generated 2477 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 7/10] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:04 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 8/11] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:04 2019] GET / => generated 2477 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 9/12] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:04 2019] GET / => generated 2477 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 10/13] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:04 2019] GET / => generated 2477 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 11/14] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 12/15] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 13/16] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 14/17] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 15/18] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 16/19] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:05 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 17/20] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:06 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 18/21] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:06 2019] GET / => generated 2477 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 19/22] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:06 2019] GET / => generated 2477 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 20/23] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:07 2019] GET / => generated 2477 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 21/24] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:07 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 22/25] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:07 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 23/26] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:22 2019] GET / => generated 2477 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 24/27] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:23 2019] GET / => generated 2477 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 25/28] 127.0.0.1 () {38 vars in 685 bytes} [Sun Dec 29 21:05:26 2019] GET / => generated 2477 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 26/29] 127.0.0.1 () {38 vars in 684 bytes} [Sun Dec 29 21:05:30 2019] GET / => generated 2479 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 27/30] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:05:33 2019] GET / => generated 2479 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 28/31] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:13 2019] GET / => generated 2479 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 29/32] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:13 2019] GET / => generated 2479 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 30/33] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 31/34] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 32/35] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 33/36] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 34/37] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 35/38] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:14 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 36/39] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:30 2019] GET / => generated 2479 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 37/40] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:31 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 38/41] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:31 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 39/42] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:31 2019] GET / => generated 2479 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 40/43] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:32 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 41/44] 127.0.0.1 () {38 vars in 690 bytes} [Sun Dec 29 21:06:41 2019] GET / => generated 2479 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 42/45] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:43 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 43/46] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:43 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 44/47] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:43 2019] GET / => generated 2479 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 45/48] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:43 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 46/49] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:45 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (2 switches on core 0)
+Not Found: /
+[pid: 7957|app: 0|req: 47/50] 127.0.0.1 () {38 vars in 691 bytes} [Sun Dec 29 21:06:47 2019] GET / => generated 2479 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7957|app: 0|req: 48/51] 127.0.0.1 () {40 vars in 585 bytes} [Sun Dec 29 21:06:55 2019] POST /api/app/init/ => generated 104 bytes in 450 msecs (HTTP/1.1 200) 5 headers in 137 bytes (1 switches on core 0)
+Sun Dec 29 21:07:07 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Dec 29 22:27:09 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Coxs-MacBook-Air.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script
+writing pidfile to /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.pid
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 bound to UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7fefa1c0a8b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x7fefa1c0a8b0 pid: 9371 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9371)
+spawned uWSGI worker 1 (pid: 9378, cores: 1)
+spawned uWSGI worker 2 (pid: 9379, cores: 1)
+spawned uWSGI worker 3 (pid: 9380, cores: 1)
+spawned uWSGI worker 4 (pid: 9381, cores: 1)
+spawned uWSGI worker 5 (pid: 9382, cores: 1)
+spawned uWSGI http 1 (pid: 9383)
