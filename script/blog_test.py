@@ -7,13 +7,11 @@ class MyTerminal(MyBasePyScript):
     def __init__(self, **payload):
         MyBasePyScript.__init__(self, **payload)
 
-    def do_test00(self):
+    def do_test(self):
 
-        print("===================== 进入 服务脚本 ==========================")
+        if self.web_state == "start": # 开启服务
 
-        if self.state == "start": # 开启服务
-
-            print("===================== 启动服务 start ==========================")
+            self.output_msg("启动服务", "start")
             self.set_nginx_conf_file(self.nginx_conf_path) # 配置nginx.conf文件
             self.set_uwsgi_conf_file() # 配置uwsgi.ini文件
             uwsgi_cmd_list = ["uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),]
@@ -21,19 +19,17 @@ class MyTerminal(MyBasePyScript):
             nginx_cmd_list = ["{}".format(self.nginx_start_cmd),]
             self.set_command_group(nginx_cmd_list, "nginx") # 启动nginx
 
-        elif self.state == "stop": # 结束服务
+        elif self.web_state == "stop": # 结束服务
 
-            print("===================== 杀死服务 stop ==========================")
-
+            self.output_msg("杀死服务","stop")
             uwsgi_pid_list = self.get_uwsgi_pid()  # 获取uwsgi的所有进程
             nginx_pid_list = self.get_nginx_pid()  # 获取nginx的所有进程
             self.kill_pid(uwsgi_pid_list)  # 杀死uwsgi的所有进程
             self.kill_pid(nginx_pid_list)  # 杀死uwsgi的所有进程
 
-        elif self.state == "restart":  # 重启服务
+        elif self.web_state == "restart":  # 重启服务
 
-            print("===================== 重启服务 restart ==========================")
-
+            self.output_msg("重启服务","restart")
             uwsgi_cmd_list = ["uwsgi --ini {}/uwsgi.ini".format(self.uwsgi_path),]
             self.set_command_group(uwsgi_cmd_list)
             nginx_cmd_list = ["{}".format(self.nginx_restart_cmd),]
@@ -42,48 +38,30 @@ class MyTerminal(MyBasePyScript):
         else:
             pass
 
-
-        print("===================== 退出 服务脚本 ==========================")
-
-        return None
-
-
-    def do_test(self):
-        print("oooo")
-        return None
-
-    def do_init(self):
-        """
-        基类自定义初始化
-        :return:
-        """
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已开启 $$$$$$$$$$$$$$$$$$$$$$$$$")
-
-        self.set_sys_data() # 根据系统的不一样, 设置不同的信息
-        self.set_path() # 设置路径
-
         return None
 
     def do_exit(self):
 
-        if self.state != "stop":
-            print("==== 系统: {} ".format(self.sys_version))
-            print("==== 服务名: {} ".format(self.server_name))
-            print("==== 服务路径: {} ".format(self.project_path))
-            print("==== 脚本路径: {} ".format(self.script_path))
-            print("==== uwsgi路径: {} ".format(self.uwsgi_path))
-            print("======== uwsgi_http: {} ".format(self.uwsgi_http))
-            print("======== uwsgi.ini 路径: {} ".format(self.uwsgi_ini_path))
-            print("======== uwsgi.sock 路径: {} ".format(self.uwsgi_sock_path))
-            print("======== uwsgi.log 路径: {} ".format(self.uwsgi_log_path))
-            print("======== uwsgi.pid 路径: {} ".format(self.uwsgi_pid_path))
-            print("==== nginx路径: {} ".format(self.nginx_path))
-            print("======== nginx.监听端口: {} ".format(self.nginx_listen))
-            print("======== nginx.域名: {} ".format(self.nginx_server_name))
-            print("======== nginx.access日志: {} ".format(self.nginx_access_log_path))
-            print("======== nginx.error日志: {} ".format(self.nginx_error_log_path))
+        if self.web_state != "pass": #
 
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$ 线程已结束 $$$$$$$$$$$$$$$$$$$$$$$$$")
+            sys_data = {
+                "系统": self.sys_version,
+                "服务名": self.server_name,
+                "服务路径": self.project_path,
+                "脚本路径": self.script_path,
+                "uwsgi路径": self.uwsgi_path,
+                "uwsgi_http": self.uwsgi_http,
+                "uwsgi.ini 路径": self.uwsgi_ini_path,
+                "uwsgi.sock 路径": self.uwsgi_sock_path,
+                "uwsgi.log 路径": self.uwsgi_log_path,
+                "uwsgi.pid 路径": self.uwsgi_pid_path,
+                "nginx路径": self.nginx_path,
+                "nginx.监听端口": self.nginx_listen,
+                "nginx.域名": self.nginx_server_name,
+                "nginx.access日志": self.nginx_access_log_path,
+                "nginx.error日志": self.nginx_error_log_path,
+            }
+            self.output_system(**sys_data)
 
         return None
 

@@ -6,6 +6,7 @@ import sys
 import requests
 
 
+
 SQL_DATA = {
     "Darwin":{
         "db_data":{
@@ -47,10 +48,10 @@ class MyBaseSqlPyScript(MyBasePyScript):
         self.do_exit()
 
     def do_init(self):
+
         self.get_sql_data() # 根据系统的不同, 设置不同的属性
         self.set_sql_path() # 配置路径, 基本的路径已经在基类的__init__设置过了
-        self.init_db() # 初始化数据库
-        
+
         return None
 
     def set_sql_path(self):
@@ -64,7 +65,7 @@ class MyBaseSqlPyScript(MyBasePyScript):
         根据系统的不同, 设置不同的属性
         :return: None
         """
-        self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
+
         self.sql_ip = SQL_DATA.get(self.sys_version).get("db_data")["ip"]
         self.sql_user = SQL_DATA.get(self.sys_version).get("db_data")["user"]
         self.sql_password = SQL_DATA.get(self.sys_version).get("db_data")["password"]
@@ -198,10 +199,6 @@ class MyBaseSqlPyScript(MyBasePyScript):
         """
 
         self.connect_db()  # 链接数据库
-        # self.crete_db()  # 操作数据库
-        # self.del_db_migrations_files() # 删除数据库迁移文件
-        # self.create_db_models() # 生成数据库模型
-        self.copy_sql_files() # 拷贝.sql文件到数据库中
-        self.close_db()  # 关闭链接
+        self.crete_db()  # 操作数据库
 
         return None

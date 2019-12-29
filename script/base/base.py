@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+from redis import Redis
 import platform
 from threading import Thread
 from configparser import ConfigParser
@@ -55,10 +56,15 @@ class MyBasePyScript(Thread):
     def __init__(self,  **payload):
         Thread.__init__(self)
         # 公共初始化, 请在这里配置
-        self.state = payload.get("state", "pass")
+        self.web_state = payload.get("web_state", "pass")
+        self.sql_state = payload.get("sql_state", "pass")
         self.server_name = payload.get("server_name", "blog_code")
         self.python_evn = payload.get("python_evn", "python3")
         self.set_base_abspath() # 初始化基本路径
+        self.set_sys_data()  # 根据系统的不一样, 设置不同的信息
+        self.set_path()  # 设置路径
+        self.payload = payload
+        self.init_redis() # 初始化 redis
 
     def run(self):
 
@@ -96,28 +102,6 @@ class MyBasePyScript(Thread):
 
         self.script_path = os.path.abspath('.')  # script 绝对路径
         self.project_path = self.script_path.split("script")[0]  # server 绝对路径
-        # sys.path.insert(0, self.project_path)
-
-        return None
-
-    def set_sys_data(self):
-        """
-        根据不同的系统,配置不同的信息
-        :return: None
-        """
-        self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
-
-        nginx_data = SYSTEM_DATA.get("nginx").get(self.sys_version)
-        self.nginx_start_cmd = nginx_data.get("nginx_start_cmd")
-        self.nginx_stop_cmd = nginx_data.get("nginx_stop_cmd")
-        self.nginx_restart_cmd = nginx_data.get("nginx_restart_cmd")
-
-        nginx_http_data = SYSTEM_DATA.get("nginx_http").get(self.sys_version)
-        self.nginx_listen = nginx_http_data.get("listen")
-        self.nginx_server_name = nginx_http_data.get("server_name")
-
-        http_data = SYSTEM_DATA.get("uwsgi_http").get(self.sys_version)
-        self.uwsgi_http = http_data.get("http") # 设置 ip:port
 
         return None
 
@@ -152,21 +136,38 @@ class MyBasePyScript(Thread):
 
         return self.set(command)
 
+    def set_sys_data(self):
+        """
+        根据不同的系统,配置不同的信息
+        :return: None
+        """
+        self.sys_version = platform.uname().system  # 系统版本 Darwin Linux
+
+        nginx_data = SYSTEM_DATA.get("nginx").get(self.sys_version)
+        self.nginx_start_cmd = nginx_data.get("nginx_start_cmd")
+        self.nginx_stop_cmd = nginx_data.get("nginx_stop_cmd")
+        self.nginx_restart_cmd = nginx_data.get("nginx_restart_cmd")
+
+        nginx_http_data = SYSTEM_DATA.get("nginx_http").get(self.sys_version)
+        self.nginx_listen = nginx_http_data.get("listen")
+        self.nginx_server_name = nginx_http_data.get("server_name")
+
+        http_data = SYSTEM_DATA.get("uwsgi_http").get(self.sys_version)
+        self.uwsgi_http = http_data.get("http") # 设置 ip:port
+
+        return None
+
     def set_path(self):
         """
         获取项目路径
         :return: None
         """
-        # self.script_path = os.path.abspath('.') # script 绝对路径
-        # self.project_path = self.script_path.split("script")[0] # server 绝对路径
-        # sys.path.append(self.project_path)
 
         self.uwsgi_path = self.script_path + "/app_sh/uwsgi" # uwsgi 绝对路径
         self.uwsgi_ini_path = self.script_path + "/app_sh/uwsgi/uwsgi.ini" # uwsgi.ini 绝对路径
         self.uwsgi_pid_path = self.script_path + "/app_sh/uwsgi/uwsgi.pid" # uwsgi.pid 绝对路径
         self.uwsgi_log_path = self.script_path + "/app_sh/uwsgi/uwsgi.log" # uwsgi.log 绝对路径
         self.uwsgi_sock_path = self.script_path + "/app_sh/uwsgi/uwsgi.sock" # uwsgi.sock 绝对路径
-
 
         self.nginx_path = self.script_path + "/app_sh/nginx" # nginx 绝对路径
         self.nginx_conf_path = self.nginx_path + "/nginx.conf" # nginx.conf 绝对路径
@@ -395,3 +396,19 @@ class MyBasePyScript(Thread):
         else:
             return 0
 
+    def init_redis(self):
+
+        self.my_redis = Redis()
+
+        return None
+
+    def flush_all_redis(self):
+        """
+        清空redis所有内容
+        :return: None
+        """
+
+        self.my_redis.flushall()
+        self.output_msg("清空redis数据","OK")
+
+        return None
