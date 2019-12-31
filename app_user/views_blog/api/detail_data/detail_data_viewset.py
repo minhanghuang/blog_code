@@ -23,7 +23,8 @@ class DetailDataViewSetBlog(MyRetrieveModelMixin):
 
         value = eval(ret_data["timeline"]) # 将字符串转成字典
         value.sort(key=lambda k: (int(k.get('id'))), reverse=True) # 列表按id排序
-        ret_data["timeline"] = str(value).replace("'","\"") # 前端框架不能解锁单引号
+        ret_data["timeline"] = value # 前端更新, 后端将下面一行代码也更新
+        # ret_data["timeline"] = str(value).replace("'","\"") # 前端框架不能解锁单引号
 
         return Response({
             "success": True,
