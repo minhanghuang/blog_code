@@ -885,3 +885,42 @@ spawned uWSGI http 1 (pid: 9383)
 [pid: 9379|app: 0|req: 3/8] 127.0.0.1 () {38 vars in 713 bytes} [Wed Jan  1 13:31:42 2020] GET /api/user/blog/detail-data/admin/ => generated 155325 bytes in 45 msecs (HTTP/1.1 200) 7 headers in 246 bytes (34 switches on core 0)
 [pid: 9379|app: 0|req: 4/9] 127.0.0.1 () {38 vars in 713 bytes} [Wed Jan  1 13:32:05 2020] GET /api/user/blog/detail-user/admin/ => generated 37632 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 245 bytes (10 switches on core 0)
 [pid: 9379|app: 0|req: 5/10] 127.0.0.1 () {38 vars in 712 bytes} [Wed Jan  1 13:44:56 2020] GET /api/user/blog/detail-data/admin/ => generated 155325 bytes in 83 msecs (HTTP/1.1 200) 7 headers in 246 bytes (19 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 9383)
+...brutally killing workers...
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+[deadlock-detector] pid 9379 was holding lock thunder (0x1066ec000)
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/script
+closing all non-uwsgi socket fds > 2 (max_fd = 4864)...
+found fd 6 mapped to socket 0 (/Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock)
+running /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+[uWSGI] getting INI configuration from /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Jan  4 00:56:00 2020] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 28 April 2019 11:57:07
+os: Darwin-18.5.0 Darwin Kernel Version 18.5.0: Mon Mar 11 20:40:32 PDT 2019; root:xnu-4903.251.3~3/RELEASE_X86_64
+nodename: Cox.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/coxhuang/Documents/django_code/blog_code/script
+detected binary path: /Library/Frameworks/Python.framework/Versions/3.7/bin/uwsgi
+chdir() to /Users/coxhuang/Documents/django_code/blog_code/
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:19900 fd 3
+uwsgi socket 0 inherited UNIX address /Users/coxhuang/Documents/django_code/blog_code/script/app_sh/uwsgi/uwsgi.sock fd 6
+Python version: 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)  [Clang 6.0 (clang-600.0.57)]
+Python main interpreter initialized at 0x7fa35540b660
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
