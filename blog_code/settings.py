@@ -27,7 +27,7 @@ SECRET_KEY = '00+99df#cjy1dr5u)c9_st_)a%1*m)4@f1%n*dn91@&%-ykfgh'
 DEBUG = myconfig.DEBUG
 # DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*",]
 
 
 
@@ -255,21 +255,6 @@ CORS_ALLOW_HEADERS = (
 
 
 FONTPATH = myconfig.FONTPATH # 系统字体
-
-
-# # 缓存
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://127.0.0.1:6379",  # 这里设定了本机的redis数据
-#         # "LOCATION": "redis://:passwordpassword@47.193.146.xxx:6379/0", # 如果redis设置密码的话，需要以这种格式host前面是密码
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#         }
-#     }
-# }
-
-
 
 # celery config
 CELERY_BROKER_URL = myconfig.get_celery_config()["CELERY_BROKER_URL"] # redis作为中间件
