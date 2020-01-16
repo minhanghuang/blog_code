@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208746be-5892-451b-81d1-773758c647da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blog_code.iml" afterPath="$PROJECT_DIR$/.idea/blog_code.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/utils/common/middlewares/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/utils/common/middlewares/system/__init__.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_code/settings.py" afterPath="$PROJECT_DIR$/blog_code/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.log" afterPath="$PROJECT_DIR$/script/app_sh/uwsgi/uwsgi.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/init/init_apiview.py" afterPath="$PROJECT_DIR$/app/api/init/init_apiview.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,15 +52,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog_code/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="648">
               <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="68" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
-                <marker date="1578670416342" expanded="true" signature="6737:6754" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utils/common/middlewares/system/middleware.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init_apiview.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/api/init/init_apiview.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +156,6 @@
         <option value="$PROJECT_DIR$/app_article/views/api_core/update_article/update_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py" />
         <option value="$PROJECT_DIR$/app_article/views/api_core/create_article/create_article_viewset.py" />
-        <option value="$PROJECT_DIR$/app/api/init/init_apiview.py" />
         <option value="$PROJECT_DIR$/script/uwsgi.ini" />
         <option value="$PROJECT_DIR$/script/app_sh/celery/work/start.sh" />
         <option value="$PROJECT_DIR$/script/uwsgi.sh" />
@@ -166,6 +184,7 @@
         <option value="$PROJECT_DIR$/app_user/views/api/data/detail_data/detail_data_viewset.py" />
         <option value="$PROJECT_DIR$/app_user/views_blog/api/detail_data/detail_data_viewset.py" />
         <option value="$PROJECT_DIR$/blog_code/settings.py" />
+        <option value="$PROJECT_DIR$/app/api/init/init_apiview.py" />
       </list>
     </option>
   </component>
@@ -219,7 +238,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="init" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,13 +756,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/utils/common/mixins/mixinbase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_article/views/api_core/list_article/list_article_viewset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -794,6 +828,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="920" column="18" lean-forward="true" selection-start-line="920" selection-start-column="18" selection-end-line="920" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -853,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/init/init_apiview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1874">
-          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/nginx/error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,6 +934,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="75" column="6" lean-forward="true" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#326#38136#0" expanded="false" />
+            <element signature="e#38150#75965#0" expanded="false" />
+            <element signature="e#75993#230919#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,6 +1038,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1053">
           <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,8 +1056,23 @@
           <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="68" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
-            <marker date="1578670416342" expanded="true" signature="6737:6754" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/common/middlewares/system/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/init/init_apiview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

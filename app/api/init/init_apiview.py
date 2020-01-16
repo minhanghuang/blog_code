@@ -141,7 +141,3 @@ class InitApiView(MyAPIView):
         return None
 
 
-    def test(self):
-
-        return None
-
