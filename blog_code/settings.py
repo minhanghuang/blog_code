@@ -216,9 +216,9 @@ MY_MAX_PAGE_SIZE = 1000 # 最大页数不超过1000
 MY_PAGE_QUERY_PARAM = "page"  # 获取页码数的
 
 
-'''
+"""
 ------------------------  跨域 Config ------------------------
-'''
+"""
 # 中间件
 # 'corsheaders.middleware.CorsMiddleware', # 跨域
 # 'django.middleware.common.CommonMiddleware', # 循序不能变
