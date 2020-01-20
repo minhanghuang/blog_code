@@ -7,7 +7,7 @@ from rest_framework import status
 
 
 
-class MyGenericAPIView(APIView,MyViewBase):
+class MyGenericAPIView(APIView):
 
     authentication_classes = ()
     permission_classes = ()
