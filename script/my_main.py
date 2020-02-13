@@ -1,5 +1,5 @@
 import sys
-from sql_test import MySqlClass
+from .sql_test import MySqlClass
 
 
 def error_msg():

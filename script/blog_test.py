@@ -1,4 +1,4 @@
-from base.base import MyBasePyScript
+from .base.base import MyBasePyScript
 
 
 class MyTerminal(MyBasePyScript):

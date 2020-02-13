@@ -1,5 +1,5 @@
-from base.base_sql import MyBaseSqlPyScript
-from blog_test import MyTerminal
+from .base.base_sql import MyBaseSqlPyScript
+from .blog_test import MyTerminal
 import requests
 
 
