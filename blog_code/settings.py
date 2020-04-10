@@ -221,7 +221,7 @@ MY_PAGE_QUERY_PARAM = "page"  # 获取页码数的
 """
 # 中间件
 # 'corsheaders.middleware.CorsMiddleware', # 跨域
-# 'django.middleware.common.CommonMiddleware', # 循序不能变
+# 'django.middleware.common.CommonMiddleware', # 顺序不能变
 # 跨域增加忽略
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True

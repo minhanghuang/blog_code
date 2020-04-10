@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from app.utils.common.serializers.serializer import MySerializerBase
 from app_article import models
 
